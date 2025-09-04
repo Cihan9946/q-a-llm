@@ -23,7 +23,7 @@ def rag_answer(user_message):
         print(prompt[:500] + "...")  # Uzun prompt'lar için kısalt
         
         response = ask_ollama(prompt).strip()
-        print("\n✅ RAG Yanıtı:", response[:200] + "..." if len(response) > 200 else response)
+        print("\n✅ RAG Yanıtı:", response[:200] + "..." if len(response) > 200 else response)hf_
         
         return response + "\n\n[RAG Sistemi ile oluşturulmuştur]"
         
