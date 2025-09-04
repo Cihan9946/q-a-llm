@@ -12,7 +12,7 @@ import json
 import os
 
 # Hugging Face Token
-os.environ["HF_TOKEN"] = "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"
+os.environ["HF_TOKEN"] = ""
 
 # Model ID
 model_id = "google/gemma-2b-it"  # CPU dostu, 3B yerine 2B önerilir

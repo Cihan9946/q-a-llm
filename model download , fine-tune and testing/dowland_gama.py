@@ -2,7 +2,7 @@ from huggingface_hub import snapshot_download
 import os
 
 # Hugging Face erişim token'ını ayarla
-os.environ["HUGGINGFACE_HUB_TOKEN"] = "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"
+os.environ["HUGGINGFACE_HUB_TOKEN"] = ""
 
 # İndirilecek model ID'si ve hedef klasör
 model_id = "google/gemma-2b-it"
