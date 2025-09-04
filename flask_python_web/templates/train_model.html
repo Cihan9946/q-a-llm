@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Modeli Fine-Tune Et</title>
+  <style>
+    body { font-family: Arial; background: #f4f4f4; padding: 40px; }
+    .container {
+      background: white; padding: 30px; border-radius: 8px;
+      max-width: 600px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, select {
+      display: block; width: 100%; margin: 10px 0; padding: 10px;
+    }
+    button {
+      padding: 10px 15px; background: #2ecc71; color: white; border: none; border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🧠 Modeli Fine-Tune Et</h2>
+    <form action="/train_model" method="post" enctype="multipart/form-data">
+      <label>Veri Seti (.jsonl):</label>
+      <input type="file" name="dataset" accept=".jsonl" required>
+
+      <label>Model Klasörü (.safetensors, config.json vb.):</label>
+      <input type="file" name="model_files" webkitdirectory directory multiple required>
+
+      <label>Epoch Sayısı:</label>
+      <input type="number" name="epochs" value="3" min="1" required>
+
+      <label>Batch Size:</label>
+      <input type="number" name="batch_size" value="2" min="1" required>
+
+      <button type="submit">🚀 Modeli Fine-Tune Et</button>
+    </form>
+  </div>
+</body>
+</html>

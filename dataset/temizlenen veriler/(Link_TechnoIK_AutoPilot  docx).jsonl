@@ -1,0 +1,285 @@
+{
+  "instruction": "Personelin eşi engelli olduğunda bordro hesaplamasında engelli indirimi nasıl uygulanır?",
+  "input": "Personelin eşi engelli fakat bordro hesaplamasında engelli indirimi uygulanmıyor. Ne yapmalıyım?",
+  "output": "Personel özlük bilgileri kartı → Aile bilgileri sayfasında engellilik derecesi ile engellilik başlangıç ve bitiş tarihi kayıt edilmelidir."
+}
+{
+  "instruction": "SGK işe giriş bildirimi yüklemesinde okul bilgileri neden gelmez?",
+  "input": "Personelin SGK işe giriş bildirimi yüklendiğinde okul bilgileri görünmüyor. Sebebi nedir?",
+  "output": "Personel özlük bilgileri → Sayfalar sekmesinde okul bilgileri kayıt edilmelidir."
+}
+{
+  "instruction": "Personelin işe başlamada istenen evraklar nasıl yüklenir?",
+  "input": "Personel özlük bilgileri sayfalarında işe başlarken istenen evrakları yüklemek istiyorum. Nasıl yapabilirim?",
+  "output": "Personel servis işlemleri bölümünde 16 numaralı 'Seçili personellerin işe alım evraklarını oluştur' seçeneği çalıştırılır."
+}
+{
+  "instruction": "Yasal gereklilik kodunda değişiklik yapılamıyorsa ne yapılmalıdır?",
+  "input": "Personelin yasal parametreleri sekmesinde tanımlı yasal gereklilik kodunu değiştiremiyorum. Nasıl düzeltebilirim?",
+  "output": "Yasal parametreler sekmesinde 'Engelli indirimi için raporu var mı' tanımının onay kutusu işaretsiz duruma getirilmelidir."
+}
+{
+  "instruction": "Özel sigorta bilgileri girişinde sigorta kuruluşu seçilemiyorsa ne yapılmalıdır?",
+  "input": "Personel için özel sigorta bilgileri girişinde sigorta kuruluşu listesinden seçim yapamıyorum. Sebebi ne olabilir?",
+  "output": "Sigorta kuruluşu tanımları eksik veya sistemde tanımlı değilse seçim yapılamaz. Öncelikle ilgili sigorta kuruluşu sistemde tanımlanmalıdır."
+}
+{
+  "instruction": "Personelin bireysel özel sağlık sigortası nasıl tanımlanır?",
+  "input": "Bir personel için bireysel özel sağlık sigortası eklemek istiyorum. Hangi adımları izlemeliyim?",
+  "output": "Personel şirket bilgileri kartına giriş yapılır. Sayfalar menüsünden özel sigorta bilgileri girilir. Poliçe bilgileri eklenir. Kesinti ve ödenek tipleri menüsünden işçi kesinti tipi seçilir ve 'Sigorta kayıtlarını oluştur' butonuna tıklanır."
+}
+{
+  "instruction": "Personele işveren tarafından yapılan özel sağlık sigortası nasıl tanımlanır?",
+  "input": "Personel için işveren tarafından karşılanan özel sağlık sigortasını eklemek istiyorum. Nasıl tanımlarım?",
+  "output": "Personel şirket bilgileri kartına giriş yapılır. Sayfalar menüsünden özel sigorta bilgileri girilir. Poliçe bilgileri eklenir ve şirket oranı %100 olarak girilir. Kesinti ve ödenek tipleri menüsünden işveren kesinti ve ödenek tipi seçilir. 'Sigorta kayıtlarını oluştur' butonu tıklanır."
+}
+{
+  "instruction": "Aylık işgücü çizelgesinde belirli süreli iş sözleşmesine göre çalışan sayısı neden listelenmez?",
+  "input": "Aylık işgücü çizelgesinde belirli süreli iş sözleşmesine göre çalışanlar görünmüyor. Sebebi ne olabilir?",
+  "output": "Personel şirket bilgileri → Yasal parametreler sekmesinde 'Sözleşmeli' tanımı işaretlenmelidir."
+}
+{
+  "instruction": "Personele engelli indirim derecesi tanımlı olmasına rağmen bordroda engelli indirimi neden hesaplanmaz?",
+  "input": "Personelin engelli indirim derecesi tanımlı fakat bordroda engelli indirimi hesaplanmıyor. Sebebi ne olabilir?",
+  "output": "Personel şirket bilgileri → Yasal parametreler sekmesinde 'Engelli indirimi için rapor var mı' tanımının işareti kaldırılarak kayıt edilmelidir."
+}
+{
+  "instruction": "Personelin doğum veya askerlik borçlanma tutarı nasıl tanımlanır?",
+  "input": "Personelin doğum ve askerlik borçlanma tutarını sisteme girmek istiyorum. Nereden tanımlanır?",
+  "output": "Personel şirket bilgileri → Aylık gelir vergisi bilgileri sekmesinde 'Doğum, Askerlik Borç Tutar' alanına giriş yapılır."
+}
+{
+  "instruction": "Personelin önceki işyerinden gelen kümülatif gelir vergisi matrahı ve kümülatif vergisi nasıl tanımlanır?",
+  "input": "Personelin önceki işyerinden devreden kümülatif gelir vergisi matrahı ve vergisini sisteme girmek istiyorum. Nereden tanımlarım?",
+  "output": "Personel şirket bilgileri → Aylık gelir vergisi bilgileri sekmesinde 'Gelir Vergisi Matrahı', 'Gelir Vergisi' ve 'Gelir Vergisi Bilgilerinin Ait Olduğu Yıl' alanları kayıt edilir."
+}
+{
+  "instruction": "06111 teşvik tanımlı olmasına rağmen bordroda teşvik hesaplanmıyorsa ne yapılmalıdır?",
+  "input": "Personelin sicil bilgilerinde kanun no alanında 06111 teşvik kayıtlı fakat bordroda teşvik hesaplanmıyor. Ne yapmalıyım?",
+  "output": "Personel şirket bilgileri → Yasal parametreler sekmesinde kanun no alanındaki butona tıklanır. Başlangıç ve bitiş ay ile yıl süreleri tanımlanır."
+}
+{
+  "instruction": "Ar-Ge bordrosu için gerekli parametreler nasıl tanımlanır?",
+  "input": "Personel için Ar-Ge bordrosu oluşturacağım. Hangi parametreleri tanımlamam gerekiyor?",
+  "output": "- Personel şirket bilgileri → Yasal parametreler sekmesinde kanun no alanına 05746 seçilir.\n- Başlangıç ve bitiş ay ile yıl süreleri tanımlanır.\n- Aylık gelir vergisi bilgileri sekmesinde 'Gelir Vergisi Stopajı Arge', 'Arge Kapsamı Arge' ve 'Teşvik Terkin Oranı' alanları kayıt edilir."
+}
+{
+  "instruction": "Teknopark bordrosu için gerekli parametreler nasıl tanımlanır?",
+  "input": "Personel için Teknopark bordrosu oluşturacağım. Hangi parametreleri tanımlamalıyım?",
+  "output": "- Personel şirket bilgileri → Yasal parametreler sekmesinde kanun no alanına 05746 seçilir.\n- Başlangıç ve bitiş ay ile yıl süreleri tanımlanır.\n- 4691 proje kodu girilir.\n- Aylık gelir vergisi bilgileri sekmesinde 'Gelir Vergisi Stopajı Arge', 'Arge Kapsamı Arge' ve 'Teşvik Terkin Oranı' alanları kayıt edilir.\n- Özel Kod4 alanına 4691 yazılır."
+}
+{
+  "instruction": "Teknopark bordrosunda proje kodu nereden girilir?",
+  "input": "Teknopark bordrosu oluştururken 4691 proje kodunu hangi alana girmeliyim?",
+  "output": "Personel şirket bilgileri → Yasal parametreler sekmesinde gerekli tanımlar yapıldıktan sonra 4691 proje kodu '4691 Proje Kodu' alanına girilir. Ayrıca Özel Kod4 alanına da 4691 yazılır."
+}
+{
+  "instruction": "Ar-Ge ve Teknopark bordrolarında teşvik terkin oranı nereden tanımlanır?",
+  "input": "Hem Ar-Ge hem Teknopark bordrolarında teşvik terkin oranı girmem gerekiyor. Hangi sekmeden tanımlarım?",
+  "output": "Personel şirket bilgileri → Aylık gelir vergisi bilgileri sekmesinde 'Teşvik Terkin Oranı' alanına ilgili oran girilir."
+}
+{
+  "instruction": "Ar-Ge ve Teknopark bordrolarında kanun numarası nasıl seçilir?",
+  "input": "Ar-Ge veya Teknopark bordrosu oluştururken kanun numarasını nereden seçerim?",
+  "output": "Personel şirket bilgileri → Yasal parametreler sekmesinde 'Kanun No' alanına 05746 seçilir."
+}
+{
+  "instruction": "Bordro hesaplamasında çocuk yardımı neden hesaplanmaz?",
+  "input": "Bordroda çocuk yardımı görünmüyor. Ne yapmam gerekir?",
+  "output": "- Personel özlük kartı → Aile bilgileri menüsünden çocuk bilgileri kayıt edilir.\n- Personel şirket bilgileri → Yasal parametreler sekmesinde 'Çocuk Yardımı Alır' parametresi işaretlenir.\n- Kapsam bazında işyeri bazlı çocuk yardımı ödenek tanımı kayıt edilir."
+}
+{
+  "instruction": "Bordro hesaplamasında aile yardımı SGK muafiyeti nasıl kaldırılır?",
+  "input": "Bordroda aile yardımı SGK muafiyeti uygulanıyor. Bunu kaldırmak istiyorum. Nasıl yapabilirim?",
+  "output": "- Personel özlük kartı → Sayfalar → Aile durum bildirim menüsünden giriş yapılır.\n- 'Yeni Bildirim' tıklanır ve tarih tanımlanır.\n- Eşin durumu 'Çalışıyor' veya 'Geliri Olan' olarak kayıt edilir."
+}
+{
+  "instruction": "Çocuk yardımı alabilmesi için personel kartında hangi bilgiler tanımlanmalıdır?",
+  "input": "Personelin çocuk yardımı alabilmesi için hangi alanları doldurmalıyım?",
+  "output": "Personel özlük kartı → Aile bilgileri menüsünde çocuk bilgileri girilmeli ve personel şirket bilgileri → Yasal parametreler sekmesinde 'Çocuk Yardımı Alır' parametresi işaretlenmelidir."
+}
+{
+  "instruction": "Aile yardımı SGK muafiyeti eş çalışıyorsa nasıl engellenir?",
+  "input": "Eşi çalışan personel için aile yardımı SGK muafiyeti uygulanmaması gerekiyor. Ne yapmalıyım?",
+  "output": "Personel özlük kartı → Aile durum bildirim menüsünden yeni bildirim oluşturulur, tarih girilir ve eşin durumu 'Çalışıyor' veya 'Geliri Olan' olarak kayıt edilir."
+}
+{
+  "instruction": "Beyanname programına yüklenen aylık bildirgede asgari ücretli sayısı neden görünmez?",
+  "input": "Beyanname programına aylık bildirge yükledim fakat asgari ücretli sayısı gelmiyor. Sebebi ne olabilir?",
+  "output": "Personel şirket bilgileri → Sayfalar → Ücret bilgilerine giriş yapılır ve 'Asgari Ücretli' tanımı işaretlenir."
+}
+{
+  "instruction": "Huzur hakkı bordrosu için gerekli parametreler nasıl tanımlanır?",
+  "input": "Huzur hakkı bordrosu oluşturacağım. Hangi parametreleri girmeliyim?",
+  "output": "- Personel şirket bilgileri → Yasal parametreler sekmesinde belge türü 'Sigorta prim hesabı yapılmayan' olarak kayıt edilir.\n- Görev kodu '657 SK(4/b) kapsamında çalışanlar' olarak kayıt edilir.\n- 'İşsizlik Sigortası' tanımının işareti kaldırılır.\n- Ücret bilgilerinde 'Huzur Hakkı' tanımı işaretlenir."
+}
+{
+  "instruction": "Huzur hakkı bordrosunda işsizlik sigortası primi neden uygulanmaz?",
+  "input": "Huzur hakkı bordrosunda işsizlik sigortası primi hesaplanmaması için ne yapılır?",
+  "output": "Personel şirket bilgileri → Yasal parametreler sekmesinde 'İşsizlik Sigortası' tanımının işareti kaldırılır."
+}
+{
+  "instruction": "Asgari ücretli tanımı nereden yapılır?",
+  "input": "Bir personeli asgari ücretli olarak işaretlemek istiyorum. Hangi ekrandan yapabilirim?",
+  "output": "Personel şirket bilgileri → Sayfalar → Ücret bilgileri ekranında 'Asgari Ücretli' tanımı işaretlenir."
+}
+{
+  "instruction": "Geçmiş dönemden devreden sigorta matrahı bordro hesaplamasına nasıl dahil edilir?",
+  "input": "Personelin önceki dönemden devreden sigorta matrahı var. Bunu bordro hesaplamasına dahil etmek için ne yapmalıyım?",
+  "output": "Personel şirket bilgileri → Aylık sosyal güvenlik bilgileri sekmesinde 'Son Ay Devir SGK Matrah', 'Ay' ve 'Yıl' bilgileri kayıt edilir."
+}
+{
+  "instruction": "Personelin şirket bilgileri nasıl silinir?",
+  "input": "Personelin sisteme kayıtlı şirket bilgilerini silmek istiyorum. Nasıl yapabilirim?",
+  "output": "- Personel şirket bilgileri → Sayfalar menüsünden işyeri bilgileri silinir.\n- Ardından şirket bilgileri silinir."
+}
+{
+  "instruction": "Puantaj hesaplamasında 'Bordro İşyeri/Birim Parametre Bilgileri Bulunamadı' hatası nasıl çözülür?",
+  "input": "Puantaj hesaplaması yaparken 'Bordro İşyeri/Birim Parametre Bilgileri Bulunamadı' uyarısı alıyorum. Ne yapmalıyım?",
+  "output": "- Tahakkuk parametreleri menüsünden işyeri parametrelerine giriş yapılır.\n- Yeni tarihli işyeri parametre tanımı kayıt edilir."
+}
+{
+  "instruction": "Bordro hesaplamasında 'Bordro Genel Parametre Bilgileri Bulunamadı' hatası nasıl çözülür?",
+  "input": "Bordro hesaplaması yaparken 'Bordro Genel Parametre Bilgileri Bulunamadı' uyarısı geliyor. Nasıl düzeltebilirim?",
+  "output": "- Tahakkuk parametreleri menüsünden genel parametrelerine giriş yapılır.\n- Yeni tarihli genel parametre tanımı kayıt edilir."
+}
+{
+  "instruction": "SGK günü sıfır olan bordroda SGK primi nasıl hesaplanır?",
+  "input": "Bordroda SGK günü sıfır olan personel için SGK primi hesaplanmıyor. Bunu hesaplatmak için ne yapmalıyım?",
+  "output": "Bordro hesaplama menüsü → Diğer parametreler sekmesinde 'Günsüz bordroda SGK primi hesaplansın' tanımı aktif hale getirilerek hesaplama yapılır."
+}
+{
+  "instruction": "Personelin kesinti işlemi bordro hesaplamasına nasıl dahil edilir?",
+  "input": "Personelin maaşından yapılacak kesintiyi bordro hesaplamasına eklemek istiyorum. Hangi adımları izlemeliyim?",
+  "output": "- Kesinti işlemleri ekranından giriş yapılır.\n- Kesinti tipi ve ay seçimi yapılarak 'Yeni Kayıt' butonuna tıklanır.\n- Tutar ve taksit sayısı tanımlanır.\n- 'Ödeme Planı Oluştur' seçeneği ile plan oluşturulup kayıt edilir."
+}
+{
+  "instruction": "Farklı bordro sıra numarasına kesinti girişi nasıl yapılır?",
+  "input": "Belirli bir bordro sıra numarasına kesinti eklemek istiyorum. Nasıl yapabilirim?",
+  "output": "- Kesinti işlemleri ekranından giriş yapılır.\n- Kesinti tipi ve ay seçimi yapılır.\n- Ödeme planı dönemi seçilir.\n- Bordro sıra numarası girilir.\n- 'Yeni Kayıt' butonuna tıklanır.\n- Tutar ve taksit sayısı tanımlanır.\n- 'Ödeme Planı Oluştur' seçeneği ile plan oluşturulup kayıt edilir."
+}
+{
+  "instruction": "Organizasyon ağacından seçilen personelin bordroları neden listelenmez?",
+  "input": "Organizasyon ağacından bir personel seçtiğimde bordroları görünmüyor. Sebebi ne olabilir?",
+  "output": "Bordro hesaplama menüsünde 'Listelemede işyeri kullanılsın' parametresinin işareti kaldırılmalıdır."
+}
+{
+  "instruction": "Bordrosu olmayan personeller listesinin boş gelmesi nasıl düzeltilir?",
+  "input": "Bordro hesaplamasında 'Bordrosu olmayan personeller' seçeneğini tıkladığımda kayıt gelmiyor. Ne yapmalıyım?",
+  "output": "Puantaj girişi oluşturma menüsünden ilgili döneme puantaj kaydı yapılmalıdır."
+}
+{
+  "instruction": "Muhtasar aylık bildirge XML oluşturma sırasında 'ChilkatDotNet4.dll yüklenemedi' hatası nasıl çözülür?",
+  "input": "Muhtasar aylık bildirge XML oluştururken 'ChilkatDotNet4.dll dosyasını veya bağımlılıklardan birini yükleyemedi' hatası alıyorum. Ne yapmalıyım?",
+  "output": "- Visual C++ Redistributable 2010 32-bit sürümü indirilir.\n- Kurulum yapılır."
+}
+{
+  "instruction": "Bordroda yemek yardımında damga vergisi muafiyeti nasıl uygulanır?",
+  "input": "Bordroda hesaplanan yemek yardımına damga vergisi muafiyeti uygulanmıyor. Bunu nasıl aktif ederim?",
+  "output": "- Tahakkuk parametreleri menüsünden genel parametrelere giriş yapılır.\n- Diğer parametrik bilgiler sekmesine girilir.\n- 'Yemek Yardımında DV muafiyeti uygulansın' tanımının onay kutusu işaretlenir ve kayıt edilir."
+}
+{
+  "instruction": "Bordroda sendika kesintisi nasıl tanımlanır?",
+  "input": "Bordroda sendika kesintisi hesaplanmıyor. Nasıl tanımlarım?",
+  "output": "- Personel şirket bilgileri ekranına giriş yapılır.\n- Sayfalar menüsünden sendika bilgilerine girilir.\n- Sendika tanımı kayıt edilir."
+}
+{
+  "instruction": "Bordro hesaplamasında sendika kesintisinin asgari gün tanımı yapılarak hesaplanması nasıl sağlanır?",
+  "input": "Sendika kesintisinin yalnızca belirli bir asgari gün sayısına ulaşıldığında hesaplanmasını istiyorum. Nasıl yapabilirim?",
+  "output": "- Program yönetiminden sendika bilgileri ekranına giriş yapılır.\n- Kayıtlı sendika bilgileri listelenir.\n- Asgari gün sayısı girilerek kayıt edilir."
+}
+{
+  "instruction": "Personele tanımlanan ek kazanç ve sosyal yardım ödeneklerinin bordroda hesaplanması nasıl sağlanır?",
+  "input": "Personele ek kazanç ve sosyal yardım ödeneği tanımladım fakat bordroda hesaplanmıyor. Ne yapmalıyım?",
+  "output": "- Bordro hesaplama menüsünde 'Ek Kazanç Parametreleri' sekmesine tıklanır.\n- Listelenen ödeneklerin tümü işaretlenir."
+}
+{
+  "instruction": "Personelin dönem içindeki bordrosu nasıl silinir?",
+  "input": "Personelin dönem içinde oluşturulan bordrosunu silmek istiyorum ancak işlem yapılamıyor. Ne yapmam gerekir?",
+  "output": "- Bordro sıra numarası boş bırakılarak listeleme yapılır.\n- Listede birden fazla bordro varsa en büyük bordro sıra numarasına sahip bordro silinir."
+}
+{
+  "instruction": "Tamamlanan bordrolarda değişiklik ve silme işlemlerini kilitleme nasıl yapılır?",
+  "input": "Tamamlanan bordrolarda değişiklik yapılmasını ve silinmesini engellemek istiyorum. Nasıl kilitlerim?",
+  "output": "- Bordro işlemleri → Kapatılmış bordro dönemleri ekranına giriş yapılır.\n- İşyeri, ay, yıl bilgileri girilir ve 'Dönem Kapalı' tanımı işaretlenerek kayıt edilir."
+}
+{
+  "instruction": "Personelin icra kesintisi nasıl tanımlanır?",
+  "input": "Bir personel için icra kesintisi tanımlamak istiyorum. Hangi adımları izlemeliyim?",
+  "output": "- Özel kesinti işlemleri menüsünden personel icra bilgileri girilir.\n- İcra bilgileri tanımlanarak kayıt edilir.\n- 'İcra Kesintisi Ekle' butonuna tıklanır, kesinti tipi ve başlama ayı bilgileri girilir."
+}
+{
+  "instruction": "Kıdem tazminatı işleminde kıdem süresinden düşülecek gün nasıl tanımlanır?",
+  "input": "Kıdem tazminatı hesabında kıdem süresinden düşülecek günü nereye girmem gerekir?",
+  "output": "- İzin Yönetimi kullanılmıyorsa personel şirket bilgileri ekranına girilir.\n- Genel bilgiler sayfasında 'Kıdem Hesabında Düşülecek' alanındaki butona tıklanarak kayıt yapılır.\n- İzin Yönetimi kullanılıyorsa izin tipleri ekranına girilir.\n- İzin tipi seçilerek 'Kıdem süresinden düşülsün' tanımı işaretlenir."
+}
+{
+  "instruction": "Aylık iş gücü raporunda nakil olan personeller nasıl listelenir?",
+  "input": "Aylık iş gücü raporunda dönem içinde nakil olan personeller görünmüyor. Bunu listelemek için ne yapmalıyım?",
+  "output": "- Personel şirket bilgileri ekranına giriş yapılır.\n- İşyeri bilgilerinde 'Nakil ile Gidilen İşyeri' ve 'Nakil ile Geldiği İşyeri' alanları seçilerek kayıt edilir."
+}
+{
+  "instruction": "Banka transfer bilgilerinde banka kodu öndeğer olarak nasıl getirilir?",
+  "input": "Banka transfer bilgileri menüsünde banka kodu otomatik olarak gelmiyor. Nasıl ayarlayabilirim?",
+  "output": "- Program yönetimi → IK sistem parametreleri ekranına giriş yapılır.\n- 'Banka Disketi Öndeğer Banka Kodu' seçilerek kayıt edilir."
+}
+{
+  "instruction": "BES kapsamında olan personelin bordroda BES primi hesaplanması nasıl sağlanır?",
+  "input": "BES kapsamında olan personele bordro hesaplamasında BES primi hesaplanmıyor. Ne yapmalıyım?",
+  "output": "- Personel şirket bilgileri ekranına giriş yapılır.\n- Sayfalar menüsünden 'Zorunlu BES Hareketleri' girişi yapılır.\n- Sisteme giriş talep kaydı oluşturulur."
+}
+{
+  "instruction": "E-bildirge dağılımında 'Prim İkramiye ve Bu Nitelikteki İstihkak' alanı neden hesaplanmaz?",
+  "input": "Bordro hesaplandıktan sonra e-bildirge dağılımında 'Prim İkramiye ve Bu Nitelikteki İstihkak' alanı boş geliyor. Sebebi nedir?",
+  "output": "Bordro hesaplamasına dahil edilen ödeneklerin Ek Kazanç ve Sosyal Yardım Tipi tanımlama menüsünde kazanç tipi 'Sosyal Yardım' olarak kayıt edilmelidir."
+}
+{
+  "instruction": "Personele özel indirim bordroda nasıl hesaplanır?",
+  "input": "Bordroda personele özel indirim uygulamak istiyorum. Bunu nasıl yapabilirim?",
+  "output": "- Tekli bordro hesaplama menüsüne giriş yapılır.\n- 'Diğer İndirimler' alanındaki butona tıklanır.\n- İndirim tutarı girilerek yeniden hesaplama yapılır."
+}
+{
+  "instruction": "Geçmiş dönemden gelen özel sigorta matrahı bordroda nasıl hesaplanır?",
+  "input": "Personelin geçmiş dönemden devreden özel sigorta matrahını bordro hesaplamasına dahil etmek istiyorum. Ne yapmalıyım?",
+  "output": "- Personel şirket bilgileri ekranına giriş yapılır.\n- Aylık gelir vergisi bilgileri sayfasında 'Geç. Dön. Özel Sig. Matrahı' alanına tutar girilir."
+}
+{
+  "instruction": "Stajyer bordro hesaplamasında döner sermaye diğer ödeme koşulu nasıl tanımlanır?",
+  "input": "Stajyer bordro hesaplamasında döner sermaye diğer ödeme koşuluna göre işlem yapmak istiyorum. Hangi adımları izlemeliyim?",
+  "output": "- Personel şirket bilgileri ekranına giriş yapılır.\n- Sayfalar menüsünde ücret bilgileri ekranına girilir.\n- 'Dön. Ser. Perf. Diğ. Ödm.' tanımının onay kutusu işaretlenir."
+}
+{
+  "instruction": "Hastalık izinine bağlı rapor ücreti bordroda nasıl hesaplanır?",
+  "input": "Personelin hastalık iznine bağlı rapor ücretinin bordroda hesaplanmasını istiyorum. Ne yapmalıyım?",
+  "output": "- İşyeri parametreleri ekranına giriş yapılır.\n- 'Ücret Ödenen Rapor Günü' tanımlanır."
+}
+{
+  "instruction": "Aylık ücretli personelin devamsızlık yaptığında çalıştığı günün puantajdan düşülmesi nasıl sağlanır?",
+  "input": "Aylık ücretli çalışan personel devamsızlık yaptığında puantajda çalıştığı gün sayısının düşmesini istiyorum. Nasıl ayarlayabilirim?",
+  "output": "- İşyeri parametreleri ekranına giriş yapılır.\n- 'Aylık/Günlük Ücretten Dev. Saatler Düşülsün' onay kutusu işaretlenir."
+}
+{
+  "instruction": "Personel resimlerini özlük kartına toplu olarak nasıl kaydederim?",
+  "input": "Personel resimlerini toplu şekilde özlük kartlarına eklemek istiyorum. Hangi adımları izlemeliyim?",
+  "output": "- Resim dosyalarının formatı JPG olarak kayıt edilir.\n- IK sistem parametrelerinde personel resim dizini tanımlanır.\n- Personel servis işlemleri ekranında 30 numaralı servis çalıştırılır."
+}
+{
+  "instruction": "Part time çalışan personelin bordro hesaplaması nasıl yapılır?",
+  "input": "Kısmi zamanlı (part time) çalışan personel için bordro hesaplamasını nasıl yapabilirim?",
+  "output": "- Personel şirket bilgileri kartına giriş yapılır.\n- Yasal parametreler sekmesinde mesai durumu 'Yarı Zamanlı', çalışma şekli 'Kısmi Zamanlı' olarak tanımlanır.\n- Part time çalışma gün sayısı tanımlanır."
+}
+{
+  "instruction": "Ödeneklerde gelir vergisi muafiyetinin SGK ve işsizlik sigorta primi düşüldükten sonra brüt tutar üzerinden hesaplanması nasıl sağlanır?",
+  "input": "Ödeneklerde gelir vergisi muafiyetini, SGK ve işsizlik sigorta primi düşüldükten sonra brüt tutardan hesaplamak istiyorum. Nasıl yapabilirim?",
+  "output": "- Tahakkuk parametreleri → Genel parametreler ekranına giriş yapılır.\n- 'Ödeneklerde uygulanacak GV muafiyeti' alanına 'SGK ve İş. Sig. Primi Düşülmüş Brüt Tutar Üzerinden' tanımı kayıt edilir."
+}
+{
+  "instruction": "İkramiye bordrosunun son brüt ücret üzerinden hesaplanması nasıl sağlanır?",
+  "input": "İkramiye bordrosunun son brüt ücret üzerinden hesaplanmasını istiyorum. Hangi ayarı yapmalıyım?",
+  "output": "- Tahakkuk parametreleri → İşyeri parametreleri ekranına giriş yapılır.\n- 'İkramiye Birim Ücret Kaynağı' alanına 'Son Brüt Ücret Üzerinde Hesaplansın' tanımı kayıt edilir."
+}
+{
+  "instruction": "Ar-Ge bordrosunda hafta tatilini kapsam içi çalışmaya dahil ederek hesaplama nasıl yapılır?",
+  "input": "Ar-Ge bordrosu hesaplamasında hafta tatilini kapsam içi çalışmaya dahil etmek istiyorum. Nasıl yapabilirim?",
+  "output": "- Tahakkuk parametreleri → İşyeri parametreleri ekranına giriş yapılır.\n- 'Hafta Tatili Kapsam İçi Çalışmaya Dahil Edilsin' onay kutusu işaretlenir."
+}

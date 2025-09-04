@@ -1,0 +1,268 @@
+{
+"instruction": "Belgeler nasıl kaydedilir?", 
+"input": "ERP sisteminde belge düzenledim, nasıl kaydedebilirim?",
+ "output": "Belge içerisindeyken F2 tuşuna veya mavi disket simgesine basarak kaydedilir."
+}
+{
+"instruction": "Faturada seri nereden değiştirilir?",
+ "input": "ERP sisteminde faturanın seri numarasını değiştirmek istiyorum.", 
+ "output": "Kayıt menüsünde 'Seri' sekmesinden istenilen seri seçilerek seri değişikliği yapılır."
+}
+{
+"instruction": "Muhasebe alt hesap kartında işlem görmüş kartları silebilir miyiz?",
+ "input": "ERP sisteminde daha önce işlem görmüş muhasebe alt hesap kartını silmek istiyorum.",
+  "output": "Genel çalışma tanımlarında 'İşlem görmüş kartlar iptal edilebilsin' seçeneği aktif edilirse silme işlemi yapılabilir."
+}
+{
+"instruction": "Muhasebe alt hesap kartlarında, işlem görmüş kartların döviz cinsini değiştirebilir miyiz?", 
+"input": "ERP sisteminde işlem görmüş muhasebe alt hesap kartının döviz cinsini değiştirmek istiyorum.",
+ "output": "Genel çalışma tanımlarında 'İşlem görmüş kartların döviz cinsi değiştirilebilsin' seçeneği aktif edilirse değişiklik yapılabilir."
+}
+{
+"instruction": "Dövizli muhasebe fişi nasıl keseriz?", 
+"input": "ERP sisteminde dövizli muhasebe fişi düzenlemek istiyorum.", 
+"output": "Muhasebe dövizli çalışma tanımları aktif hale getirilir. Muhasebe fişinde Döviz/TL, Döviz cinsi, Döviz kuru ve Döviz tutarı alanlarının eklenmesi gerekir."
+}
+
+
+{
+"instruction": "Muhasebe fişinde istenilen hesabın hareketleri görülebilir mi?",
+ "input": "ERP sisteminde muhasebe fişinde belirli bir hesabın geçmiş hareketlerini görmek istiyorum.",
+  "output": "Muhasebe fiş satırında hesap kodu alanına istenilen hesap kodu yazılır, ardından Ctrl + H tuşuna veya kartın hareket listesi tuşuna tıklanarak hareketler listelenir."
+}
+{
+"instruction": "Muhasebe fişinde fişi verilen hesaba nasıl kapatabiliriz?", 
+"input": "ERP sisteminde muhasebe fişindeki bir hesabı kapatmak istiyorum.",
+ "output": "Fiş satırında ilgili hesap kodu yazıldıktan sonra Ctrl + Shift + B tuşuyla veya 'Fişi hesaba kapat' tuşuyla kapatılabilir."
+}
+{
+"instruction": "Muhasebe fişi içerisindeyken muavin alabilir miyim?", 
+"input": "ERP sisteminde muhasebe fişi düzenlerken muavin raporu almak istiyorum.",
+ "output": "İlgili hesap kodu üzerindeyken sağ tıklanarak 'Muavin' seçeneği ile muavin raporu alınabilir."
+}
+{
+"instruction": "Muhasebe fişini excele atabilir miyim? Excelden içeri muhasebe fişi atabilir miyim?", 
+"input": "ERP sisteminde muhasebe fişini excele aktarmak veya excelden fiş yüklemek istiyorum.", 
+"output": "Fiş içerisindeyken 'Excele aktar' tuşuyla fiş dışa aktarılır. Boş muhasebe fişinde 'Excelden veri transferi' tuşuyla içeri muhasebe fişi yüklenebilir."
+}
+{
+"instruction": "Belgelerde en son hangi kullanıcı değişiklik yapmış görebilir miyim?", 
+"input": "ERP sisteminde bir belgedeki son değişikliği kimin yaptığını öğrenmek istiyorum.", 
+"output": "Belgenin ayrıntı sayfasında en son değişiklik yapan kullanıcı bilgileri görüntülenir."
+}
+
+
+
+{
+"instruction": "Muhasebe fişinde aylık yevmiye satır sayılarını nasıl görebilirim?",
+ "input": "ERP sisteminde muhasebe fişi içerisindeyken aylık yevmiye satır sayılarını görmek istiyorum.",
+  "output": "Fiş içerisindeyken 'Aylık yevmiye satır sayılarını göster' tuşuna basılarak görüntülenebilir."
+}
+{
+"instruction": "Satış faturasında e-fatura mükellefi carinin e-fatura senaryosu temel fatura geliyor, ticari yapabilir miyim?",
+ "input": "ERP sisteminde satış faturası keserken e-fatura mükellefi carinin senaryosunu temel faturadan ticariye çevirmek istiyorum.",
+  "output": "Cari hesap kartında 'E-fatura' sayfasına girilerek senaryo alanı 'Ticari' olarak seçilebilir."
+}
+{
+"instruction": "E-irsaliye olmayan bir mükellefe irsaliye kesebilir miyiz?",
+ "input": "ERP sisteminde e-irsaliye mükellefi olmayan bir firmaya irsaliye düzenlemek istiyorum.",
+  "output": "Eğer kesen taraf e-irsaliye mükellefiyse, irsaliye mutlaka e-irsaliye olarak kesilmelidir."
+}
+{
+"instruction": "Cari hesap kartında yetkilileri nereden tanımlarım?",
+ "input": "ERP sisteminde cari hesap kartına yetkili kişi eklemek istiyorum.", 
+ "output": "Cari hesaplar menüsü altında 'Yetkililer' seçeneği kullanılarak tanımlama yapılabilir."
+}
+{
+"instruction": "Cari hesap kartlarında işlem görmüş bir kartı iptal edebilir miyim?", 
+"input": "ERP sisteminde işlem görmüş bir cari hesap kartını iptal etmek istiyorum.",
+ "output": "Cari hesap çalışma tanımlarında 'İşlem görmüş kartlar iptal edilebilsin' seçeneği işaretlenirse iptal işlemi yapılabilir."
+}
+
+
+
+{
+"instruction": "İşlem görmüş cari hesap kartlarında döviz cinsi değiştirilebilir mi?",
+ "input": "ERP sisteminde işlem görmüş cari hesap kartının döviz cinsini değiştirmek istiyorum.",
+  "output": "Cari hesap çalışma tanımlarında 'İşlem görmüş kartların döviz cinsi değiştirilebilsin' seçeneği işaretlenirse değişiklik yapılabilir."
+}
+{
+"instruction": "Caride devir tarihinden önceye kayıt girilebilir mi?", 
+"input": "ERP sisteminde cari hesaba devir tarihinden önce kayıt eklemek istiyorum.", 
+"output": "Cari hesap çalışma tanımlarında 'Devir tarihinden önceye işlem girişine izin verilsin' seçeneği işaretlenirse işlem yapılabilir."
+}
+{
+"instruction": "Cari hesap kartında kredi limiti tanımlayabilir miyiz?", 
+"input": "ERP sisteminde bir cari hesap için kredi limiti belirlemek istiyorum.",
+ "output": "Cari hesap kartındaki 'Kredi limiti' alanına tutarsal değer girilerek limit tanımlanabilir."
+}
+{
+"instruction": "Cari hesap kartını nereden pasif yapabilirim?",
+ "input": "ERP sisteminde aktif durumdaki bir cari hesabı pasif yapmak istiyorum.", 
+ "output": "İlgili cari hesap kartındaki 'Aktif/Pasif' alanı 'Pasif' olarak seçilerek yapılabilir."
+}
+{
+"instruction": "Cari hesap kartında alıcı etiketi boş veya hatalı geliyor, ne yapmalıyım?", 
+"input": "ERP sisteminde cari hesap kartında alıcı etiketi hatalı görünüyor.", 
+"output": "Kayıtlı kullanıcılar güncellenmelidir."
+}
+
+
+{
+"instruction": "Fatura numarasını elle vererek nasıl fatura kesebilirim?", 
+"input": "ERP sisteminde fatura numarasını manuel olarak girmek istiyorum.", 
+"output": "Herhangi bir fatura seçeneğinde, 'E-arşiv aktif/pasif durumunu değiştir' tuşuna basılır, açılan ekranda çentik kaldırılır. Seçenekler kısmında 'Fatura no otomatik verilmesin' çentiği kaldırılarak manuel fatura numarası girilebilir."
+}
+{
+"instruction": "Pasif cari hesap kartlarına işlem yapabilir miyiz?", 
+"input": "ERP sisteminde pasif durumdaki cari hesap kartına işlem yapmak istiyorum.",
+ "output": "Cari hesap çalışma tanımlarında 'Pasif kartlara işlem yapılsın' seçeneği işaretlenmelidir."
+}
+{
+"instruction": "Cari hesap kartlarında pasif kartlar F9 ve F10 penceresinde gelmiyor, ne yapmalıyım?", 
+"input": "ERP sisteminde F9 ve F10 penceresinde pasif cari hesap kartlarının görünmesini istiyorum.", 
+"output": "Cari hesap çalışma tanımlarında 'Pasif kartlar F9 seçim listesinde yer alsın' ve 'Pasif kartlar F10 seçim listesinde yer alsın' seçenekleri işaretlenmelidir."
+}
+{
+"instruction": "Yeni cari hesap kartı açıldığında otomatik muhasebe hesap kartı açılabilir mi?", 
+"input": "ERP sisteminde yeni cari hesap kartı açarken otomatik olarak muhasebe hesap kartı da açılmasını istiyorum.", 
+"output": "Cari hesap çalışma tanımlarında 'Yeni C/H kartı açıldığında hesap planına eklensin' seçeneği işaretlenirse otomatik olarak muhasebe alt hesap kartı da açılır."
+}
+{
+"instruction": "Cari hesap kartlarında kredi limiti ayarı yapmak istiyorum, mümkün mü?", 
+"input": "ERP sisteminde cari hesap kartına parametrik kredi limiti tanımlamak istiyorum.", 
+"output": "Cari hesap çalışma tanımlarında 'Kredi limiti' alanından parametrik olarak ayarlanabilir."
+}
+
+
+{
+"instruction": "Cari hesap kartında opsiyon günü girebilir miyim?", 
+"input": "ERP sisteminde cari hesap kartına opsiyon günü eklemek istiyorum.", 
+"output": "Evet. Opsiyon günü alanına gün cinsinden rakamsal değer girilerek ilgili cari hesap kartında kullanılır."
+}
+{
+"instruction": "E fatura çıktısında adres bilgileri çıkmıyor, neden?",
+ "input": "ERP sisteminde e fatura çıktısında adres bilgilerini göstermek istiyorum.", 
+ "output": "Cari hesap kartının e fatura sayfasında adres bilgileri doldurulmadığında adres bilgileri çıkmaz. Adres bilgileri eksiksiz doldurulmalıdır."
+}
+{
+"instruction": "Cari hesap kartı ekstresini nasıl alırım?", 
+"input": "ERP sisteminde belirli bir cari hesap kartına ait ekstre almak istiyorum.", 
+"output": "Cari hesap kodu yazılıp üzerinde sağ Mouse ile tıklanarak 'Ekstre' seçeneği seçilir."
+}
+{
+"instruction": "Cari hesap kartı hareket listesini nasıl alırım?", 
+"input": "ERP sisteminde cari hesap kartının tüm hareketlerini listelemek istiyorum.", 
+"output": "Ctrl + H tuşlarına basılarak veya 'Kartın hareket listesini aç' tuşuyla alınabilir."
+}
+{
+"instruction": "E arşiv faturası kesmek isterken e arşiv fatura serileri gelmiyor, neden?", 
+"input": "ERP sisteminde e arşiv fatura serilerinin görünmesini istiyorum.", 
+"output": "İşletmende ilgili firma kartında 'E arşiv faturası kullanılıyor' seçeneği işaretlenmelidir."
+}
+
+
+
+{
+"instruction": "Cari hesap kartındayken excelden cari hesap kartı aktarabilir miyim?", 
+"input": "ERP sisteminde excelden cari hesap kartlarını toplu olarak aktarmak istiyorum.", 
+"output": "Evet. Ctrl + W veya 'Excelden veri transferi' tuşuyla veri aktarılabilir."
+}
+{
+"instruction": "Cari hesap kartında belge bazlı not girişi yapabilir miyim?", 
+"input": "ERP sisteminde cari hesap kartına belirli bir belgeye ait not eklemek istiyorum.", 
+"output": "Evet. İlgili cari hesap kartının 'Notlar' sayfasında, not tarihi, açıklama ve evrak tipi seçilerek not eklenebilir."
+}
+{
+"instruction": "Cari hesap kartı bazında bekleyen evrak türlerini görebilir miyim?", 
+"input": "ERP sisteminde bir cari hesap kartına ait bekleyen evrak türlerini listelemek istiyorum.", 
+"output": "Evet. İlgili cari hesap kartı seçilip 'Bekleyen İşler' sayfasından evrak türü seçilerek listelenebilir."
+}
+{
+"instruction": "Stok kartında miktar takibi yapılmasın istiyorum, nasıl yapabilirim?", 
+"input": "ERP sisteminde belirli bir stok kartı için miktar takibini kapatmak istiyorum.", 
+"output": "İlgili stok kartında 'Miktar Takibi' işareti kaldırılarak yapılır."
+}
+{
+"instruction": "Stok kartında miktar takibi nasıl yapılır?", 
+"input": "ERP sisteminde stok kartında miktar takibini aktif hale getirmek istiyorum.", 
+"output": "İlgili stok kartında 'Miktar Takibi' alanı işaretlenerek yapılır."
+}
+
+
+{
+"instruction": "Stok kartında KDV oranı nereye girilir?",
+ "input": "ERP sisteminde stok kartına KDV oranı eklemek istiyorum.", 
+ "output": "KDV % alanına oran cinsinden girilerek kullanılması sağlanır."}
+{
+"instruction": "Stok kartında farklı satış fiyatları uygulayabilir miyim?", 
+"input": "ERP sisteminde stok kartı için farklı satış fiyatları tanımlamak istiyorum.", 
+"output": "Stok kartı satış sayfasında 6 adet döviz, 6 adet TL olmak üzere farklı fiyat uygulanabilir."
+}
+{
+"instruction": "Stok kartında GTPN no bilgisi nereye girilir?", 
+"input": "ERP sisteminde stok kartına GTPN numarası eklemek istiyorum.", 
+"output": "Stok kartı Alış/Mlyt sayfasında GTPN alanına girilir."}
+{
+"instruction": "Stok kartında birden fazla alış fiyatı girebilir miyim?", 
+"input": "ERP sisteminde stok kartına birden fazla alış fiyatı eklemek istiyorum.", 
+"output": "Alış/Mlyt sayfasında 3 adet TL, 3 adet döviz fiyatı girilebilir."
+}
+{
+"instruction": "Stok kartındayken ekstre nasıl alırım?", 
+"input": "ERP sisteminde stok kartı için ekstre almak istiyorum.", 
+"output": "İlgili mal kodu yazılıp, sağ Mouse yapılarak ekstre seçeneğinden alınır."
+}
+
+
+
+{
+    "instruction": "İşlem görmüş stok kartı iptal edilebilir mi?", 
+    "input": "ERP sisteminde işlem görmüş stok kartını iptal etmek istiyorum.", 
+    "output": "Stok çalışma tanımlarında, İşlem görmüş kartlar iptal edilebilsin seçilerek iptal edilir."
+}
+{
+    "instruction": "İşlem görmüş stok kartının döviz cinsi değiştirilebilir mi?", 
+    "input": "ERP sisteminde işlem görmüş stok kartının döviz cinsini değiştirmek istiyorum.", 
+    "output": "Stok çalışma tanımlarında, işlem görmüş kartların döviz cinsi değiştirilebilsin seçilerek değiştirilir."
+}
+{
+    "instruction": "Stoğun eksiye düşmemesini nasıl engelleriz?", 
+    "input": "ERP sisteminde stokların eksiye düşmesini engellemek istiyorum.", 
+    "output": "Stok çalışma tanımlarında, stok miktar kontrolü işlemlerden seçilerek yapılır."
+}
+{
+    "instruction": "Stok kartlarını excele aktarabilir miyim?", 
+    "input": "ERP sisteminde stok kartlarını excel dosyasına aktarmak istiyorum.", 
+    "output": "Excele veri aktar tuşuyla yapılabilir."}
+{
+    "instruction": "Excelden stok kartı aktarabilir miyiz?", 
+    "input": "ERP sistemine excelden stok kartı aktarmak istiyorum.", 
+    "output": "Excelden veri aktar tuşuyla aktarılabilir."
+}
+
+
+
+{
+    "instruction": "Belge olmadan stok giriş veya çıkışlarını nasıl yapabilirim?", 
+    "input": "ERP sisteminde belge olmadan stok giriş veya çıkış yapmak istiyorum.", 
+    "output": "Fişler, stok giriş veya çıkış fişinden yapılır."}
+{
+    "instruction": "Satış faturasında birden fazla KDV nasıl kullanılır?", 
+    "input": "ERP sisteminde satış faturasında birden fazla KDV oranı uygulamak istiyorum.", 
+    "output": "KDV uygulama tanımlarında kalemde KDV var seçilmesi gerekir."
+}
+{
+    "instruction": "Satış faturasında tevkifat nasıl uygulanır?", 
+    "input": "ERP sisteminde satış faturasında tevkifat uygulamak istiyorum.", 
+    "output": "KDV uygulama tanımlarında kalemde tevkifat var seçilmelidir."
+}
+{
+    "instruction": "Satış faturasında seri/parti numarası kullanamıyorum, ne yapmalıyım?", 
+    "input": "ERP sisteminde satış faturasında seri/parti numarası kullanmak istiyorum fakat çalışmıyor.", 
+    "output": "Seri parti no kontrolü tanımı evet seçilmelidir."}
+{
+    "instruction": "Satış faturasında vade tarihine opsiyon gününü eklemiyor, nasıl düzeltebilirim?", 
+    "input": "ERP sisteminde satış faturasında vade tarihine opsiyon günü eklenmesini istiyorum.", 
+    "output": "Vade tarihi tanımlarında, Fatura vade tarihi (Fatura tarihi+Opsiyon günü) seçilmelidir."
+}

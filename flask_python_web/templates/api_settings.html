@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>API Ayarları</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f7f7f8;
+      padding: 40px;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    select, button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    .message {
+      margin-top: 20px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>⚙️ API Ayarları</h2>
+    <form method="POST">
+      <label for="selected_model">Kullanılacak Model:</label>
+      <select name="selected_model" id="selected_model">
+  {% for model, name in models.items() %}
+    <option value="{{ model }}" {% if model == current_model %}selected{% endif %}>{{ name }}</option>
+  {% endfor %}
+</select>
+
+      <button type="submit">Kaydet</button>
+    </form>
+    {% if message %}
+      <div class="message">{{ message }}</div>
+    {% endif %}
+  </div>
+</body>
+</html>

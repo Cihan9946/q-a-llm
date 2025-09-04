@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Chat Popup – Link yapay zeka </title>
+  <style>
+    :root{
+      --brand:#111;
+      --accent:#00b5ff;
+      --bubble-user:#e8f5ff;
+      --bubble-bot:#f5f5f7;
+      --text:#111;
+      --muted:#6b7280;
+      --radius:16px;
+      --shadow:0 12px 30px rgba(0,0,0,.18);
+      --border:1px solid rgba(0,0,0,.08);
+      --butoncolor:#474747;
+      --kırmızı:#ff0000;
+    }
+    html,body{height:100%;margin:0;}
+    body{font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, Noto Sans; color:var(--text);}
+
+    /* Launcher */
+    .chat-launcher{
+      position: fixed; inset: auto 20px 20px auto;
+      width:64px; height:64px; display:grid; place-items:center;
+      background: var(--brand); color:#fff; border-radius: 999px; border: none;
+      box-shadow: var(--shadow); cursor:pointer; z-index: 1000;
+    }
+    .chat-launcher svg{ width:28px; height:28px; }
+    .chat-launcher-badge{ position:absolute; top:-4px; right:-4px; background:var(--kırmızı); color:#ffffff; font-size:12px; font-weight:700; padding:4px 6px; border-radius:999px; box-shadow:0 8px 20px rgba(0,181,255,.35); }
+    .chat-launcher:focus{ outline: 3px solid rgba(143, 143, 143, 0.5); outline-offset:3px; }
+
+    /* Popup */
+    .chat-popup{
+      position: fixed; right: 20px; bottom: 96px;
+      width: 360px;
+      height: 75vh;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      border:var(--border);
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+      z-index: 1000;
+    }
+    .chat-popup.open{ display:flex; }
+
+    /* Rating bar */
+    .rate-bar {
+      background:#f9fafb; border-bottom:1px solid #e5e7eb;
+      padding:8px 12px; display:flex; align-items:center; justify-content:space-between;
+      font-size:14px; font-weight:600;
+    }
+    .rate-bar a {color:var(--accent); font-weight:700; cursor:pointer; text-decoration:none;}
+
+    /* Intro screen */
+    #introScreen{flex: 1; padding:20px;overflow:auto;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+    #introScreen img{width:80px;margin-bottom:12px;}
+    #introScreen h2{margin:10px 0 6px;font-size:18px;}
+    #introScreen p{font-size:13px;line-height:1.4;color:#333;max-height:110px;overflow:auto;text-align:left;}
+    #introScreen label{font-size:13px;margin-top:10px;display:flex;align-items:center;gap:6px;}
+    #startBtn{margin-top:16px;padding:10px 14px;border:none;border-radius:10px;background:var(--butoncolor);color:#fff;font-weight:600;cursor:pointer;width:100%;}
+    #startBtn:disabled{opacity:.5;cursor:not-allowed;}
+
+    /* Chat UI */
+    .chat-header{ background: #ffffff; color:#fff; padding:14px 16px; display:flex; align-items:center; gap:10px;justify-content: space-between; }
+    .chat-title{ font-size:15px; font-weight:700; line-height:1.2; }
+    .chat-sub{ font-size:12px; opacity:.8; }
+    .chat-header-spacer{ flex:1; }
+    .icon-btn{ background: transparent; border: none; color: inherit; cursor: pointer; padding: 6px; border-radius: 10px; }
+    .icon-btn:hover{ background: rgba(255,255,255,.08); }
+.chat-avatar {
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  overflow: hidden; /* köşelerden taşmayı engeller */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-avatar img {
+  width: 100px;
+  height: 50px;
+  object-fit: contain; /* logonun deforme olmadan sığmasını sağlar */
+  margin-top: 10px;
+}
+
+    .chat-body{
+      flex:1;
+  padding:12px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  overflow-y:auto;      /* sadece burası scroll */
+  scroll-behavior:smooth;
+  min-height:0;
+    }
+    .msg{
+          white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+        max-width: 80%; padding:8px 10px; border-radius: 14px; line-height:1.35; font-size:14px; border:var(--border); position:relative; }
+    .msg.time{ align-self:center; background:transparent; border:none; color:var(--muted); font-size:12px; }
+    .msg.bot{ background:var(--bubble-bot); border:1px solid #ececef; }
+    .msg.user{ background:var(--bubble-user); align-self:flex-end; border:1px solid #d9ecff; }
+    .msg-time { font-size:11px; color:var(--muted); margin-left:6px; vertical-align:bottom; }
+
+    .chat-input {
+  border-top: var(--border);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;     /* alta sabitlenir */
+  background:#fff;    /* kayarken intro/chat üstüne binmez */
+}
+
+.input-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.chat-input textarea {
+  width: 100%;
+  resize: none;
+  max-height: 120px;
+  min-height: 22px;
+  padding: 10px 42px 10px 12px; /* sağa buton için boşluk */
+  border-radius: 12px;
+  border: var(--border);
+  border-color: #001018;
+  font: inherit;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.chat-input textarea:focus {
+  outline: 2px solid var(--brand);
+  border-color: transparent;
+}
+
+.send-btn {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: var(--butoncolor);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.send-btn.active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.send-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0;
+  transform: scale(0);
+}
+
+ 
+
+    /* Suggestions */
+    .suggestions {display:flex;flex-direction:column;gap:8px;margin-bottom:12px;}
+    .suggestion {border:1px solid #e5e7eb; border-radius:12px; padding:10px; font-size:13px; cursor:pointer; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,.05);}
+    .suggestion:hover {background:#f9fafb;}
+    .suggestion strong {font-size:14px; color:#111;}
+    .suggestion span {display:block; font-size:12px; color:#444; margin-top:2px;}
+
+    .typing{display:flex;align-items:center;gap:4px;}
+    .dot{width:6px;height:6px;border-radius:50%;background:#555;animation:bounce 1s infinite;}
+    .dot:nth-child(2){animation-delay:0.2s;}
+    .dot:nth-child(3){animation-delay:0.4s;}
+    @keyframes bounce{0%,80%,100%{transform:scale(0.7);opacity:0.5;}40%{transform:scale(1);opacity:1;}}
+
+    /* Rating ekranı */
+    .rating-screen, .thanks-screen {flex:1; padding:20px; overflow:auto; display:none; flex-direction:column; align-items:center; text-align:center;}
+    .stars span{font-size:28px; cursor:pointer; color:#ccc;}
+    .stars span.active{color:gold;}
+    .options{display:flex;flex-wrap:wrap;gap:8px; margin:10px 0;}
+    .options button{padding:6px 10px;border:1px solid #ccc;border-radius:8px;background:#fff;cursor:pointer;font-size:12px;}
+    .options button:hover{background:#f9fafb;}
+    textarea.feedback{width:100%;min-height:70px;border:1px solid #ccc;border-radius:8px;padding:8px;font-family:inherit;margin-top:10px;}
+    .blue-btn{background:var(--butoncolor); color:#fff; padding:10px 14px; border:none; border-radius:8px; font-weight:700; margin-top:14px; cursor:pointer;}
+  
+  
+.chat-info {
+  margin-left: auto;      /* en sağa iter */
+  text-align: right;      /* yazıları sağa yaslar */
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.chat-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+}
+
+.chat-sub {
+  font-size: 12px;
+  color: #6b7280;
+}
+#chatScreen{
+ flex:1;                       /* üst-alt sabit, ortası esnek */
+  display:flex;
+  flex-direction:column;
+  min-height:0;   
+  display:none;  
+}
+
+  </style>
+</head>
+<body>
+
+  <button class="chat-launcher" id="chatLauncher">
+    <span class="chat-launcher-badge">?</span>
+    <svg viewBox="0 0 24 24" fill="none"><path d="M4 5a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H9l-5 5v-16Z" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="9" r="1" fill="currentColor"/><circle cx="13" cy="9" r="1" fill="currentColor"/><circle cx="17" cy="9" r="1" fill="currentColor"/></svg>
+  </button>
+
+  <section class="chat-popup" id="chatPopup">
+    <!-- Rating bar -->
+    <div class="rate-bar">Link AI Asistanımızı değerlendirin <a id="goRate">GO</a></div>
+
+    <!-- Intro -->
+    <div id="introScreen">
+      <img style="width: 150px; height: 100px;" src="{{ url_for('static', filename='icon1.png') }}" alt="icon"/>
+      <h2>Yapay Zeka Asistanı</h2>
+      <strong>Link Bilgisayar Gizlilik Bildirimi</strong>
+      <p>Link Bilgisayar AI Assistant sohbet robotunu ("bu Hizmet") kullanmaya hoş geldiniz!
+Bu Hizmet'te girdiğiniz soruları yanıtlamak, bu Hizmeti iyileştirmek ve optimize etmek için, "Yukarıdaki bildirimi kabul ediyorum" butonuna tıklayarak, Link Bilgisayar'a aşağıdaki verileri sağlamayı ve ayrıca Link Bilgisayar Gizlilik Politikası'nı kabul etmiş olursunuz. Çocukların gizliliğini korumak amacıyla, bu hizmet aracılığıyla çocuklardan kişisel veri toplamayacağız. Çocuksanız, sizin adınıza destek hizmeti talep etmesi için ebeveyninizi veya yasal vasinizi önereceğiz:
+1. Görüşme kaydı ve cevaplarımızda tıkladığınız beğen/beğenme butonu.
+2. Sohbet odasının sağ üst tarafındaki "Geri Bildirim" formunu doldurmayı seçerseniz, Link Bilgisayar bu Hizmet'te gönderdiğiniz memnuniyet oranını ve yorumları toplayabilir.
+Lütfen bu Hizmet'te kişisel verilerinizi (adınız, iletişim bilgileriniz, ürün seri numaraları, onarım bilgileri vb.) girmekten kaçının.</p>
+
+<hr style="border: 0,1px solid #000000; width: 300px;">
+
+      <label><input type="checkbox" id="agreeChk">Kabul ediyorum</label>
+      <button id="startBtn" disabled>Sohbete başla</button>
+    </div>
+
+    <!-- Chat -->
+    <div id="chatScreen" >
+<header class="chat-header">
+  <div class="chat-avatar">
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="Link Logo" />
+  </div>
+
+  <div class="chat-info">
+    <div class="chat-title">Link Asistan</div>
+    <div class="chat-sub">Çevrimiçi</div>
+  </div>
+
+  <button class="icon-btn" id="minBtn">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <path d="M5 12h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+  </button>
+</header>
+
+
+
+      <main class="chat-body" id="chatBody">
+   <div id="suggestionContainer" class="suggestions">
+  <div class="suggestion">
+    <strong>💰 Tahsilat İşlemleri</strong><br>
+    <span>Link-Cloud ERP’de tahsilatı nasıl alırım?</span>
+  </div>
+  <div class="suggestion">
+    <strong>📄 Fatura İşlemleri</strong><br>
+    <span>Link-Cloud ERP’de fatura nasıl kesilir?</span>
+  </div>
+  <div class="suggestion">
+    <strong>👥 Cari Hesaplar</strong><br>
+    <span>Cari hesap ekleme ve takibini nasıl yaparım?</span>
+  </div>
+  <div class="suggestion">
+    <strong>🏦 Banka İşlemleri</strong><br>
+    <span>Banka ödeme ve tahsilatlarını nasıl kaydederim?</span>
+  </div>
+
+</div>
+
+        <div class="msg time" id="timeStamp"></div>
+      </main>
+
+  <form class="chat-input" id="chatForm">
+  <div class="input-wrapper">
+    <textarea style="width: 270px; height: 22px;" id="chatText" rows="1" placeholder="Bir şey yazın…"></textarea>
+    <button class="send-btn" id="sendBtn" type="submit" disabled>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="18" height="18">
+        <path d="M2 21l21-9L2 3v7l15 2-15 2v7z"/>
+      </svg>
+    </button>
+  </div>
+</form>
+
+    </div>
+
+    <!-- Rating Screen -->
+    <div id="ratingScreen" class="rating-screen">
+      <h3>
+AI Assistant deneyiminizden bahseder misiniz?</h3>
+      <div class="stars" id="starBox"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      <div class="options">
+        <button>
+Sorunumu çözdüm</button><button>Kapsamlı yanıt</button>
+        <button>Hızlı cevap
+</button><button>Doğal ton</button><button>Diğer Öneriler</button>
+      </div>
+      <textarea class="feedback" placeholder="Düşüncelerinizi paylaşın..."></textarea>
+      <button class="blue-btn" id="submitRate">Gönder</button>
+    </div>
+
+    <!-- Thanks Screen -->
+    <div id="thanksScreen" class="thanks-screen">
+      <h3>
+Puanınız ve geri bildiriminiz için teşekkür ederiz.</h3>
+      <button class="blue-btn" id="backToChat">
+Sohbete Geri Dön</button>
+      <button class="blue-btn" id="restartChat">Sohbeti Yeniden Başlat</button>
+    </div>
+  </section>
+
+  <script>
+    const qs = sel => document.querySelector(sel);
+    let el = {
+      launcher: qs('#chatLauncher'),
+      popup: qs('#chatPopup'),
+      intro: qs('#introScreen'),
+      chat: qs('#chatScreen'),
+      agree: qs('#agreeChk'),
+      start: qs('#startBtn'),
+      body: qs('#chatBody'),
+      form: qs('#chatForm'),
+      input: qs('#chatText'),
+      send: qs('#sendBtn'),
+      min: qs('#minBtn'),
+      time: qs('#timeStamp'),
+      sugg: qs('#suggestionContainer'),
+      rating: qs('#ratingScreen'),
+      thanks: qs('#thanksScreen'),
+      go: qs('#goRate'),
+      submit: qs('#submitRate'),
+      back: qs('#backToChat'),
+      restart: qs('#restartChat')
+    };
+
+    const fmtTime = () => new Date().toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'});
+
+    function toggle(open){ el.popup.classList.toggle('open', open ?? !el.popup.classList.contains('open')); }
+    el.launcher.addEventListener('click',()=> toggle());
+    el.min.addEventListener('click',()=> toggle(false));
+
+    el.agree.addEventListener('change', ()=> el.start.disabled = !el.agree.checked);
+    el.start.addEventListener('click', ()=>{
+      el.intro.style.display='none';
+      el.chat.style.display='flex';
+      const botNode = addMsg("", 'bot');
+      typeWriter(botNode, "Merhabalar! Ben Link Bilgisayar Yapay Zeka asistanıyım...");
+    });
+
+el.input.addEventListener('input', ()=>{
+  el.input.style.height='auto';
+  el.input.style.height = Math.min(el.input.scrollHeight, 120) + 'px';
+
+  if (el.input.value.trim() !== "") {
+    el.send.disabled = false;
+    el.send.classList.add("active");
+  } else {
+    el.send.disabled = true;
+    el.send.classList.remove("active");
+  }
+});
+
+// Enter tuşu gönderme (Shift+Enter satır atlatır)
+el.input.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && !e.shiftKey) {
+    e.preventDefault();
+    if (!el.send.disabled) {
+      el.form.requestSubmit();
+    }
+  }
+});
+
+
+    el.form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const text = el.input.value.trim();
+      if(!text) return;
+      sendMessage(text);
+    });
+
+    function addMsg(text, who='bot'){
+      const node = document.createElement('div');
+      node.className = `msg ${who}`;
+      node.innerHTML = escapeHTML(text) + `<span class="msg-time">${fmtTime()}</span>`;
+      el.body.insertBefore(node, el.time);
+      el.body.scrollTop = el.body.scrollHeight;
+      return node;
+    }
+
+    function sendMessage(text){
+      addMsg(text, 'user');
+      el.input.value = ''; el.input.dispatchEvent(new Event('input'));
+      const typingNode = document.createElement('div');
+      typingNode.className = "msg bot";
+      typingNode.innerHTML = `<div class="typing"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>`;
+      el.body.insertBefore(typingNode, el.time);
+      el.body.scrollTop = el.body.scrollHeight;
+      apiReply(text).then(reply=>{
+        typingNode.remove();
+        const botNode = addMsg("", 'bot');
+        typeWriter(botNode, reply);
+      });
+    }
+
+    function typeWriter(node, text, speed=40, callback){
+      let i = 0;
+      (function typing(){
+        if(i < text.length){
+          node.innerHTML = escapeHTML(text.substring(0,i+1)) + `<span class="msg-time">${fmtTime()}</span>`;
+          i++;
+          el.body.scrollTop = el.body.scrollHeight;
+          setTimeout(typing, speed);
+        } else if(callback) callback();
+      })();
+    }
+
+    async function apiReply(q){
+      try {
+        const res = await fetch("/chat", {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({ message: q })
+        });
+        if(!res.ok){
+          return `⚠️ Sunucu hatası: ${res.status}`;
+        }
+        const data = await res.json();
+        return data.response || JSON.stringify(data);
+      } catch(err){
+        console.error(err);
+        return "❌ API bağlantısı kurulamadı.";
+      }
+    }
+
+    const wait = (ms)=> new Promise(r=>setTimeout(r, ms));
+    function escapeHTML(s){ return s.replace(/[&<>"']/g, m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[m])); }
+
+    // Önerilere tıklayınca mesaj gönder
+    function bindSuggestions(){
+      el.sugg.querySelectorAll(".suggestion").forEach(s=>{
+        s.addEventListener("click", ()=> sendMessage(s.innerText));
+      });
+    }
+    bindSuggestions();
+
+    // ⭐ Rating ekranı geçişleri
+    el.go.onclick=()=>{el.intro.style.display='none';el.chat.style.display='none';el.rating.style.display='flex';el.thanks.style.display='none';};
+    el.submit.onclick=()=>{el.rating.style.display='none';el.thanks.style.display='flex';};
+    el.back.onclick=()=>{el.thanks.style.display='none';el.chat.style.display='flex';};
+    el.restart.onclick=()=>{
+      el.thanks.style.display='none';el.chat.style.display='none';el.intro.style.display='flex';
+      // chat ekranını sıfırla
+      el.body.innerHTML = `
+        <div id="suggestionContainer" class="suggestions">
+          <div class="suggestion"><strong>📘 Product Specifications</strong><br><span>What are the specifications of the Zenbook A14 (UX3407) AI laptop?</span></div>
+          <div class="suggestion"><strong>🎯 Product Recommendation</strong><br><span>Can you recommend the latest 15-inch laptop for students?</span></div>
+          <div class="suggestion"><strong>🔄 Compare Products</strong><br><span>What are the differences between the AI laptop Zenbook A14 (UX3407) and Zenbook S16 (UX5606)?</span></div>
+          <div class="suggestion"><strong>⌨️ Accessory Suggestion</strong><br><span>Can you recommend a wireless keyboard?</span></div>
+        </div>
+        <div class="msg time" id="timeStamp"></div>`;
+      // yeniden DOM referanslarını güncelle
+      el.sugg = qs('#suggestionContainer');
+      el.time = qs('#timeStamp');
+      bindSuggestions();
+    };
+
+    // ⭐ yıldız seçimi
+    qs('#starBox').querySelectorAll('span').forEach((s,i,arr)=>{s.onclick=()=>{arr.forEach((sp,j)=>sp.classList.toggle('active', j<=i));};});
+  </script>
+</body>
+</html>

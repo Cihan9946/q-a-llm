@@ -1,0 +1,141 @@
+{
+  "instruction": "Fatura karşı tarafa ulaşmış ancak sistem yanıtı gelmemişse ne yapılmalıdır?",
+  "input": "1220 hedeften sistem yanıtı gelmedi durumundaki bir fatura var ve karşı tarafla teyit edildi, fatura ulaşmış.",
+  "output": "Fatura karşı tarafa ulaştıysa ve sistem yanıtı gelmemişse, Li-Nova’da 1220 hedeften sistem yanıtı gelmedi olarak işaretlenip arşive atılabilir."
+}
+{
+  "instruction": "Fatura karşı tarafa ulaşmamışsa ne yapılmalıdır?",
+  "input": "1220 hedeften sistem yanıtı gelmedi durumunda ve fatura karşı tarafa ulaşmamış.",
+  "output": "Fatura karşı tarafa ulaşmamışsa GİB göndermeye çalışıyordur. Son gönderme sonrası ulaşırsa işlem başarıyla tamamlanır, ulaşmazsa durumu değişir. Bu durumda gönderici veya entegratör tarafından yapılacak bir işlem yoktur."
+}
+{
+  "instruction": "1220 hedeften sistem yanıtı gelmedi durumundaki faturada alıcıya hangi bilgiler iletilmelidir?",
+  "input": "1220 hedeften sistem yanıtı gelmedi durumundaki faturada karşı taraf kontrol yapmalı.",
+  "output": "Faturanın zarf ID’leri alıcı tarafa iletilmeli ve kontrol etmeleri istenmelidir."
+}
+
+
+
+{
+  "instruction": "Muhasebe fişinde kopyalama işlemi nasıl yapılır?",
+  "input": "Mevcut muhasebe fişini baz alarak yeni bir fiş oluşturmak istiyorum.",
+  "output": "Muhasebe fişinde değişiklik yapılacak fiş çağrıldıktan sonra CTRL+N yapılarak istenilen değişiklik yapılır ve yeni bir fiş olarak kaydedilebilir."
+}
+{
+  "instruction": "Muhasebe fişlerinde girilen fişlerin tekrar çağrıldığında girildiği sırada gelmesi nasıl sağlanır?",
+  "input": "Muhasebe fişleri tekrar açıldığında, giriş sırasına göre listelenmesini istiyorum.",
+  "output": "Muhasebe fişinde girilen fişler tekrar çağrıldığında girildiği sırada gelmesi isteniyorsa, Yeni Nesil İşlemler → Indexleme İşlemleri seçeneğinde, muhasebe sistemi → muhasebe fişi seçeneğinde, fiş listesi için olan (62 nolu index) index'in son 2 satırı (001=hesap kodu ve 007=borç/alacak) silinip kaydedilmelidir."
+}
+
+
+{
+  "instruction": "Muhasebe fişine girmek istendiğinde 'fiş dosyası kullanılmaktadır' uyarısı geldiğinde ne yapılmalıdır?",
+  "input": "Muhasebe fişine giriş yapmak istediğimde 'fiş dosyası kullanılmaktadır' uyarısı alıyorum.",
+  "output": "Bu uyarı alındığında Muhasebe Sistemi → Servis İşlemleri → Kilitli Fiş Kayıtlarının Açılması seçeneği çalıştırılmalıdır."
+}
+{
+  "instruction": "Muhasebe fişinde kolon ekleme veya çıkarma işlemi nasıl yapılır?",
+  "input": "Muhasebe fişinde başlık alanlarına yeni kolon eklemek veya mevcut kolonları kaldırmak istiyorum.",
+  "output": "Muhasebe fişi içindeyken, başlık kısmında iken sağ tıklanarak 'Düzenle (Kolonlar)' seçeneğinden istenilen alanlar eklenip çıkartılabilir."
+}
+{
+  "instruction": "Fatura durum kodu 1210 olduğunda hangi adımlar izlenmelidir?",
+  "input": "Fatura ERP sisteminde 1210 durum kodu ile görünüyor.",
+  "output": "1210 'DOKÜMAN BULUNAN ADRESE GÖNDERİLEMEDİ' statüsündedir. Bu statüdeki faturalara müdahale edilmez. Merkez birim aynı zarfi dört defa ikişer saat arayla toplam sekiz saat içinde göndermeyi dener. Bu süre içinde gönderim başarılı olursa 1300 'BAŞARIYLA TAMAMLANDI' kodu alınır. Süre sonunda gönderim başarısız olursa 1215 'DOKÜMAN GÖNDERİMİ BAŞARISIZ, TEKRAR GÖNDERME SONLANDI' kodu alınır."
+}
+
+
+
+{
+  "instruction": "TL genel mizan nasıl alınır?",
+  "input": "ERP sisteminde TL bazlı genel mizan raporu almak istiyorum.",
+  "output": "Programlar → Muhasebe Sistemi → Listeler → Mizan → Genel ve Aylık Mizan → Genel Mizan → Miktarsal Genel Mizan seçeneğinden alınabilir."
+}
+{
+  "instruction": "Toplu yedek alma işlemi nasıl yapılır?",
+  "input": "Sistem üzerinde tüm verilerin toplu yedeğini almak istiyorum.",
+  "output": "Yeni Nesil İşlemler → Diğer İşlemler → Toplu Yedek İşlemi seçeneğinden gerekli tanımlar yapılarak toplu yedek alma işlemi yapılabilir."
+}
+{
+  "instruction": "Muhasebe fişindeyken girilen hesap koduna ait muavin nasıl alınır?",
+  "input": "Muhasebe fişinde iken bir hesap kodunun muavin defterini görüntülemek istiyorum.",
+  "output": "Muhasebe fişi ekranında sağ tarafta bulunan 'Bağlantılı Programlar' seçeneğinden ilgili hesabın muavini alınabilir."
+}
+
+
+{
+  "instruction": "Muhasebe fişi girilirken girilen hesabın ünvanının gelmesi için ne yapılmalıdır?",
+  "input": "Muhasebe fişinde hesap kodu girdiğimde ilgili hesabın ünvanı otomatik olarak gelsin istiyorum.",
+  "output": "Parametreler → Sistem Parametreleri → Çalışma Parametreleri → Genel Parametrelerde 'Elektronik Muhasebe Fişi = Kullanılıyor' seçilmelidir."
+}
+{
+  "instruction": "İndirilecek KDV listesi nasıl alınır?",
+  "input": "ERP sisteminden indirilecek veya yüklenilen KDV listesini almak istiyorum.",
+  "output": "Programlar → Muhasebe Sistemi → Beyannameler → Listeler → İndirilecek/Yüklenilen KDV Listesi seçeneğinden alınabilir."
+}
+{
+  "instruction": "Toplu şekilde program güncellemesi nasıl yapılır?",
+  "input": "ERP sisteminde programı toplu olarak güncellemek istiyorum.",
+  "output": "Yeni Nesil İşlemler → Sistem Tanımları → Genel Tanımlar kısmında paylaşıma açılan klasör tanımı yapılarak toplu güncelleme yapılabilir."
+}
+{
+  "instruction": "E-defter kullanılan şirkette muhasebe fişi girebilmek için kullanıcı nasıl açılır?",
+  "input": "E-defter modülü kullanılan bir şirkette muhasebe fişi girebilecek yeni kullanıcı tanımlamak istiyorum.",
+  "output": "Yeni Nesil İşlemler → Güvenlik Yönetimi → Kullanıcı Tanıtımında açılan kullanıcının aynısı Programlar → Muhasebe Sistemi → Referans Kartlarında da açılmalıdır."
+}
+
+
+
+{
+"instruction": "Kapalı fatura nasıl kesilir?", 
+"input": "ERP sisteminde kapalı fatura kesmek istiyorum.", 
+"output": "Kesilecek faturanın fatura parametreleri sekmesinde 'Fatura Şekli' alanından açık veya kapalı seçilerek kesilebilir."}
+{
+"instruction": "Stok takip kartı nasıl açılır?", 
+"input": "Yeni bir ticari mal için stok takip kartı tanımlamak istiyorum.", 
+"output": "Programlar → Stok Takip Sistemi → Stok Takip Kartı → Stok Takip Kartı seçeneğinden açılır. Stok takip kartı; ticari mal, mamul, yarı mamul, hammadde ve işletme malzemelerinin tanımlandığı karttır. Her mal için ayrı bir stok kartı açılır."
+}
+{
+"instruction": "Tevkifatlı fatura nasıl kesilir?", 
+"input": "ERP sisteminde tevkifatlı fatura düzenlemek istiyorum.", 
+"output": "Tevkifatlı fatura kesilebilmesi için stok takip kartında genel sayfada 'Alım KDV Tevkifat İşlem Türü' ve 'Satış KDV Tevkifat İşlem Türü' seçilmelidir. Fatura kesilirken mal kalemleri girildikten sonra CTRL+F6 tuşu ile kapatılarak fatura kaydedilir."
+}
+{
+"instruction": "E-defter kullanılan şirketlerde muhasebe fişi girilirken kullanıcı adı ve soyadı nasıl girilir?",
+"input": "E-defter modülü olan bir şirkette muhasebe fişi girecek kullanıcı eklemek istiyorum.",
+"output": "Yeni Nesil İşlemler → Güvenlik Yönetimi → Kullanıcı Tanıtımı kısmında açılan kullanıcının aynısı Programlar → Muhasebe Sistemi → Referans Kartlarında kullanıcı seçilerek aynı şekilde açılmalıdır."
+}
+
+
+
+{
+"instruction": "E-alım faturası transferi esnasında yapılan stok eşleşmeleri nerede tutulur?", 
+"input": "ERP sisteminde e-alım faturası aktarımı yaparken stok eşleşmelerini nereden bulabilirim?", 
+"output": "E-alım faturasındaki eşleşmeler, stok kartındaki C/H mal kodu bilgileri sayfasında tutulur."
+}
+{
+"instruction": "Fatura kesilirken kalemde iskonto nasıl yapılır?",
+ "input": "Fatura düzenlerken belirli bir ürün satırına iskonto eklemek istiyorum.", 
+ "output": "Fatura kesilirken 'Kolon Ekle' seçeneği kullanılarak özel iskonto oranı kolonu eklenir."
+}
+{
+"instruction": "Yeni işe giren bir personelin önceki işyerinden getirdiği gelir vergisi rakamları nasıl girilir?",
+ "input": "ERP sisteminde yeni personelin önceki işyerinden getirdiği gelir vergisi bilgilerini kaydetmek istiyorum.",
+  "output": "Programlar → Personel Sistemi → Personel Kartı → Personel Kartında 'SGK ve Gelir Vergisi Bilgileri' sayfasına hem mevcut gelir vergisi rakamları hem de önceki işyeri gelir vergisi rakamları girilir."}
+{
+"instruction": "E-alım faturasında stok kodu nasıl değiştirilir?", 
+"input": "ERP sisteminde e-alım faturasında yanlış girilen stok kodunu değiştirmek istiyorum.",
+ "output": "E-alım faturasındaki ilgili satır seçilir, stok kartı üzerinden doğru C/H mal kodu tanımlanarak güncelleme yapılır."
+}
+{
+"instruction": "İskonto oranı faturada tüm satırlara topluca nasıl uygulanır?", 
+"input": "Faturada tüm kalemlere aynı iskonto oranını vermek istiyorum.", 
+"output": "Fatura düzenleme ekranında toplu iskonto alanına istenen oran girilir ve tüm satırlara uygulanır."
+}
+{
+"instruction": "Personel kartına gelir vergisi muafiyet bilgisi nasıl eklenir?",
+ "input": "Yeni personelin gelir vergisinden muaf olduğunu sisteme kaydetmek istiyorum.", 
+ "output": "Personel Kartı → SGK ve Gelir Vergisi Bilgileri sayfasında muafiyet durumu 'Evet' olarak seçilir."
+}
+
+

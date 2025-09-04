@@ -1,0 +1,301 @@
+ERP ve Bankacılıkta Ortak Kullanılan 150 Terim aşşağıdaki gibidir.
+Hesap Planı
+
+Mizan
+
+Bakiye
+
+Borç
+
+Alacak
+
+Cari Hesap
+
+Cari Ekstre
+
+Dekont
+
+Mutabakat
+
+Nakit Akışı
+
+Ödeme Emri
+
+Tahsilat
+
+Tediye
+
+Havale
+
+EFT (Elektronik Fon Transferi)
+
+SWIFT
+
+POS (Point of Sale)
+
+Santral Hesap
+
+Çek
+
+Senet
+
+Teminat
+
+Reeskont
+
+Kredi
+
+Faiz
+
+Vadeli İşlem
+
+Vadesiz Hesap
+
+Döviz Kuru
+
+Kur Farkı
+
+Kur Değişimi Kar/Zarar
+
+Bütçe
+
+Gelir Tablosu
+
+Bilanço
+
+Yevmiye Defteri
+
+Defter-i Kebir
+
+Muhasebe Fişi
+
+Ödeme Planı
+
+Tahsilat Planı
+
+Likidite
+
+Kasa Defteri
+
+Hesap Hareketleri
+
+Referans Numarası
+
+İşlem Kodu
+
+Müşteri Numarası (Customer ID)
+
+Şube Kodu
+
+IBAN
+
+Hesap Numarası
+
+Ödeme Talimatı
+
+Bloke
+
+Temerrüt
+
+Bordro
+
+Bordro Tahakkuku
+
+Tahakkuk Fişi
+
+Masraf Merkezi
+
+Finansman Gideri
+
+Kredi Limit
+
+Limit Aşımı
+
+Temlik
+
+Aval
+
+Kefalet
+
+Ödeme Vadesi
+
+Stopaj
+
+Vergi Levhası
+
+KDV Beyannamesi
+
+BS Formu
+
+Ba Formu
+
+Tahsilat Makbuzu
+
+Tediye Makbuzu
+
+Döviz Alım Belgesi
+
+Döviz Satım Belgesi
+
+Kur Farkı Faturası
+
+Kapanış Fişi
+
+Açılış Fişi
+
+Dönem Sonu İşlemleri
+
+Reeskont Faizi
+
+Değerleme
+
+Enflasyon Düzeltmesi
+
+Teminat Mektubu
+
+Akreditif
+
+Hesap Ekstresi
+
+Kredi Kartı
+
+Banka Komisyonu
+
+Sigorta Poliçesi
+
+Sigorta Primleri
+
+İskonto
+
+Mahsup Fişi
+
+Transfer Fişi
+
+Nakit Yönetimi
+
+Banka Mutabakatı
+
+Çek Karnesi
+
+Senet Portföyü
+
+Senet Tahsili
+
+Senet Protestosu
+
+Vadeli Mevduat
+
+Repo
+
+Ters Repo
+
+Yatırım Fonları
+
+Tahvil
+
+Hisse Senedi
+
+Temettü
+
+Portföy Yönetimi
+
+Fon Akışı
+
+Gelir Kaydı
+
+Gider Kaydı
+
+Hesap Kapatma
+
+Yıl Sonu Kapanışı
+
+Hesap Yenileme
+
+Kredi Tahsisi
+
+Kredi Yenileme
+
+Kredi Yapılandırma
+
+Borç Transferi
+
+Fon Transferi
+
+Toplu Ödeme
+
+Toplu Tahsilat
+
+İleri Tarihli İşlem
+
+Geçmiş Tarihli İşlem
+
+Ön Muhasebe
+
+Ana Hesap
+
+Alt Hesap
+
+Müşteri Risk Limiti
+
+Kredi Skoru
+
+Risk Yönetimi
+
+Kredi Notu
+
+Banka Garantisi
+
+Kredi Tahsilatı
+
+Kredi Takibi
+
+Temerrüt Faizi
+
+Haciz
+
+İcra Takibi
+
+Banka Blokesi
+
+Teminat Değeri
+
+Gayrimenkul Değerleme
+
+Ara Dönem Raporu
+
+Yıllık Rapor
+
+Denetim Raporu
+
+Bağımsız Denetim
+
+Finansal Tablo Analizi
+
+Oran Analizi
+
+Likidite Oranı
+
+Karlılık Oranı
+
+Borçluluk Oranı
+
+Sermaye Yeterliliği
+
+Özkaynak
+
+Dağıtılmamış Kar
+
+Geçmiş Yıl Zararı
+
+Kar Payı Avansı
+
+Tahvil İhracı
+
+Hisse İhracı
+
+Bedelli Sermaye Artırımı
+
+Bedelsiz Sermaye Artırımı
+
+Şarta Bağlı Yükümlülük
+

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Link Asistan</title>
+  <style>
+    body {
+      font-family: system-ui, 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f7f7f8;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 34px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #4CAF50;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .navbar {
+      background-color: #1f2937;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .train-button-container {
+      margin-right: 10px;
+    }
+
+    .train-button {
+      padding: 8px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .navbar h1 {
+      font-size: 20px;
+      margin: 0;
+    }
+
+    .navbar select {
+      padding: 8px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: 1px solid #d1d5db;
+      background: #2d3748;
+      color: white;
+      width: 200px;
+    }
+
+    .sidebar {
+      width: 240px;
+      background: #1f2937;
+      color: white;
+      padding: 20px;
+      height: calc(100vh - 60px);
+      box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+      overflow-y: auto;
+    }
+
+    .sidebar h3 {
+      color: #f1f5f9;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .session-link {
+      color: #d1d5db;
+      cursor: pointer;
+      margin: 8px 0;
+      padding: 8px;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+
+    .session-link:hover {
+      background: #374151;
+    }
+
+    .main-container {
+      display: flex;
+      flex-grow: 1;
+      background: #f7f7f8;
+      width: 100%;
+      height: 100%;
+    }
+
+    .main {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .chat-box {
+      background: #ffffff;
+      border-radius: 10px;
+      width: 100%;
+      flex-grow: 1;
+      overflow-y: auto;
+      border: 1px solid #e0e0e0;
+      margin-bottom: 20px;
+      max-height: calc(100vh - 220px);
+    }
+
+    .msg {
+      margin: 12px 0;
+      max-width: 80%;
+      padding: 12px 16px;
+      border-radius: 18px;
+      font-size: 15px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+
+    .user-msg {
+      margin-left: auto;
+      background: #dcfce7;
+      color: #14532d;
+      border-bottom-right-radius: 4px;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+    }
+
+    .bot-msg {
+      margin-right: auto;
+      background: #ffffff;
+      color: #1f2937;
+      border-bottom-left-radius: 4px;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+
+    .rag-msg {
+      background: #f0f7ff;
+      border-left: 4px solid #4CAF50;
+      padding-left: 12px;
+    }
+
+    .typing {
+      font-style: italic;
+      color: #9ca3af;
+      margin-top: 10px;
+      padding-left: 5px;
+      font-size: 14px;
+    }
+
+    .typing::after {
+      content: '';
+      display: inline-block;
+      margin-left: 5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #9ca3af;
+      animation: blink 1s infinite ease-in-out;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+
+    .toggle-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-right: 15px;
+    }
+
+    #rag-status {
+      color: white;
+      font-size: 14px;
+    }
+
+    /* ✅ Eklenen kısım: */
+    .input-area {
+        display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px; /* Alt boşluk eklendi */
+  background: #f7f7f8;
+    }
+
+    #message {
+      flex: 1;
+      padding: 10px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .styled-button {
+      padding: 10px 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .styled-button:hover {
+      background-color: #388e3c;
+    }
+
+    .new-session-button {
+      padding: 8px 12px;
+      margin-bottom: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .new-session-button:hover {
+      background-color: #388e3c;
+    }
+  </style>
+</head>
+<body>
+
+<div class="navbar">
+  <h1>🧠 Link Yapay Zeka Asistanı</h1>
+  
+  <div class="train-button-container">
+    <a href="/train_model">
+      <button class="train-button">🧠 Modeli Eğit</button>
+    </a>
+  </div>
+
+  <div class="toggle-container">
+    <label class="switch">
+      <input type="checkbox" id="rag-toggle">
+      <span class="slider round"></span>
+    </label>
+    <span id="rag-status">RAG: Kapalı</span>
+  </div>
+
+  <div class="train-button-container">
+    <a href="/api_settings">
+      <button class="train-button">⚙️ API Ayarları</button>
+    </a>
+  </div>
+
+  <select id="modelSelect">
+    {% for model, name in models.items() %}
+      <option value="{{ model }}">{{ name }}</option>
+    {% endfor %}
+  </select>
+</div>
+
+<div class="main-container">
+  <div class="sidebar">
+    <h3>🧠 Sohbetler</h3>
+    <button class="new-session-button" onclick="newSession()">+ Yeni Sohbet</button>
+    <div id="session-list">
+      {% for sid, history in all_sessions.items() %}
+        {% if history %}
+          <div class="session-link" onclick="switchSession('{{ sid }}')">
+            🗨️ {{ history[-1].user[:15] }}...
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="chat-box" id="chat-box">
+      {% for item in history %}
+        <div class="msg user-msg"><strong>Kullanıcı:</strong> {{ item.user }}</div>
+        <div class="msg bot-msg"><strong>Asistan:</strong> {{ item.bot }}</div>
+      {% endfor %}
+    </div>
+
+    <!-- ✅ Yeni input + buton yapısı -->
+    <div class="input-area">
+      <input type="text" id="message" placeholder="Mesajınızı yazın..." />
+      <button class="styled-button" id="sendBtn">Gönder</button>
+      <button class="styled-button" id="resetBtn">🗑️ Temizle</button>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  // EN ÜSTE ekleyin (diğer scriptlerden önce)
+  if (typeof localStorage.getItem("ragActive") === 'undefined' || 
+      localStorage.getItem("ragActive") === null) {
+      localStorage.setItem("ragActive", "false");
+  }
+
+  // Toggle event handler'ını şöyle değiştirin:
+  document.getElementById("rag-toggle").addEventListener("change", function() {
+      const isActive = this.checked;
+      localStorage.setItem("ragActive", isActive.toString());
+      sessionStorage.setItem("ragActive", isActive.toString());
+      console.log("RAG Durumu Kaydedildi:", isActive);
+      location.reload(); // Sayfayı yeniden yükle
+  });
+
+  // Generate UUID
+  function generateUUID() {
+    if (crypto.randomUUID) {
+      return crypto.randomUUID();
+    } else {
+      return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16 | 0;
+        var v = (c === 'x') ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+      });
+    }
+  }
+
+  // DOM Elements
+  const sendBtn = document.getElementById("sendBtn");
+  const resetBtn = document.getElementById("resetBtn");
+  const chatBox = document.getElementById("chat-box");
+  const messageInput = document.getElementById("message");
+  const modelSelect = document.getElementById("modelSelect");
+  const ragToggle = document.getElementById("rag-toggle");
+  const ragStatus = document.getElementById("rag-status");
+
+  // Initialize RAG state
+  document.addEventListener("DOMContentLoaded", function() {
+    // Check both sessionStorage and localStorage
+    const ragActive = sessionStorage.getItem("ragActive") === "true" || 
+                     localStorage.getItem("ragActive") === "true";
+    
+    ragToggle.checked = ragActive;
+    ragStatus.textContent = `RAG: ${ragActive ? "Açık" : "Kapalı"}`;
+    console.log("Sayfa Yüklendi - RAG Durumu:", ragActive);
+  });
+
+  // RAG Toggle Handler
+  ragToggle.addEventListener("change", function() {
+    const isActive = this.checked;
+    // Save to both storage types
+    sessionStorage.setItem("ragActive", isActive);
+    localStorage.setItem("ragActive", isActive);
+    ragStatus.textContent = `RAG: ${isActive ? "Açık" : "Kapalı"}`;
+    console.log("RAG Durumu Değişti:", isActive);
+    
+    // Visual feedback
+    document.querySelector(".navbar").style.backgroundColor = isActive ? "#2c5282" : "#1f2937";
+  });
+
+  // Send Message Handler
+  sendBtn.addEventListener("click", function() {
+    const msg = messageInput.value.trim();
+    if (!msg) return;
+
+    // Get RAG state
+    const isRAGActive = sessionStorage.getItem("ragActive") === "true" || 
+                        localStorage.getItem("ragActive") === "true";
+    console.log("Gönderim Anında RAG:", isRAGActive);
+
+    // Add user message to chat
+    const userDiv = document.createElement("div");
+    userDiv.className = "msg user-msg";
+    userDiv.innerHTML = `<strong>Kullanıcı:</strong> ${msg}`;
+    chatBox.appendChild(userDiv);
+
+    // Add typing indicator
+    const typingDiv = document.createElement("div");
+    typingDiv.className = "msg bot-msg typing";
+    typingDiv.id = "typing";
+    typingDiv.innerText = "Asistan yazıyor";
+    chatBox.appendChild(typingDiv);
+    chatBox.scrollTop = chatBox.scrollHeight;
+    messageInput.value = "";
+
+    // Determine endpoint
+    const endpoint = isRAGActive ? "/rag_chat" : "/send_message";
+    const selectedModel = modelSelect.value;
+
+    // Send request
+    fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ 
+        message: msg, 
+        model: selectedModel,
+        rag_active: isRAGActive
+      })
+    })
+    .then(res => res.json())
+    .then(data => {
+      // Remove typing indicator
+      const typingElem = document.getElementById("typing");
+      if (typingElem) typingElem.remove();
+
+      // Add bot response
+      const botDiv = document.createElement("div");
+      botDiv.className = isRAGActive ? "msg rag-msg" : "msg bot-msg";
+      
+      // Add RAG indicator if active
+      const ragIcon = isRAGActive ? ' ' : '';
+botDiv.innerHTML = `<strong>Asistan:</strong> ${ragIcon}`;
+chatBox.appendChild(botDiv);
+typeText(botDiv, `${ragIcon}${data.response}`, 20);  // Harf harf yaz
+      chatBox.scrollTop = chatBox.scrollHeight;
+    })
+    .catch(error => {
+      console.error("Fetch Hatası:", error);
+      document.getElementById("typing")?.remove();
+      
+      const errorDiv = document.createElement("div");
+      errorDiv.className = "msg bot-msg";
+      errorDiv.innerHTML = `<strong>Asistan:</strong> ⚠️ Bir hata oluştu: ${error.message}`;
+      chatBox.appendChild(errorDiv);
+    });
+  });
+
+  // Message input key handler
+  messageInput.addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+      sendBtn.click();
+    }
+  });
+
+  // Reset button handler
+  resetBtn.addEventListener("click", function() {
+    fetch("/reset", { method: "POST" }).then(() => location.reload());
+  });
+
+  function typeText(element, text, delay = 20) {
+  let index = 0;
+  function typeChar() {
+    if (index < text.length) {
+      element.innerHTML += text.charAt(index);
+      index++;
+      setTimeout(typeChar, delay);
+    }
+  }
+  typeChar();
+}
+
+  // Session management
+  function switchSession(sessionId) {
+    fetch("/switch_session", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ session_id: sessionId })
+    }).then(() => location.reload());
+  }
+
+  function newSession() {
+    const newId = generateUUID();
+    switchSession(newId);
+  }
+</script>
+</body>
+</html>

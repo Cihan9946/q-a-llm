@@ -1,0 +1,563 @@
+{
+  "instruction": "e-Fatura Gelen Faturalar ekranında [EF0530] hatası nasıl çözülür?",
+  "input": "e-Fatura modülünde Gelen Faturalar ekranında 'Fatura alınırken hata oluştu! Hata = [EF0530] Sadece şube bazlı yetki verilen kullanıclarla login olamazsınız.' uyarısı alıyorum. Ne yapmalıyım?",
+  "output": "Yalnızca web servis için bir kullanıcı açılmalı ve e-Fatura ile e-Arşiv tanımları ekranında bu kullanıcı tanımlanmalıdır. Bu uyarı portal kullanıcısında yetki problemi olduğunu belirtir."
+}
+{
+  "instruction": "e-İrsaliye Gelen İrsaliyeler ekranında [EF0530] hatası nasıl çözülür?",
+  "input": "e-İrsaliye modülünde Gelen İrsaliyeler ekranında 'İrsaliye alınırken hata oluştu! Hata = [EF0530] Sadece şube bazlı yetki verilen kullanıclarla login olamazsınız.' uyarısı alıyorum. Sebebi nedir?",
+  "output": "Bu uyarı portal kullanıcısında yetki problemi olduğunu gösterir. Çözüm olarak yalnızca web servis için bir kullanıcı açılmalı ve e-Fatura ile e-Arşiv tanımları ekranında tanımlama yapılmalıdır."
+}
+{
+  "instruction": "[EF0530] şube bazlı yetki hatasının genel çözümü nedir?",
+  "input": "e-Fatura veya e-İrsaliye işlemlerinde [EF0530] Sadece şube bazlı yetki verilen kullanıclarla login olamazsınız hatasını alıyorum. Genel çözümü nedir?",
+  "output": "Yalnızca web servis için ayrı bir kullanıcı oluşturulmalı ve e-Fatura ile e-Arşiv tanımları ekranında bu kullanıcı tanımlanmalıdır."
+}
+
+
+
+{
+  "instruction": "e-Fatura Bekleyen Faturalar ekranında 'Konnektör Lisansı Bulunamadı' hatası nasıl çözülür?",
+  "input": "e-Fatura modülünde Bekleyen Faturalar ekranında 'Fatura gönderim işlemi yapılamadı... Hata: Konnektör Lisansı Bulunamadı!' uyarısı alıyorum. Ne yapmalıyım?",
+  "output": "Lisans programı LKP üzerinden ilgili firma için konnektör lisans kuruluşu yapılıp yapılmadığı kontrol edilmelidir."
+}
+{
+  "instruction": "'Konnektör Lisansı Bulunamadı' hatasının nedeni nedir?",
+  "input": "e-Fatura gönderiminde 'Konnektör Lisansı Bulunamadı' hatası alıyorum. Sebebi nedir?",
+  "output": "Bu hata, LKP üzerinden ilgili firma için konnektör lisans kuruluşunun yapılmamış olmasından kaynaklanır."
+}
+{
+  "instruction": "Konnektör lisans kuruluşu nasıl kontrol edilir?",
+  "input": "e-Fatura modülünde lisans sorunlarını çözmek için konnektör lisans kuruluşunun yapılıp yapılmadığını nereden kontrol edebilirim?",
+  "output": "Lisans programı LKP üzerinden ilgili firma için konnektör lisans kuruluşu yapılıp yapılmadığı kontrol edilmelidir."
+}
+
+
+{
+  "instruction": "e-Fatura alım fatura transfer ekranında LB veritabanı görünmüyor, nasıl çözülür?",
+  "input": "e-Fatura alım fatura transfer ekranındaki dürbünde LB database'i listelenmiyor. Veritabanı seçimi yapamıyorum. Ne yapmalıyım?",
+  "output": "SQL Server'da ilgili veritabanında LINKMASTER altında Security → Users'a girin. LNK kullanıcısına sağ tıklayıp Özellikler'den Membership sekmesine girin ve 'db_owner' kutusunu işaretleyin. Bu işlemden sonra LB veritabanı seçim ekranında görünecektir."
+}
+{
+  "instruction": "LB veritabanı seçim ekranında görünmüyorsa ne yapılmalıdır?",
+  "input": "LB veritabanı alım fatura transfer ekranında görünmüyor. Sebebi nedir ve nasıl düzeltilir?",
+  "output": "Bu sorun genellikle SQL Server'da LNK kullanıcısının ilgili veritabanında 'db_owner' yetkisine sahip olmamasından kaynaklanır. Security → Users bölümünden LNK kullanıcısına 'db_owner' yetkisi vererek düzeltebilirsiniz."
+}
+{
+  "instruction": "SQL Server'da LNK kullanıcısına db_owner yetkisi nasıl verilir?",
+  "input": "LB veritabanını görebilmek için LNK kullanıcısına db_owner yetkisi vermem gerekiyor. Bunu nasıl yaparım?",
+  "output": "SQL Server Management Studio'da ilgili veritabanına gidin. Security → Users altında LNK kullanıcısını bulun, sağ tıklayıp Özellikler'e girin. Membership sekmesinde 'db_owner' kutusunu işaretleyin ve kaydedin."
+}
+
+
+{
+  "instruction": "Güneş Sistemine girişte 'Veritabanı güncelleniyor' uyarısı nasıl çözülür?",
+  "input": "Güneş Sistemine giriş yapmaya çalıştığımda 'Veritabanı güncelleniyor. İşlem tamamlandıktan sonra giriş yapabilirsiniz' uyarısı alıyorum. Ne yapmalıyım?",
+  "output": "Güneş Sistemi giriş ekranında SUPER kullanıcısı ile giriş yaparak Gelişmiş Ayarlar kısmından 'Veritabanı güncellemesini sonlandır ve yeniden başlat' seçeneği seçilmelidir."
+}
+{
+  "instruction": "'Veritabanı güncelleniyor' uyarısının nedeni nedir?",
+  "input": "Güneş Sistemine girişte 'Veritabanı güncelleniyor' uyarısı alıyorum. Bu ne anlama geliyor?",
+  "output": "Bu uyarı, veritabanı güncelleme işleminin devam ettiğini gösterir. Güncellemeyi sonlandırmak için SUPER kullanıcısı ile Gelişmiş Ayarlar bölümünden 'Veritabanı güncellemesini sonlandır ve yeniden başlat' seçeneği kullanılmalıdır."
+}
+{
+  "instruction": "Veritabanı güncellemesini Güneş Sisteminde nasıl sonlandırabilirim?",
+  "input": "Güneş Sisteminde veritabanı güncelleme işlemini iptal edip yeniden başlatmam gerekiyor. Nasıl yapabilirim?",
+  "output": "SUPER kullanıcısı ile giriş ekranındaki Gelişmiş Ayarlar bölümüne girin ve 'Veritabanı güncellemesini sonlandır ve yeniden başlat' seçeneğini işaretleyin."
+}
+
+
+{
+  "instruction": "Biten demirbaşlar amortisman listesinde neden görünmez?",
+  "input": "Amortisman listesinde biten veya satılmış demirbaşları göremiyorum. Ne yapmalıyım?",
+  "output": "Amortisman hesaplama ekranında 'Uygulanacak filtre' kısmında filtre vermeden çalıştırılırsa satılan demirbaşlar da hesaplanır. Eğer listelenmeleri engellenmek isteniyorsa ilk satırdaki 'DMR Demirbaş Kodu Filtresi' kullanılmalıdır."
+}
+{
+  "instruction": "Satılan demirbaşların amortisman listesine dahil edilmesi nasıl sağlanır?",
+  "input": "Amortisman listesinde satılan demirbaşların da görünmesini istiyorum. Ne yapmalıyım?",
+  "output": "Amortisman hesaplama ekranında 'Uygulanacak filtre' alanına herhangi bir filtre girmeden çalıştırırsanız satılan demirbaşlar da listeye dahil edilir."
+}
+{
+  "instruction": "Amortisman listesinde satılan demirbaşların görünmesini nasıl engellerim?",
+  "input": "Amortisman listesinde satılan demirbaşlar çıkıyor, bunların görünmesini istemiyorum. Ne yapmalıyım?",
+  "output": "Amortisman hesaplama ekranında 'Uygulanacak filtre' bölümünde ilk satırdaki 'DMR Demirbaş Kodu Filtresi'ni kullanarak satılan demirbaşların listelenmesini engelleyebilirsiniz."
+}
+
+
+
+{
+  "instruction": "Banka ekstresinde 108.10.00002 hesabı neden bulunamaz?",
+  "input": "Banka ekstresi girerken X carisinden tarafımıza gelen ödemeleri girmek istiyoruz ancak 108.10.00002 hesabını bulamıyoruz. Ne yapmalıyız?",
+  "output": "Öncelikle diğer cari hesap kartlarından kart tipi 'Diğer' olan, 108.10.00002 kodlu bir cari hesap kartı açılmalıdır. Ardından Cari Hesap Kartı → Kodlar sayfasından Muhasebe Koduna alt hesap kartlarındaki kod (108.10.00002) bağlanmalıdır. Son olarak X carisinden gelen ödeme, Banka Gelen Havale/EFT Fişi ekranından girilerek Banka Hesap Kodu kısmına 102’li hesap, Karşı Hesap Kodu kısmına 108.10.00002 kodlu cari hesap seçilmelidir."
+}
+{
+  "instruction": "108.10.00002 kodlu cari hesap nasıl açılır ve muhasebe koduna bağlanır?",
+  "input": "Banka işlemlerinde kullanmak üzere 108.10.00002 kodlu cari hesap oluşturmam gerekiyor. Bunu nasıl yaparım?",
+  "output": "Diğer cari hesap kartlarından kart tipi 'Diğer' seçilerek 108.10.00002 kodlu cari hesap kartı açılır. Cari Hesap Kartı → Kodlar sekmesinden Muhasebe Koduna alt hesap kartlarındaki 108.10.00002 kodu bağlanır."
+}
+{
+  "instruction": "X carisinden gelen ödemeler Banka Gelen Havale/EFT Fişi ekranına nasıl girilir?",
+  "input": "X carisinden gelen ödemeyi sisteme Banka Gelen Havale/EFT Fişi ekranından girmek istiyorum. Hangi hesap kodlarını kullanmalıyım?",
+  "output": "Banka Gelen Havale/EFT Fişi ekranında Banka Hesap Kodu kısmında 102’li hesap, Karşı Hesap Kodu kısmında ise 108.10.00002 kodlu cari hesap seçilerek giriş yapılmalıdır."
+}
+
+
+
+
+{
+  "instruction": "Virman, fatura, çek veya dekont girişinde 'Muhasebeleşmedi' uyarısı nasıl çözülür?",
+  "input": "Virman işlemi, fatura girişi, çek veya dekont eklediğimde 'Muhasebeleşmedi' uyarısı alıyorum. Ne yapmam gerekir?",
+  "output": "İlgili kullanıcı, Li-Nova ana menüden Tanımlar → Muhasebe → Entegrasyon → Genel Tanımlar ekranına girerek 'On-Line Muhasebe Entegrasyonu Yapılsın' ve 'On-Line Entegrasyon Kontrolü Yapılsın' seçeneklerini işaretlemelidir. Ayrıca 'Muhasebeleşme Tablo No' alanı '1' olarak ayarlanmalıdır."
+}
+{
+  "instruction": "'Muhasebeleşmedi' uyarısının nedeni nedir?",
+  "input": "Virman veya fatura girişi yaptığımda 'Muhasebeleşmedi' uyarısı çıkıyor. Bu ne anlama gelir?",
+  "output": "Bu uyarı, On-Line Muhasebe Entegrasyonu ayarlarının yapılmamış olmasından kaynaklanır. Genel Tanımlar ekranında ilgili seçenekler işaretlenip tablo numarası ayarlanmalıdır."
+}
+{
+  "instruction": "On-Line Muhasebe Entegrasyonu ayarları nasıl yapılır?",
+  "input": "Li-Nova'da On-Line Muhasebe Entegrasyonu'nu aktif etmek için hangi menüden ayar yapmalıyım?",
+  "output": "Li-Nova ana menüden Tanımlar → Muhasebe → Entegrasyon → Genel Tanımlar ekranına girin, 'On-Line Muhasebe Entegrasyonu Yapılsın' ve 'On-Line Entegrasyon Kontrolü Yapılsın' kutucuklarını işaretleyin. 'Muhasebeleşme Tablo No' alanını '1' olarak belirleyin."
+}
+
+
+{
+  "instruction": "Banka Gelen Havale/EFT Fişinde Karşı Hesap Kodu alanında firma unvanı ile arama nasıl yapılır?",
+  "input": "Banka Gelen Havale/EFT Fişi girerken Karşı Hesap Kodu alanına firma kodu yerine unvanını yazarak firmayı seçmek istiyorum. Nasıl yapabilirim?",
+  "output": "Banka Gelen Havale/EFT Fişi ekranında başlık kısmına çift tıklayın. Eklenebilir sahalardan 'Karşı Hesap Kodunu' bulun, sağ tarafında açılan sahalarda 'Karşı Hesap Kodu…Ünvan' alanını bularak Seçilen Sahalar gridine sürükleyip ekleyin."
+}
+{
+  "instruction": "Karşı Hesap Kodu alanında unvan ile arama yapabilmek için hangi alan eklenmelidir?",
+  "input": "Banka Gelen Havale/EFT Fişinde Karşı Hesap Kodu alanına unvan yazabilmek istiyorum. Bunun için hangi alanı eklemem gerekiyor?",
+  "output": "Başlık kısmına çift tıklayarak eklenebilir sahalar listesinden 'Karşı Hesap Kodu…Ünvan' alanını bulun ve Seçilen Sahalar gridine ekleyin."
+}
+{
+  "instruction": "Banka Gelen Havale/EFT Fişinde Karşı Hesap Kodu alanı özelleştirmesi nasıl yapılır?",
+  "input": "Karşı Hesap Kodu alanında firma unvanı ile arama yapmak istiyorum. Bu alanı nasıl özelleştirebilirim?",
+  "output": "Banka Gelen Havale/EFT Fişi ekranında başlık kısmına çift tıklayın. 'Eklenebilir Sahalar' listesinden 'Karşı Hesap Kodu…Ünvan' alanını seçip Seçilen Sahalar gridine sürükleyerek ekleyin."
+}
+
+
+
+{
+  "instruction": "Muhasebe alt hesap kartını silerken 'Bu kayıt işlem görmüştür, silinemez!' uyarısı alındığında ne yapılmalıdır?",
+  "input": "Muhasebe alt hesap kartını silmek istediğimde 'Bu kayıt işlem görmüştür, silinemez!' hatası alıyorum. Nasıl silebilirim?",
+  "output": "Öncelikle Detay butonuna tıklayarak kartın hangi tablolarda hareket gördüğünü tespit edin. Örneğin, Muhasebe Fişi Tablosunda hareketi varsa bu kartın mahsup fişi, tahsil fişi vb. kaydı vardır. Eğer bu hareketlere rağmen silmek istiyorsanız, Genel Çalışma Tanımlarından 'İşlem görmüş kartlar iptal edilebilsin' seçeneğini işaretleyerek kartı silebilirsiniz."
+}
+{
+  "instruction": "İşlem görmüş muhasebe alt hesap kartı nasıl silinir?",
+  "input": "İşlem görmüş bir muhasebe alt hesap kartını silmem gerekiyor. Ne yapmalıyım?",
+  "output": "Detay butonuna tıklayıp kartın hangi tablolarda hareket gördüğünü kontrol edin. Silme işlemi için Genel Çalışma Tanımlarından 'İşlem görmüş kartlar iptal edilebilsin' seçeneğini aktif hale getirin."
+}
+{
+  "instruction": "Muhasebe alt hesap kartı silinemiyor hatası çözümü nedir?",
+  "input": "Muhasebe alt hesap kartını silmeye çalışırken işlem görmüş uyarısı çıkıyor. Bu sorunu nasıl çözebilirim?",
+  "output": "Kartı silmeden önce Detay butonundan hareket gördüğü tabloları tespit edin. Silme yetkisi için Genel Çalışma Tanımlarında 'İşlem görmüş kartlar iptal edilebilsin' seçeneğini işaretleyin."
+}
+
+
+
+{
+  "instruction": "İrsaliye düzenlerken oran iskontosu nasıl girilir?",
+  "input": "Satış irsaliyesi düzenlerken oran iskontosu eklemek istiyorum. Bunu nasıl yapabilirim?",
+  "output": "Satış irsaliyesi ekranını temizledikten sonra Tip kolonunda Mal Hizmet Bedeli'nin altındaki KDV satırına tıklayın ve Oran İskontosunu seçin. TAB tuşuna basarak yan hücreye geçin. Oran İskontosu satırı geldikten sonra alt satıra inin, Toplam satırında KDV tipini seçin. TAB ile yan hücreye geçip alt satıra geçtiğinizde Toplam satırının geldiğini göreceksiniz. Oran İskontosu satırında Oran kolonuna ilgili değeri girerek hesaplama yapabilirsiniz."
+}
+{
+  "instruction": "Satış irsaliyesinde oran iskontosu ekleme adımları nelerdir?",
+  "input": "Satış irsaliyesinde KDV üzerinden oran iskontosu tanımlamak istiyorum. Adımlar nedir?",
+  "output": "İrsaliye ekranını temizleyin, Tip kolonunda Mal Hizmet Bedeli'nin altındaki KDV satırını seçin ve Oran İskontosunu belirleyin. TAB tuşu ile yan hücreye geçin. Oran İskontosu satırı göründüğünde alt satıra inerek Toplam satırında KDV tipini seçin. TAB ile ilerleyip alt satıra geçtiğinizde Toplam satırının geldiğini göreceksiniz. Oran kolonuna iskonto yüzdesini girin."
+}
+{
+  "instruction": "Oran iskontosu irsaliyeye nasıl uygulanır?",
+  "input": "İrsaliye ekranında oran iskontosu uygulamak istiyorum. Ne yapmalıyım?",
+  "output": "İrsaliye ekranında Tip kolonunda Mal Hizmet Bedeli'nin altındaki KDV satırına tıklayın, Oran İskontosu seçin. TAB ile yan hücreye geçtikten sonra alt satırda Toplam satırında KDV tipini seçin. TAB ile ilerleyip alt satıra geçtiğinizde Toplam satırını göreceksiniz. Oran kolonuna iskonto oranını girerek hesaplatın."
+}
+
+
+{
+  "instruction": "Cari hesap kartı silerken 'Bu kayıt işlem görmüştür, silinemez!' uyarısı alındığında ne yapılır?",
+  "input": "Cari hesap kartını silmek istiyorum ancak 'Bu kayıt işlem görmüştür, silinemez!' hatası alıyorum. Nasıl çözebilirim?",
+  "output": "Öncelikle 'Detay' butonuna tıklayın. Eğer 'Temin / Teslim Yerleri Tablosu' ifadesi görülüyorsa Satınalma → Tedarikçiler → Satıcı Ürün Kodları ekranına girin. Index olarak 'Cari Hesap Kodu1_2' seçeneğini belirleyin. Cari Hesap Kodu alanına ilgili kodu yazıp arama dürbününe (F10) basın. İlgili cari hesap için tanımı gördükten sonra mavi çarpı (Sil) butonu ile kaydı silin."
+}
+{
+  "instruction": "İşlem görmüş cari hesap kartı nasıl silinir?",
+  "input": "Bir cari hesap kartı işlem gördüğü için silinemiyor. Adımlar nedir?",
+  "output": "Cari hesap kartında 'Detay' butonuna basın. 'Temin / Teslim Yerleri Tablosu' görünüyorsa Satınalma → Tedarikçiler → Satıcı Ürün Kodları ekranına gidin. Index kısmında 'Cari Hesap Kodu1_2' seçin, ilgili kodu girin ve arama dürbününe (F10) tıklayın. Listelenen tanımı mavi çarpı (Sil) ile kaldırın."
+}
+{
+  "instruction": "Cari hesap kartı silme hatası çözümü",
+  "input": "Cari hesap kartını silerken sistem işlem gördüğünü söylüyor. Ne yapmalıyım?",
+  "output": "Detay butonuna basın, 'Temin / Teslim Yerleri Tablosu' yazıyorsa Satınalma → Tedarikçiler → Satıcı Ürün Kodları ekranına gidin. Index alanında 'Cari Hesap Kodu1_2' seçeneğini işaretleyin, cari kodunu yazın ve arama dürbününe (F10) basın. Kaydı görüntüledikten sonra mavi çarpı (Sil) ile silme işlemini gerçekleştirin."
+}
+
+
+{
+  "instruction": "Faturada tutar iskontosu nasıl yapılır?",
+  "input": "Fatura oluştururken tutar iskontosu girmek istiyorum. Adımlar nedir?",
+  "output": "Hesap kodunu seçip mal kalemlerini girdikten sonra dipnot şablonuna gidin. Tip kolonunda 'Mal Hizmet Bedeli'nin altındaki KDV satırına tıklayıp 'Tutar İskontosu' seçin. TAB tuşuna basarak yan hücreye geçin. Tutar İskontosu satırı geldikten sonra alt satıra inin, 'Toplam' satırında KDV tipini seçin. TAB tuşuna basıp yan hücreye geçin. Alt satıra geçtiğinizde 'Toplam' satırı da gelecektir. Tutar İskontosu satırında, Tutar kolonuna ilgili değeri girerek işlemi tamamlayın."
+}
+{
+  "instruction": "Tutar iskontosu faturaya nasıl eklenir?",
+  "input": "Faturaya tutar bazlı indirim eklemem gerekiyor, nasıl yapabilirim?",
+  "output": "Faturada hesap kodunu seçip mal kalemlerini girdikten sonra dipnot şablonunda 'Mal Hizmet Bedeli' altındaki KDV satırına tıklayın, 'Tutar İskontosu' seçeneğini işaretleyin. TAB ile yan hücreye geçin. Daha sonra alt satıra inerek 'Toplam' satırında KDV tipini seçin ve yine TAB ile geçiş yapın. Son olarak alt satırda 'Toplam' satırını gördüğünüzde Tutar kolonuna iskonto tutarını girin."
+}
+{
+  "instruction": "Fatura dipnot şablonunda tutar iskontosu girme",
+  "input": "Fatura dipnot şablonunda tutar iskontosu eklemem lazım. Ne yapmalıyım?",
+  "output": "Mal kalemleri girildikten sonra dipnot şablonunda Tip kolonundan 'Mal Hizmet Bedeli'nin altındaki KDV satırını seçin ve 'Tutar İskontosu' olarak değiştirin. TAB ile yan hücreye geçin, ardından alt satıra inip 'Toplam' satırında KDV tipini seçin. Tekrar TAB ile geçin ve alt satırda 'Toplam' satırının geldiğini görün. Burada Tutar kolonuna iskonto miktarını yazın."
+}
+
+
+
+{
+  "instruction": "KDV'siz fatura nasıl girilir?",
+  "input": "Fatura oluştururken KDV'siz işlem yapmak istiyorum, ancak KDV Uygulama tanımlarında 'Kalemde KDV yok' seçtiğim halde %20 KDV geliyor. Ne yapmalıyım?",
+  "output": "KDV Uygulama tanımlarında 'Kalemde KDV var' seçeneğini işaretleyin. Böylece mal kodunu seçtiğinizde KDV% alanını manuel olarak değiştirebilir, '0' yazarak KDV'siz işlem yapabilirsiniz. Dipnot şablonunu 'Mal Hizmet Bedeli' ve 'Toplam' olacak şekilde kaydedin."
+}
+{
+  "instruction": "KDV oranı 0 olarak fatura düzenleme",
+  "input": "Fatura düzenlerken KDV'yi 0 yapmak istiyorum ama sistem %20 getiriyor. Nasıl düzeltebilirim?",
+  "output": "KDV Uygulama tanımlarında 'Kalemde KDV var' seçeneğini aktif hale getirin. Böylece mal kodu seçildikten sonra KDV% alanına '0' değeri girerek KDV'siz fatura kesebilirsiniz. Dipnot şablonunda sadece 'Mal Hizmet Bedeli' ve 'Toplam' satırları yer almalıdır."
+}
+{
+  "instruction": "KDV'siz fatura düzenleme adımları",
+  "input": "KDV'siz fatura kesmek istiyorum. Ayarlarda hangi değişiklikleri yapmam gerekiyor?",
+  "output": "Öncelikle KDV Uygulama tanımlarında 'Kalemde KDV var' seçeneğini işaretleyin. Bu sayede mal kodunu seçtiğinizde KDV% alanını değiştirebilir ve '0' yazarak işlem yapabilirsiniz. Ardından dipnot şablonunu 'Mal Hizmet Bedeli' ve 'Toplam' satırları olacak şekilde kaydedin."
+}
+
+
+
+{
+  "instruction": "E-Alım faturası transfer ekranında gelen belgeyi Gider Fatura olarak kaydetme",
+  "input": "E-Alım faturası transfer ekranında gelen bir belgeyi Gider Fatura şeklinde kaydetmek istiyorum. Nasıl yapabilirim?",
+  "output": "Genel Çalışma Tanımlarına girerek 'Gider Faturası Tanımları' alanına gelen belgeye ait carinin Vergi Kimlik Numarasını yazın ve (+) butonu ile ekleyip kaydedin. Bu işlemden sonra Alım Fatura Transfer ekranında ilgili belge Gider Faturası olarak açılacaktır."
+}
+{
+  "instruction": "Gelen e-Alım faturasını gider faturası olarak işleme alma",
+  "input": "E-Alım faturası transfer ekranında gelen belgeyi gider faturası olarak işlemem gerekiyor. Hangi adımları izlemeliyim?",
+  "output": "Genel Çalışma Tanımlarında 'Gider Faturası Tanımları' bölümüne girin. Gelen belgenin ait olduğu carinin Vergi Kimlik Numarasını ekleyip (+) butonuna basarak kaydedin. Böylece Alım Fatura Transfer ekranında bu belge Gider Faturası olarak açılacaktır."
+}
+{
+  "instruction": "E-Alım transfer ekranında gider faturası tanımlama",
+  "input": "Bir e-Alım belgesini gider faturası olarak kaydetmek istiyorum.",
+  "output": "Genel Çalışma Tanımlarındaki 'Gider Faturası Tanımları' bölümünde ilgili carinin Vergi Kimlik Numarasını girin, (+) butonuna tıklayın ve kaydedin. Bu sayede Alım Fatura Transfer ekranında belge otomatik olarak Gider Faturası şeklinde açılacaktır."
+}
+
+
+
+{
+  "instruction": "Belgelerde depo seçiminin her seferinde sorulmaması",
+  "input": "Serbest Meslek Makbuzu, Alım Faturası, Alım İrsaliyesi gibi belgelerde kayıt aşamasında her defasında depo seçmek zorunda kalıyorum. Bunu otomatik hale getirebilir miyim?",
+  "output": "Dosya menüsünden 'Depo Seçimi' ekranına girerek depo seçimi yapın. Bu şekilde sistem belge bazında depo sormaz ve varsayılan olarak seçtiğiniz depoyu getirir."
+}
+{
+  "instruction": "Varsayılan depo tanımlama",
+  "input": "Girdiğim belgelerde sistemin sürekli depo sormasını istemiyorum, nasıl varsayılan depo tanımlayabilirim?",
+  "output": "Dosya → Depo Seçimi ekranından depo seçimi yapın. Böylece seçtiğiniz depo varsayılan hale gelir ve belge girişlerinde depo sormadan otomatik olarak gelir."
+}
+{
+  "instruction": "Depo seçiminin otomatik yapılması",
+  "input": "Her belge girişinde depo seçmek istemiyorum, otomatik seçilsin istiyorum.",
+  "output": "Menüden Dosya → Depo Seçimi'ne girin ve kullanmak istediğiniz depoyu seçin. Sistem bundan sonra depo bilgisini belge bazında sormadan varsayılan olarak getirecektir."
+}
+
+
+{
+  "instruction": "Gider Pusulası mahsup fişinde aynı hesap kodlarının tek satırda gösterilmesi",
+  "input": "Gider Pusulasını kaydettiğimde mahsup fişinde 730'lu hesap kodu iki ayrı satır olarak geliyor. Bunların tek satırda birleşmesini istiyorum.",
+  "output": "Muhasebe Tanımlarına girerek 'Hesap kodu aynı olan cari işlemler birleştirilsin' seçeneğini işaretleyin. Böylece aynı hesap koduna ait işlemler tek satırda toplanacaktır."
+}
+{
+  "instruction": "Aynı hesap kodlarını birleştirme ayarı",
+  "input": "Muhasebe kayıtlarında aynı hesap kodları iki satır olarak geliyor. Bunları otomatik birleştirmek mümkün mü?",
+  "output": "Muhasebe Tanımlarında 'Hesap kodu aynı olan cari işlemler birleştirilsin' onay kutusunu işaretleyin. Bu ayar aktif olduğunda aynı hesap kodu içeren kayıtlar tek satırda gösterilecektir."
+}
+{
+  "instruction": "Mahsup fişinde hesap satırlarını birleştirme",
+  "input": "Gider Pusulası oluşturduğumda mahsup fişinde aynı 730'lu hesap kodu iki satırda gözüküyor, tek satır olsun istiyorum.",
+  "output": "İlgili kullanıcının Muhasebe Tanımlarına girerek 'Hesap kodu aynı olan cari işlemler birleştirilsin' seçeneğini aktif edin. Böylece aynı hesap koduna ait tutarlar tek satırda toplanır."
+}
+
+
+
+{
+  "instruction": "Stoktaki mal maliyeti raporunda birim maliyetin doğruluğunu kontrol etme",
+  "input": "Stoktaki mal maliyeti raporu aldığımda bazı stok kartlarının birim maliyetleri bana hatalı geliyor. Doğruluğunu kontrol etmek için ne yapmalıyım?",
+  "output": "İlgili stok kartlarında bakiyenin eksiye düşmediğini kontrol edin. Giriş hareketlerinde mutlaka birim fiyat girilmiş olmalı. Ayrıca, bakiye miktar sıfırlandıktan sonra ilk giriş tarihindeki kaydın da birim fiyat ile girilmiş olduğunu doğrulayın."
+}
+{
+  "instruction": "Stok maliyet hesaplama hatalarını tespit etme",
+  "input": "Raporlarda stok birim maliyetleri hatalı görünüyor. Nerelere bakmam gerekiyor?",
+  "output": "Stok kartı bakiyesinin eksiye düşmediğini, giriş hareketlerinde birim fiyatın girildiğini ve bakiye sıfırlandıktan sonraki ilk giriş kaydında da birim fiyat olduğunu kontrol edin."
+}
+{
+  "instruction": "Stok maliyet kontrolü yapma adımları",
+  "input": "Bazı stok kartlarının maliyetini raporda hatalı görüyorum. Kontrol adımlarını öğrenmek istiyorum.",
+  "output": "İlk olarak bakiyenin eksiye düşmediğini, ikinci olarak giriş hareketlerinde birim fiyat ile giriş yapıldığını, üçüncü olarak ise bakiye miktarının sıfırlandığı tarihten sonraki ilk giriş kaydında birim fiyat girildiğini kontrol edin."
+}
+
+
+
+{
+  "instruction": "Alacak ve Borç Yaşlandırma raporu için devir bakiyesi girme",
+  "input": "120 ve 320 hesaplarına ait Alacak ve Borç Yaşlandırma raporu hazırlayacağım. Devir bakiyelerini nereden girebilirim?",
+  "output": "Genel Araç Çubuğunda Diğer menüsü altındaki 'Cari Devir Fişi' seçeneğine tıklayın. Açılan ekranda cari devir fişi tarihini, hesap kodunu, borç/alacak (B/A) bilgisini ve tutarı girin. Alt satıra geçtiğiniz anda kayıt oluşur. Çok sayıda kayıt varsa Excel'den 'veritabanına aktar' seçeneği ile toplu yükleme yapabilirsiniz."
+}
+{
+  "instruction": "Cari devir fişi ile borç/alacak bakiye tanımlama",
+  "input": "Cari hesapların devir bakiyelerini toplu olarak yüklemek istiyorum. Hangi adımları izlemeliyim?",
+  "output": "Diğer menüsünden 'Cari Devir Fişi' ekranına gidin. Fiş tarihini, hesap kodunu, borç/alacak bilgisini ve tutarı girin. Çok fazla kayıt varsa Excel'den 'veritabanına aktar' seçeneğini kullanarak toplu yükleme yapabilirsiniz."
+}
+{
+  "instruction": "Cari hesap devir bakiyesi girme işlemi",
+  "input": "Alacak ve borç yaşlandırma raporuna başlamadan önce devir bakiyelerini nasıl tanımlayabilirim?",
+  "output": "Genel Araç Çubuğunda Diğer > Cari Devir Fişi yolunu izleyin. Tarih, hesap kodu, borç/alacak türü ve tutarı girdikten sonra alt satıra geçerek kaydı tamamlayın. Fazla sayıda kayıt için Excel üzerinden 'veritabanına aktar' fonksiyonunu kullanın."
+}
+
+
+
+{
+  "instruction": "120 ve 320 cari hesaplar arası virman işlemi yapma",
+  "input": "120 ABO 00296 numaralı cari hesap bakiyesini 120 127 48431 numaralı hesaba virmanlamak istiyorum. Hem cari kartlarda hem muhasebede hareket görünmeli. Hangi menüden yapabilirim?",
+  "output": "Finans > Diğer Cari Hesap İşlemleri > Virman Fişi ekranından iki cari arasında virman yapabilirsiniz. Kaynak Hesap alanına 120 ABO 00296, Hedef Hesap alanına ise 120 127 48431 numaralı hesabı seçin. Açıklama, vade tarihi ve tutarı girerek virman işlemini kaydedin."
+}
+{
+  "instruction": "Cari hesap virman işlemi",
+  "input": "120 ve 320'lerdeki cari hesaplar arasında bakiye transferi yapmak istiyorum. Hem cari hem muhasebe kayıtlarında görünmeli. Nasıl yapabilirim?",
+  "output": "Finans menüsünden Diğer Cari Hesap İşlemleri > Virman Fişi ekranına girin. Kaynak hesabı ve hedef hesabı seçin, açıklama, vade tarihi ve tutar bilgilerini girerek virman işlemini tamamlayın."
+}
+{
+  "instruction": "Virman fişi ile bakiye aktarımı",
+  "input": "Bir carideki bakiyeyi başka bir cariye aktaracağım. Örneğin 120 ABO 00296'dan 120 127 48431'e. İşlemi nereden yapabilirim?",
+  "output": "Finans > Diğer Cari Hesap İşlemleri > Virman Fişi ekranına gidin. Kaynak Hesap olarak 120 ABO 00296'yı, Hedef Hesap olarak 120 127 48431'i seçin. Açıklama, vade tarihi ve tutarı girip işlemi kaydedin."
+}
+
+
+
+{
+  "instruction": "Satış faturasında yanlış seçilen hesap kodunu değiştirme",
+  "input": "Gönderimini yaptığım satış faturasında yanlış hesap kodu seçmişim. Bu faturada hesap kodunu değiştirebilir miyim?",
+  "output": "Servisler > Finans, Satış, Satınalma, Stok Yönetimi > C/H Kartı İşlemleri Toplu İşlemler > C/H Kartı Kod Değişikliği ekranından yapılabilir. Eski hesap kodunu 'Hesap Kodu' alanına, yeni hesap kodunu 'Yeni Hesap Kodu' alanına yazın. 'Tarih Aralığı Filtre Kontrolü' mutlaka seçilmeli ve fatura tarihi aralığı belirtilmelidir. İlgili tarihte başka hareketler varsa işlem önerilmez."
+}
+{
+  "instruction": "Hatalı hesap kodunu düzeltme",
+  "input": "Satış faturasında seçtiğim hesap kodu yanlış. Nasıl değiştirebilirim?",
+  "output": "Servisler menüsünden Finans, Satış, Satınalma, Stok Yönetimi > C/H Kartı İşlemleri Toplu İşlemler > C/H Kartı Kod Değişikliği ekranına gidin. Eski kodu 'Hesap Kodu', yeni kodu 'Yeni Hesap Kodu' alanına girin. 'Tarih Aralığı Filtre Kontrolü' seçeneğini aktif edip fatura tarihini belirtin."
+}
+{
+  "instruction": "Faturadaki hesap kodunu değiştirme",
+  "input": "Yanlış hesap kodu ile kesilmiş satış faturasında hesap kodunu nasıl düzeltebilirim?",
+  "output": "C/H Kartı Kod Değişikliği ekranında eski ve yeni hesap kodlarını girin. Tarih Aralığı Filtre Kontrolü'nü işaretleyip fatura tarihini belirleyin. Bu işlem Servisler > Finans, Satış, Satınalma, Stok Yönetimi > C/H Kartı İşlemleri Toplu İşlemler menüsünden yapılır."
+}
+
+
+
+{
+  "instruction": "Satış faturasında mal koduna ait ÖTV oranını değiştirme",
+  "input": "Satış faturasında seçtiğim mal kodunun ÖTV oranını değiştirmek istiyorum. Nasıl yapabilirim?",
+  "output": "Stok kartında Alış/Maliyet sekmesine gidin. GTIPN alanına çift tıklayarak Gümrük Kartı Tanımlarını açın ve buradan ÖTV oranını revize edin."
+}
+{
+  "instruction": "ÖTV oranı revizesi",
+  "input": "Mal kodu için tanımlı ÖTV oranını nasıl güncelleyebilirim?",
+  "output": "İlgili stok kartında Alış/Maliyet sayfasına girin. GTIPN alanına çift tıklayın. Açılan Gümrük Kartı Tanımlarında ÖTV oranını güncelleyip kaydedin."
+}
+
+
+
+{
+  "instruction": "Dövizli belge girişi yapma",
+  "input": "Dövizli belge girişi yapamıyorum, ne yapmalıyım?",
+  "output": "Ekranın sağ tarafındaki Sayfa Araç Çubuğunda yer alan Tanımlar > Dövizli Çalışma Tanımlarına girin. 'Dövizli Çalışma' seçeneğini aktif hale getirin. Döviz kurları döviz sisteminden alınacaksa ilgili tanımı 'Evet' olarak seçin ve kullanılacak kur cinsini belirleyin."
+}
+{
+  "instruction": "Dövizli çalışma ayarlarının yapılması",
+  "input": "Sistemde dövizli belge girişini nasıl aktif edebilirim?",
+  "output": "Sayfa Araç Çubuğu > Tanımlar > Dövizli Çalışma Tanımlarına girin. 'Dövizli Çalışma' seçeneğini aktif edin. Döviz kurları döviz sisteminden alınacaksa 'Evet' olarak ayarlayın ve kur cinsini belirleyin."
+}
+{
+  "instruction": "Dövizli işlem ayarı",
+  "input": "Dövizli çalışmayı açmak için hangi menüden işlem yapmalıyım?",
+  "output": "Sağ taraftaki Sayfa Araç Çubuğunda Tanımlar > Dövizli Çalışma Tanımlarına gidin. 'Dövizli Çalışma' seçeneğini aktif edin. Gerekirse döviz kurları için 'Evet' seçeneğini işaretleyin ve kur cinsini belirleyin."
+}
+
+
+
+{
+  "instruction": "Kalemde KDV Tevkifatı girememe sorunu çözümü",
+  "input": "Fatura kaleminde KDV Tevkifatı girmek istiyorum ancak alan aktif değil, ne yapmalıyım?",
+  "output": "Ekranın sağ tarafındaki Sayfa Araç Çubuğunda yer alan Tanımlar > KDV Uygulama Tanımlarına girin. 'KDV Tevkifatı Uygulama Şekli' tanımını 'Kalemde Tevkifatı var' olarak değiştirin."
+}
+{
+  "instruction": "Kalemde KDV Tevkifatı aktif etme",
+  "input": "Kalemde KDV Tevkifatı seçeneği neden görünmüyor?",
+  "output": "Sayfa Araç Çubuğu > Tanımlar > KDV Uygulama Tanımlarına girerek 'KDV Tevkifatı Uygulama Şekli' seçeneğini 'Kalemde Tevkifatı var' olarak ayarlayın."
+}
+{
+  "instruction": "KDV Tevkifatı ayarlarının yapılması",
+  "input": "Kalemde KDV Tevkifatı ekleyebilmek için hangi ayar yapılmalı?",
+  "output": "Ekranın sağındaki Sayfa Araç Çubuğunda Tanımlar > KDV Uygulama Tanımlarına girin. 'KDV Tevkifatı Uygulama Şekli' alanını 'Kalemde Tevkifatı var' olarak değiştirin."
+}
+
+
+
+{
+  "instruction": "Belge girişini ikinci birim üzerinden yapma",
+  "input": "Satış faturası veya alım faturası gibi belgeleri ikinci birim üzerinden girebilir miyim?",
+  "output": "Ekranın sağ tarafında bulunan Sayfa Araç Çubuğundaki Tanımlarda 'Birden Çok Birim İle Çalışma' tanımlarına giriş yapıp aktif edin. 'Ana Birimin Miktarı Değiştirilebilsin' seçeneğini 'Evet' olarak tanımlayın."
+}
+{
+  "instruction": "İkinci birim ile belge girişi",
+  "input": "Stok giriş veya çıkış fişini ikinci birim üzerinden girmek istiyorum, nasıl yapabilirim?",
+  "output": "Sayfa Araç Çubuğundan 'Birden Çok Birim İle Çalışma' tanımlarına girip aktif hale getirin. Ayrıca 'Ana Birimin Miktarı Değiştirilebilsin' seçeneğini 'Evet' olarak ayarlayın."
+}
+{
+  "instruction": "Birden çok birim ile çalışmayı aktif etme",
+  "input": "Belgeleri ikinci birim kullanarak girmek istiyorum, hangi ayarı açmam lazım?",
+  "output": "Ekranın sağındaki Sayfa Araç Çubuğunda 'Birden Çok Birim İle Çalışma' tanımlarını aktif edin ve 'Ana Birimin Miktarı Değiştirilebilsin' seçeneğini 'Evet' olarak tanımlayın."
+}
+
+
+
+{
+  "instruction": "Senet / Çek kasası hesabı görünmüyor",
+  "input": "Alınan Çekler / Çek Alım Bordrosu ekranında Senet / Çek kasası alanında 101'li hesabı göremiyorum, neden?",
+  "output": "İlgili cari hesabın kart tipi 'Kasa', işlem tipi ise 'Çek' olarak tanımlanmalıdır. Aksi takdirde senet / çek kasası dürbününde görüntülenmez."
+}
+{
+  "instruction": "Çek kasası hesabının görünmesini sağlama",
+  "input": "Senet / Çek kasası seçiminde 101'li hesabın gelmesi için ne yapmam gerekiyor?",
+  "output": "Cari hesabın kart tipini 'Kasa', işlem tipini ise 'Çek' olarak ayarlayın. Bu tanımlar yapılmazsa senet / çek kasası seçiminde 101'li hesap görünmez."
+}
+
+
+{
+  "instruction": "Hareket görmemiş muhasebe alt hesaplarını listeleme",
+  "input": "Hiç işlem yapılmamış muhasebe alt hesaplarını nasıl bulabilirim?",
+  "output": "Li-Nova ana menüsünde Servisler bölümüne giderek 'İşlem Görmemiş Alt Hesaplar' servisini çalıştırın. Açılan pencerede bugüne kadar hareket görmemiş alt hesap kartları listelenecektir."
+}
+{
+  "instruction": "İşlem görmemiş muhasebe alt hesaplarını tespit etme",
+  "input": "Hangi muhasebe alt hesapları hiç kullanılmamış, bunları nasıl tespit ederim?",
+  "output": "Servisler menüsünden 'İşlem Görmemiş Alt Hesaplar' servisini çalıştırın. Karşınıza gelen listede hareket görmemiş tüm alt hesaplar görüntülenecektir."
+}
+{
+  "instruction": "Satış veya alım evraklarının bağlı olduğu belgeyi görüntüleme",
+  "input": "Bir satış veya alım evrakının hangi belgeye bağlı olduğunu nasıl görebilirim?",
+  "output": "İlgili evrağın Form araç çubuğundan 'Evrak Geçişlerini Göster' (CTRL + N) butonuna tıklayın. Açılan pencerede evrağın bağlı olduğu belgeler listelenecektir."
+}
+{
+  "instruction": "Evrak bağlantılarını inceleme",
+  "input": "Girdiğim satış veya alım evrakının bağlantılı olduğu diğer belgeleri görmek istiyorum, ne yapmalıyım?",
+  "output": "Form araç çubuğunda bulunan 'Evrak Geçişlerini Göster' (CTRL + N) butonuna tıklayın. Açılan pencerede evrağa bağlı tüm belgeler görüntülenir."
+}
+
+
+
+{
+  "instruction": "Pasif edilen stok kartına işlem yapma",
+  "input": "Yeni stok kartı oluşturmak istediğimde 'İlgili kart Pasif edilmiştir! İşlem yapılamaz.' hatası alıyorum ve F10 kayıt listesinde görünmüyor. Ne yapmalıyım?",
+  "output": "Li-Nova ana menüde Tanımlar → Stok Yönetimi → Stok Kartları → Stok Kartı → Genel Çalışma Tanımlarına girin. 'Pasif Kartlara İşlem Yapılsın' ve 'Pasif Kartlar F10 Seçim Listesinde Yer Alsın' seçeneklerini işaretleyerek kaydedin."
+}
+{
+  "instruction": "Pasif stok kartını F10 listesinde gösterme",
+  "input": "Pasif olan stok kartım F10 seçim listesinde görünmüyor. Nasıl görüntüleyebilirim?",
+  "output": "Tanımlar → Stok Yönetimi → Stok Kartları → Stok Kartı → Genel Çalışma Tanımlarında 'Pasif Kartlara İşlem Yapılsın' ve 'Pasif Kartlar F10 Seçim Listesinde Yer Alsın' seçeneklerini aktif edin."
+}
+
+
+{
+  "instruction": "Hareket görmeyen depoları listeleme",
+  "input": "Sistemde hiç hareket görmeyen depoları tespit etmek istiyorum. Hangi menüden yapabilirim?",
+  "output": "Li-Nova ana menüde Servisler → Depo Yönetimi → Depo İşlemleri → Depo / Stok Kartı Olmayan Hareketler servisine girin. 'Stok İşlemleri' ve 'Sipariş İşlemleri' kutucuklarını işaretleyip çalıştırın. Rezervasyon ve teklif hareketleri de takip ediliyorsa 'Rezervasyon İşlemleri' ve 'Teklif İşlemleri' seçeneklerini de seçerek çalıştırmanız önerilir."
+}
+{
+  "instruction": "Depo hareketi olmayan stokları bulma",
+  "input": "Bazı depoların hiç stok hareketi yok. Bunları nasıl bulabilirim?",
+  "output": "Servisler → Depo Yönetimi → Depo İşlemleri → Depo / Stok Kartı Olmayan Hareketler ekranına gidin. 'Stok İşlemleri' ve 'Sipariş İşlemleri' onay kutularını seçin. Eğer şirkette rezervasyon ve teklif hareketleri kullanılıyorsa ilgili kutucukları da seçip çalıştırın."
+}
+
+
+
+{
+  "instruction": "Enflasyon Düzeltmesine göre amortisman hesaplatırken 'Enflasyon Düzeltme ve Arınma Yöntemleri Tanımları yapılmamış!' hatası nasıl çözülür?",
+  "input": "Enflasyon Düzeltmesine Göre amortisman hesaplatması yapmak istediğimde 'Enflasyon Düzeltme ve Arınma Yöntemleri Tanımları yapılmamış!' uyarısı alıyorum. Ne yapmalıyım?",
+  "output": "Amortisman hesaplaması yaptırmak istediğiniz yıl için enflasyon düzeltme ve arındırma yöntem tanımları yapılmalıdır. Li-Nova ana menüde Tanımlar → Enflasyon Düzeltmeleri → Enflasyon Düzeltmeleri ve Arındırma Yöntemi Tanımları ekranına girin, Mali Yıl sütununa ilgili yılı (ör. 2025, 2026) yazıp alt satıra geçerek kaydı oluşturun."
+}
+{
+  "instruction": "Enflasyon düzeltme ve arındırma yöntem tanımları nereden yapılır?",
+  "input": "Amortismanı enflasyon düzeltmesine göre hesaplamak için yöntem tanımlarını hangi menüden girebilirim?",
+  "output": "Li-Nova ana menüde Tanımlar → Enflasyon Düzeltmeleri → Enflasyon Düzeltmeleri ve Arındırma Yöntemi Tanımları ekranından tanımları yapabilirsiniz."
+}
+{
+  "instruction": "Amortisman için hangi mali yıl değerine enflasyon düzeltme tanımı girilmelidir?",
+  "input": "Enflasyon düzeltmesiyle amortisman alacağım yıl için nasıl yıl seçmeliyim?",
+  "output": "Amortisman hesaplatmak istediğiniz yılın değeri (örneğin 2025 veya 2026) Mali Yıl sütununa yazılmalı ve alt satıra inerek tanım kaydedilmelidir."
+}
+
+
+
+
+{
+  "instruction": "Satış faturasına bağlı hatalı veya mükerrer mahsup fişini nasıl düzeltebilirim?",
+  "input": "Satış Faturasına bağlı mahsup fişi hatalı/mükerrer oluşmuş. Muhasebe kaydını silip yeniden oluşturmak istiyorum. Ne yapmalıyım?",
+  "output": "İlgili mahsup fişini silin. Ardından satış faturasını 'Kaydı Oku' (CTRL + F10) butonu ile okutun ve 'Evrakı Muhasebeye Aktar' butonu ile yeniden muhasebeleştirin."
+}
+{
+  "instruction": "Mükerrer oluşan mahsup fişi nasıl yeniden muhasebeleştirilir?",
+  "input": "Sistemde mükerrer kayıt oluştu, satış faturasına ait mahsup fişini yeniden oluşturmak istiyorum.",
+  "output": "Öncelikle mükerrer mahsup fişini silin. Daha sonra satış faturasını 'Kaydı Oku' (CTRL + F10) ile açarak 'Evrakı Muhasebeye Aktar' butonunu kullanın."
+}
+
+
+
+
+{
+  "instruction": "Muhasebe fişlerinde Belge Tipi/No/Tarih alanları doldurulmuyor, nasıl çözülür?",
+  "input": "Kaydettiğim evrakların muhasebe fişlerinde Belge Tipi, Belge No ve Belge Tarihi otomatik gelmiyor. Ne yapmalıyım?",
+  "output": "Önce LKP programında şirketin VKN’sine ait ilgili yıl için ek lisansın tanımlı olduğunu kontrol edin. Ardından Li-Nova → Tanımlar → Muhasebe → Entegrasyon → Genel Tanımlar ekranında ‘On-Line Muhasebe Entegrasyonu Yapılsın’ ve ‘On-Line Muhasebe Entegrasyon Kontrolü Yapılsın’ seçeneklerinin işaretli olduğundan emin olun."
+}
+{
+  "instruction": "Belge alanlarının boş gelmesinin muhtemel nedeni nedir?",
+  "input": "Muhasebe fişlerinde Belge Tipi/No/Tarih alanları neden boş kalır?",
+  "output": "Genellikle iki sebepten kaynaklanır: (1) LKP’de ilgili yıl için şirket VKN’sine ek lisans tanımlı değildir. (2) Li-Nova → Tanımlar → Muhasebe → Entegrasyon → Genel Tanımlar’da ‘On-Line Muhasebe Entegrasyonu Yapılsın’ ve ‘On-Line Muhasebe Entegrasyon Kontrolü Yapılsın’ işaretli değildir."
+}
+{
+  "instruction": "On-Line Muhasebe Entegrasyonu ayarları nasıl doğrulanır?",
+  "input": "Belge alanları dolmuyor; entegrasyon ayarlarının doğru olup olmadığını nasıl kontrol ederim?",
+  "output": "Li-Nova ana menüden Tanımlar → Muhasebe → Entegrasyon → Genel Tanımlar ekranını açın. ‘On-Line Muhasebe Entegrasyonu Yapılsın’ ve ‘On-Line Muhasebe Entegrasyon Kontrolü Yapılsın’ kutucuklarının işaretli olduğunu doğrulayın. Sorun sürerse LKP’de şirket VKN’si için ilgili yıl ek lisansını kontrol edin."
+}
+
+
+
+
+{
+  "instruction": "Belirli bir dönem mizanında aktif ve pasif tutmuyor; askıda fiş nasıl tespit edilir?",
+  "input": "01.01.2025 - 31.03.2025 tarihli mizan aldığımda aktif ve pasif tutmuyor. Askıda fiş kalmış olabilir mi?",
+  "output": "Li-Nova ana menüde Servisler bölümünde 'Fiş Bakiyesi Kontrolü' servisini çalıştırarak bakiyeli (askıda) fişleri tespit edebilirsiniz."
+}
+{
+  "instruction": "Fiş Bakiyesi Kontrolü çıktısı Excel’e nasıl aktarılır?",
+  "input": "Askıda fişleri kontrol etmek için listeyi Excel’e aktarmak istiyorum. Nasıl yaparım?",
+  "output": "Servisler → 'Fiş Bakiyesi Kontrolü' servisini çalıştırın. Sonuç ekranında Excel’e aktar seçeneğini kullanarak listeyi dışa aktarın ve detayları Excel üzerinde inceleyin."
+}
+{
+  "instruction": "Aktif-pasif tutarsızlığında ilk kontrol adımı nedir?",
+  "input": "Mizanda aktif ve pasif eşit değil. İlk olarak nereden kontrol etmeliyim?",
+  "output": "Öncelikle Servisler → 'Fiş Bakiyesi Kontrolü' servisini çalıştırarak bakiyeli fişleri tespit edin. Gerekirse listeyi Excel’e aktarıp ilgili fişleri inceleyin."
+}
+
+
+
+
+{
+  "instruction": "Alımdan iade irsaliye işleminde irsaliye numarası otomatik nasıl getirilir?",
+  "input": "Alımdan iade irsaliye işlemlerinde irsaliye numarası alanı boş geliyor. Son evrak numarasından sonra otomatik numara gelmesini istiyorum.",
+  "output": "Seçenekler menüsünden 'İrsaliye No Otomatik Verilmesin' seçeneğini işaretleyin. Böylece sistem son evrak numarasından sonraki numarayı otomatik olarak getirir."
+}
+{
+  "instruction": "Alımdan iade işlemi sonrası irsaliye oluşturulamıyorsa ne yapılmalı?",
+  "input": "Alımdan iade işlemlerinden sonra bu kullanıcı ile irsaliye oluşturamıyoruz.",
+  "output": "Kullanıcı yetkilerini ve Seçenekler → 'İrsaliye No Otomatik Verilmesin' ayarını kontrol edin. İşaretli değilse işaretleyin, ardından tekrar deneyin."
+}
+

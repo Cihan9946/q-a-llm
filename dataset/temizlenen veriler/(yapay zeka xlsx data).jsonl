@@ -1,0 +1,111 @@
+
+
+{"instruction": "Terminalde program demo modunda çalışıyor. Nasıl düzeltirim?", 
+"input": "Terminal bağlantısında program demo modunda açılıyor. Bunun çözümü nedir?", 
+"output": "Ana bilgisayara \\\\anabilgisayar_adı ile giderken büyük ihtimalle şifre soruyordur. Admin kullanıcı adı ve şifre girilip, 'celtik' işareti konulursa terminal demo moddan çıkacaktır."
+}
+
+{"instruction": "Fatura keserken 'mükerrer referans numarası' hatası alıyorum. Ne yapmalıyım?", 
+"input": "Fatura oluşturmak istediğimde sistem mükerrer referans numarası hatası veriyor. Bunu nasıl düzeltebilirim?",
+"output": "a) Mükerrer olan numara, Çok Amaçlı Listeden referans numarası eklenerek listelenir. Değer değişikliğinden önce başına 99999 eklenir. Aynı şekilde SQL’den LB’da fatura bulunur ve referans numarasının başına yine 99999 eklenir."
+}
+
+{"instruction": "E-Defter gönderirken 'shmatron hatası' alıyorum. Çözümü nedir?", 
+"input": "Link-Cloud ERP’de E-Defter gönderiminde shmatron hatası alıyorum. Nasıl düzeltebilirim?", 
+"output": "Java 301 64-bit sürümü yüklenir ve diğer Java sürümleri kaldırılır."
+}
+
+
+
+{"instruction": "E-Defter oluştururken VKN hatası alıyorum. Çözümü nedir?", 
+"input": "E-Defter oluştururken sistem VKN hatası veriyor. Nasıl düzeltebilirim?", 
+"output": "İşletme bilgilerindeki VKN kontrol edilir. Büyük ihtimalle farklı VKN vardır. Üzerindeki ok işaretine tıklayınca ikinci bir VKN görünür; o seçilip kayıt edilince sorun düzelecektir."
+}
+
+
+
+{"instruction": "Hesap pusulasını İngilizce çıktı almak için ne yapmalıyım?", 
+"input": "Hesap pusulasını İngilizce olarak dökmek istiyorum. Nereden ayarlayabilirim?", 
+"output": "Hesap pusulasını İngilizce almak için Ynsextdef.txt dosyasının içine ED00003 yazmalısınız. Türkçe çıktıya dönmek için bu satırı dosyadan silmeniz gerekir."
+}
+
+{"instruction": "CefSharp hatası nasıl çözülür?", 
+"input": "Programı açınca CefSharp ile ilgili bir hata alıyorum. Ne yapmalıyım?", 
+"output": "Microsoft Visual C++ Redistributable 2015–2019 paketini kurmalısınız. 32-bit sistem için x86, 64-bit sistem için x64 sürümünü indirip kurduktan sonra programı yeniden başlatın."}
+
+{"instruction": "Serbest bölgeye ihracat faturası nasıl kesilir?", 
+"input": "Serbest bölgeye ihracat faturası düzenleyeceğim. Hangi ayarları yapmalıyım?", 
+"output": "Ülke kodunu 960 ya da 961 olarak seçin. E-Fatura kullanıcısında ‘çeltik’ işareti bulunmalı ve senaryosu ‘İhracat Faturası’ olmalıdır."
+}
+
+{"instruction": "İhracat irsaliyesi keserken alınan hata nasıl çözülür?",
+"input": "İhracat irsaliyesi kesiyorum ama sistem hata veriyor. Nereden düzeltmeliyim?", 
+"output": "Sevkiyatın yapılacağı yer için gümrük kartı açıp o kartı seçin. Açılan kartın adres bilgilerini (posta kodu dâhil) eksiksiz doldurun; ardından irsaliyeyi yeniden deneyin."
+}
+
+{"instruction": "Mikro ihracat faturası nasıl düzenlenir?", 
+"input": "Mikro ihracat yapacağım. Faturayı nasıl kesmeliyim?", 
+"output": "VKN alanına 222222222 yazın. E-İhracat çeltiğini işaretlemeyin; işlem E-Arşiv fatura olarak kesilecektir. Hepsi bu kadar."
+}
+
+{"instruction": "Bordroda askerlik borçlanması nasıl yapılır?", 
+"input": "Çalışanın askerlik borçlanması tutarını bordroya eklemem gerekiyor. Hangi alanları kullanacağım?",
+"output": "Borçlanma tutarını ‘Diğer İndirimler’ alanına girin ve hesap şekli olarak 188’i kullanın."
+}
+
+{"instruction": "E-Fatura’ya giriş yapamıyorum, kullanıcı blokesi nasıl anlaşılır ve neden olur?",
+"input": "E-Fatura sistemine giremiyorum, ‘Yanlış Kullanıcı veya şifre’ hatası alıyorum. Bloke olabilir mi?",
+"output": "EFATURAMASTER kullanıcısı bloke olduğunda E-Fatura girişinde ‘Yanlış Kullanıcı veya şifre’ mesajı alınır. Kullanıcı şifresi belirli sayıda hatalı girildiğinde sistem tarafından bloke edilir."
+}
+
+{"instruction": "Yeni Nesil Fatura ekranında miktar toplamlarını nasıl görüntülerim?",
+"input": "Yeni Nesil Fatura’da miktar toplamını ve Miktar 2 toplamını görmek istiyorum. Kısayol var mı?",
+"output": "Toplam miktarı görmek için ‘A’ tuşuna basıp ardından Ctrl+1 yapın. Miktar 2 toplamı için ‘A’ tuşundan sonra Ctrl+2 kombinasyonunu kullanın."
+}
+
+{"instruction": "Faturayı açıp kapatınca mal kodları sıralanıyor; kesildiği sırayla nasıl korunur?", 
+"input": "Kestiğim faturayı tekrar açınca mal kalemleri farklı sırada geliyor. Orijinal sırayı nasıl sabitlerim?",
+"output": "Stok takip sistemi → Stok hareket girişi bölümünde 58 no’lu indeksin ‘online’ olmasını sağlayın. Düzenle kısmında ‘mal kodu’ seçeneğini kaldırıp 019 no’lu ‘kayıt sıra no’ alanını ekleyin; böylece kalemler kesildiği sırayla gelir."
+}
+
+{"instruction": "Kuruluş yaparken ‘merkezle bağlantı kurulamadı’ hatası nasıl giderilir?",
+"input": "Kurulum esnasında merkezle bağlantı kurulamadı uyarısı alıyorum. Ağ tarafında ne kontrol etmeliyim?",
+"output": "Aşağıdaki adrese erişim engeli olmamalıdır: wwww.link.com.tr. Bu adrese erişimi güvenlik duvarı ve proxy üzerinde izinli hale getirin ve yeniden deneyin."
+}
+
+{"instruction": "Unvan değişikliğinden sonra e-Defter işlemleri nasıl yapılır?",
+"input": "Şirketin unvanı değişti. Hangi dönemi hangi mali mühürle göndermeliyim?",
+"output": "Tescilin gerçekleştiği ayın tamamına ait e-defterler eski unvana ait mali mühürle oluşturulup imzalanarak GİB’e gönderilmelidir. Sonraki ve diğer tüm aylara ait e-defterler ise yeni unvana ait mali mühürle oluşturulup GİB’e gönderilmelidir."
+}
+
+{"instruction": "Nevi değişikliğinde hangi adımlar izlenmelidir?", 
+"input": "Şirketin nevini değiştirdim. E-Defter ve mali mühür işlemlerinde nasıl bir yol izlemem gerekir?", 
+"output": "Nevi değişikliğinin gerçekleşmesinden itibaren yeni neviye ait mali mühür başvurusu yapılmalıdır. Mali mühür başvurusundan itibaren 15 gün içinde Başkanlığa durumu anlatan dilekçe ve ticaret sicil gazetesi örneği iletilmelidir. Mali mühür temin edildikten sonra yeni neviye ait mali mühürle e-Defter başvurusu yapılmalı ve e-Defter uygulama başlama tarihi en yakın tarih olarak seçilmelidir."
+}
+
+{"instruction": "Eski neviye ait beratlar nasıl oluşturulur ve gönderilir?",
+"input": "Nevi değişikliğinden önceki döneme ait e-defter beratlarını nasıl düzenlemeliyim?",
+"output": "Eski neviye ait beratlar, ilgili ayın tamamını kapsayacak şekilde (ör. 01.0X.2017-30.0X.2017) eski neviye ait mali mühürle oluşturulmalı, imzalanmalı ve GİB’e gönderilmelidir. Muhasebe fişleri, belge tarihi 01/0X/2017 ile tescil tarihi arasındaki kayıtları kapsamalıdır."
+}
+
+{"instruction": "Yeni neviye ait beratlar nasıl oluşturulur ve gönderilir?", 
+"input": "Nevi değişikliğinden sonraki döneme ait e-defter beratlarını nasıl düzenlemem gerekiyor?", 
+"output": "Yeni neviye ait beratlar, ilgili ayın tamamını kapsayacak şekilde (ör. 01.0X.2017-30.0X.2017) yeni neviye ait mali mühürle oluşturulmalı, imzalanmalı ve GİB’e gönderilmelidir. Muhasebe fişleri, belge tarihi tescil tarihinden itibaren yapılan kayıtları kapsamalıdır."
+}
+
+{"instruction": "Nevi değişikliğinde mali mühür başvurusu ne zaman yapılmalıdır?",
+"input": "Şirketin nevini değiştirdim. Mali mühür başvurusunu hangi sürede yapmam gerekiyor?", 
+"output": "Nevi değişikliğinin gerçekleşmesinden itibaren derhal yeni neviye ait mali mühür başvurusu yapılmalı ve başvurudan itibaren 15 gün içinde Başkanlığa dilekçe ile ticaret sicil gazetesi örneği iletilmelidir."}
+
+{"instruction": "Nevi değişikliğinde e-defter başlama tarihi nasıl belirlenir?",
+"input": "Nevi değişikliğinden sonra e-defter başvurusunda başlama tarihi nasıl seçilmeli?", 
+"output": "E-Defter başvurusu yeni neviye ait mali mühürle yapılmalı ve başlama tarihi tescil tarihi seçilmese dahi en yakın tarih olarak belirtilmelidir. Başkanlığa iletilen evraklara istinaden e-defter başlama tarihi tescil tarihine çekilecektir."
+}
+
+{"instruction": "Nevi değişikliğinde muhasebe fiş girişleri nasıl yapılır?",
+"input": "Nevi değişikliğinde belge tarihleri ve tescil tarihi dikkate alınarak fiş girişleri nasıl olmalı?", 
+"output": "Eski neviye ait fiş girişlerinde belge tarihi 01/0X/2017 ile tescil tarihi arasındaki kayıtlar yapılır. Yeni neviye ait fiş girişlerinde ise belge tarihi tescil tarihinden itibaren yapılan kayıtlar girilir."
+}
+
+
+

@@ -1,0 +1,217 @@
+{"instruction": "Programa giriş yaparken 'SOLAR6 veritabanı yüklü değil' hatası nasıl çözülür?",
+"input": "Programa giriş yapmaya çalıştığımda SOLAR6 veritabanı yüklü değil mesajı alıyorum. Ne yapmalıyım?",
+"output": "Bu hata, 32 bit ODBC User DSN veya System DSN tanımında SOLAR6 bulunmamasından kaynaklanır. Çözüm için istemci kurulumunu yeniden yapın veya User DSN tanımını manuel olarak ekleyin."
+}
+{"instruction": "32 bit ODBC'de User DSN tanımı eksik olduğunda ne yapılır?", 
+"input": "ODBC veri kaynaklarında User DSN tanımı eksik görünüyor. SOLAR6 bağlantısını nasıl ekleyebilirim?",
+ "output": "Eksik User DSN tanımını ODBC veri kaynak yöneticisinde manuel olarak ekleyebilir veya istemci kurulumunu yeniden yaparak otomatik olarak oluşturulmasını sağlayabilirsiniz."
+}
+{"instruction": "System DSN ile User DSN farkı nedir ve SOLAR6 tanımı hangisine eklenmelidir?", 
+"input": "SOLAR6 bağlantısı için System DSN mi yoksa User DSN mi eklemeliyim?",
+ "output": "System DSN, bilgisayardaki tüm kullanıcılar için geçerlidir; User DSN ise yalnızca o kullanıcı hesabı için geçerlidir. SOLAR6 tanımı eksikse genellikle User DSN’e eklemek yeterlidir, ancak çok kullanıcılı sistemlerde System DSN’e eklemeniz gerekir."
+}
+{"instruction": "SOLAR6 ODBC tanımı manuel olarak nasıl eklenir?",
+ "input": "SOLAR6 ODBC bağlantısını manuel olarak eklemek istiyorum. Nasıl yaparım?",
+  "output": "Denetim Masası → Yönetimsel Araçlar → ODBC Veri Kaynakları (32-bit) → User DSN → Ekle yolunu izleyin. SOLAR6 sürücüsünü seçin, gerekli sunucu ve veritabanı bilgilerini girin, kaydedin."
+}
+{"instruction": "İstemci kurulumunu tekrarlamadan SOLAR6 tanımı nasıl düzeltilir?",
+ "input": "SOLAR6 ODBC tanımı eksik. İstemciyi yeniden kurmadan bu tanımı düzeltebilir miyim?", 
+ "output": "Evet. ODBC yönetici arayüzünden eksik SOLAR6 DSN tanımını manuel olarak ekleyerek veya düzenleyerek istemciyi yeniden kurmadan sorunu çözebilirsiniz."
+}
+
+
+
+{"instruction": "Döviz kurlarının otomatik olarak yüklenmesi mümkün mü?",
+ "input": "Programda döviz kurlarını her gün elle girmek istemiyorum. Otomatik yükleme özelliği var mı?",
+  "output": "Evet, döviz kurlarının otomatik olarak yüklenmesi mümkündür. Bunun için Döviz Kurları programına giriş yapın, Dosya sekmesinden 'Merkez Bankası Kur Transferleri' seçeneğine girin, 'Günlük döviz kurları sisteme otomatik yüklensin' kutucuğunu seçip tamam ile onaylayın. Tanımlama yapıldıktan sonra programa girişte kurlar otomatik güncellenecektir."
+}
+{"instruction": "Döviz kurları otomatik yükleme özelliği nasıl aktif edilir?", 
+"input": "Merkez Bankası'ndan günlük döviz kurlarını otomatik olarak almak istiyorum. Programda nasıl ayar yapmalıyım?", 
+"output": "Döviz Kurları programına giriş yapın, Dosya sekmesinden 'Merkez Bankası Kur Transferleri' seçeneğine girin. 'Günlük döviz kurları sisteme otomatik yüklensin' kutucuğunu işaretleyin ve tamam ile onaylayın. Bu ayar sonrası program açıldığında kurlar güncellenecektir."
+}
+{"instruction": "Merkez Bankası kur transferi ayarları nereden yapılır?", 
+"input": "Programda Merkez Bankası kur transferini aktif etmek istiyorum. Ayarlara nereden ulaşabilirim?", 
+"output": "Döviz Kurları programına giriş yaptıktan sonra Dosya sekmesine gidin, 'Merkez Bankası Kur Transferleri' seçeneğini seçin. Açılan ekranda 'Günlük döviz kurları sisteme otomatik yüklensin' kutucuğunu işaretleyip onaylayın."
+}
+
+
+
+{"instruction": "Windows 10 ve Windows 11'de programa girişte ekran titremesi ve yavaş açılma sorunu nasıl çözülür?", 
+"input": "Windows 10 kullanıyorum, programa girişte ekran titriyor ve çok yavaş açılıyor. Ne yapmalıyım?",
+ "output": "Program kısayolu üzerine sağ tıklayın, 'Özellikler' menüsüne girin. 'Uyumluluk' (Compatibility) sekmesine gelerek 'Bu uygulamayı Windows 7 olarak çalıştır' seçeneğini işaretleyin ve onaylayın. Bu ayar sorunu çözecektir."
+}
+{"instruction": "Windows uyumluluk ayarlarıyla program performansı nasıl iyileştirilir?", 
+"input": "Windows 11 kullanıyorum, programa girişte ekran titreme sorunum var. Uyumluluk ayarlarını nasıl yapabilirim?",
+ "output": "Programın masaüstü kısayolu üzerine sağ tıklayın, 'Özellikler' menüsüne girin. 'Uyumluluk' sekmesinde 'Bu uygulamayı Windows 7 uyumluluğunda çalıştır' kutucuğunu işaretleyip değişiklikleri kaydedin."
+}
+{"instruction": "Programın yavaş açılma sorununu uyumluluk modu ile çözebilir miyim?", 
+"input": "Program Windows 10'da çok yavaş açılıyor. Uyumluluk modu çözüm olur mu?", 
+"output": "Evet. Kısayol üzerine sağ tıklayıp 'Özellikler' → 'Uyumluluk' sekmesine gidin ve 'Bu uygulamayı Windows 7 uyumluluğunda çalıştır' seçeneğini işaretleyin. Değişiklikleri onaylayıp programı yeniden başlatın."
+}
+
+
+
+
+{"instruction": "Önce Satış Faturası düzenleyip sonra Satış İrsaliyesi ile sevkiyat yapabilir miyim?",
+ "input": "İlk olarak satış faturası oluşturup daha sonra malların sevkini satış irsaliyesi ile yapmak istiyorum. Bu mümkün mü?",
+  "output": "Evet, yapabilirsiniz. Satış Faturasını düzenlerken 'Sevkiyatı daha sonra yapılacak' kutucuğunu işaretleyip faturayı oluşturun. Ardından Satış İrsaliyesine girip İrsaliye sekmesinden 'Sevkedilmeyen faturaları seç' seçeneğini kullanarak işlemi tamamlayabilirsiniz."
+}
+{"instruction": "Satış Faturasına sıfır KDV oranı girdiğimde neden müdahale edemiyorum?", 
+"input": "Satış faturası kesiyorum, KDV oranını 0 giriyorum fakat sistem müdahale etmeme izin vermiyor. Sebebi nedir?", 
+"output": "Satış Faturasında kullanılan cari hesap kartının Genel sayfasında 'KDV'den Muaf' seçimi yapılmışsa, sistem bu durumda KDV hesaplaması yapmaz ve müdahaleye izin vermez."
+}
+{"instruction": "KDV'den muaf cari hesap kartı kullanıldığında KDV nasıl hesaplanır?", 
+"input": "Satış faturasında kullandığım cari hesap kartı KDV'den muaf. Bu durumda KDV hesaplanır mı?", 
+"output": "Hayır. Cari hesap kartının Genel sayfasında 'KDV'den Muaf' seçiliyse sistem KDV hesaplaması yapmaz."
+}
+
+
+
+{
+"instruction": "Alım Faturası kaydedildiğinde stok kartlarının Son Alım Fatura Bilgileri neden güncellenmez?",
+ "input": "Kullanıcının tüm yetkileri olmasına rağmen Alım Faturası kaydedildiğinde faturadaki stok kartlarının Son Alım Fatura Bilgileri güncellenmiyor. Sebebi nedir?", 
+ "output": "İşletmen → Diğer → Tanımlar → Kart Güncelleme Tanımları ekranında 'Son Alım Faturaları Güncellenmesin' tanımı işaretlenmiş olabilir. Bu işaret kaldırılarak güncelleme sağlanabilir."
+}
+{
+"instruction": "Muhasebe On-Line Entegrasyon'da her kullanıcı için farklı muhasebe fişi nasıl oluşturulur?",
+ "input": "Aynı türden evraklar bir fişte tek aktarılsın yönteminde her kullanıcı için ayrı muhasebe fişi oluşmasını istiyorum. Nasıl yapabilirim?",
+ "output": "Tanımlar → Muhasebe → Entegrasyon → Genel Tanımlar ekranındaki 'Muhasbeleşme Tablo No' alanı her kullanıcı için farklı olacak şekilde tanımlanarak bu işlem sağlanır."
+}
+
+
+{
+  "instruction": "Alım İrsaliyesi ile depolar arası transfer fişi otomatik oluşturulabilir mi?",
+  "input": "Alım İrsaliyesi ile tüm ürünleri MRK deposuna giriş yapıp kaydettiğimizde MRK deposundan S01 nolu depoya depolar arası transfer fişi otomatik oluşturulsun istiyorum. Mümkün mü?",
+  "output": "Evet. Alım İrsaliyesi Kaydetme ve Baskı tanımlarının ekranından 'Otomatik Depo Transfer Fişi Oluşturulsun' seçeneğini işaretleyerek bu işlem yapılabilir."
+}
+{
+  "instruction": "Yeni kullanıcı giriş yaptığında Tanım Sihirbazı neden görünmez?",
+  "input": "Yeni yarattığım kullanıcı ile sisteme giriş yaptığımda Tanım Sihirbazı seçeneğini göremiyorum. Neden?",
+  "output": "Tanım Sihirbazı seçeneği yalnızca 'Super' kullanıcısı ile sisteme giriş yapıldığında aktif olur."
+}
+
+
+{
+  "instruction": "EURO döviz cinsli müşteriden USD çek alındığında USD Çek Kasası nasıl seçilir?",
+  "input": "Döviz cinsi EURO olan bir müşteriden USD çek alımı yapıyorum ancak Senet/Çek Kasası F9 Liste penceresinde USD Çek Kasası görünmüyor. Ne yapmalıyım?",
+  "output": "1. Dövizli Çalışma Tanımlarında 'İşlemin Döviz Cinsi, İşlem sırasında verilsin' opsiyonu seçilmelidir. 2. İşlem satırında Döviz Cinsi USD olarak tanımlandıktan sonra Senet/Çek Kasası F9 Liste penceresinden USD Çek Kasası seçilebilir."
+}
+{
+  "instruction": "Evrak Seri No Tanımında aynı numara kullanıldığında sistemin uyarı vermesi nasıl sağlanır?",
+  "input": "Evrak Seri No Tanımında 'Seri numarasını kaydederken al' seçeneği aktif. Ancak aynı cari hesaba aynı numaralı birden fazla alım faturası girildiğinde sistem uyarı vermiyor. Bunu nasıl düzeltebilirim?",
+  "output": "Seçenekler → Soru penceresinde 'Otomatik seri no atamasında mesaj ver' opsiyonu seçilmelidir."
+}
+
+
+{
+  "instruction": "Muhasebe Analiz modülü raporlarında 'COMBOITEM_NAME tablosunun tanımı TABLE_NAME içerisinde bulunamadı' hatası nasıl çözülür?",
+  "input": "Muhasebe Analiz modülü raporları Hesap Kodu sahasında F9 Liste penceresi açıldığında sistem 'COMBOITEM_NAME tablosunun tanımı TABLE_NAME içerisinde bulunamadı' uyarısı veriyor. Nasıl düzeltebilirim?",
+  "output": "İşletmen → Veritabanı seçeneklerinden 'Metabase Servi İşlemi' çalıştırılmalıdır."
+}
+{
+  "instruction": "Müşteri kartındaki bakiye sahası nasıl düzenlenir?",
+  "input": "Müşteri kartı açıldığında genel sayfadaki bakiye sahasının yanlış olduğu fark ediliyor. Bu bakiye nasıl düzeltilir?",
+  "output": "Müşteri C/H tanımları → Genel çalışma tanımları menüsünde 'İşlemler ile değişen sahalar kart üzerinde değiştirilebilsin' parametresi açılır. Ardından kartın B/A sayfasında düzeltme yapılıp kayıt edilir."
+}
+              
+
+{
+  "instruction": "Programa girişte Ana Menü'nün ağaç yapısı şeklinde açılması nasıl kapatılır?",
+  "input": "Programa her girişimde Ana Menü ağaç yapısı şeklinde açılıyor. Bu görünümü kapatmak istiyorum. Ne yapmalıyım?",
+  "output": "Seçenekler menüsü altında 'Ana Menü Görünsün' parametresinin işareti kaldırılmalıdır."
+}
+{
+  "instruction": "Programdan miktarsal muavin alınabilir mi?",
+  "input": "Programda miktarsal muavin raporu almak istiyorum. Bu mümkün mü ve nasıl yapılır?",
+  "output": "Evet, alınabilir. Muhasebe fişlerine miktar sahası eklenerek miktar rakamları girilir. Raporlara miktar sahaları eklenerek miktarsal muavin alınabilir."
+}
+
+
+{
+  "instruction": "Evrak girişlerindeki kolon ayarlarını sabitleyip kullanıcıların değiştirmesi engellenebilir mi?",
+  "input": "Belge giriş ekranlarında kolon düzenini standart tutmak istiyoruz. Kullanıcıların kolon ayarlarını değiştirmesini nasıl engelleriz?",
+  "output": "Evet. İşletmen → Diğer → Tanımlar → 'Evrak Saha Seçim Tanımı' ekranında 'Gösterilen evrak sahalarında değişiklik yapılmasın' seçeneğini işaretleyerek engellenir."
+}
+{
+  "instruction": "Kayıt edilen Ön Satış Teklifi, Satış Teklifine nasıl dönüştürülür?",
+  "input": "Ön Satış Teklifi kaydettim. Bunu Satış Teklifine çevirmek istiyorum. Hangi adımları izlemeliyim?",
+  "output": "Satış Teklifi evrağını açın ve 'Ön Satış Teklifi Fiş No' sahasından ilgili evrağı seçin."
+}
+{
+  "instruction": "Alım Faturası evrağında mal kodlarının isimleri gelmiyor; sebebi nedir?",
+  "input": "Alım faturası keserken mal kodu seçiyorum ama isimleri görünmüyor. Neden olabilir?",
+  "output": "Seçenekler altında 'Kart Bilgilerini Görüntüle' işareti kapalıdır. Bu seçeneği işaretleyin."
+}
+
+{
+  "instruction": "Online entegrasyonda evrak üzerindeyken muhasebe fişine kısayoldan nasıl ulaşılır?",
+  "input": "Online entegrasyonda çalışırken evrak üzerindeyim. Muhasebe fişine hızlıca gitmek istiyorum. Kısayolu nedir?",
+  "output": "Evrak üzerinde herhangi bir yerde Shift+F11 tuşuna basarak muhasebe fişine ulaşabilirsiniz."
+}
+{
+  "instruction": "Satış Faturası sırasında malın depolardaki stok durumu nasıl görüntülenir?",
+  "input": "Satış faturası oluştururken satırdaki malın depodaki stok miktarını görmek istiyorum. Nasıl yapabilirim?",
+  "output": "İlgili satırın üzerindeyken Ctrl+E tuşuna basarak depolardaki stok durumunu görüntüleyebilirsiniz."
+}
+{
+  "instruction": "Fatura Birim Fiyat sahasının ondalık hane sayısı nasıl artırılır?",
+  "input": "Fatura Birim Fiyat sahasının ondalık hane sayısını 2'den 3'e çıkarmak istiyorum. Hangi adımları izlemeliyim?",
+  "output": "İşletmen → Veritabanı → Ondalık haneler seçeneğinden, şirket seçimi yapıldıktan sonra Brim Fiyat sahasına 3 yazılır."
+}
+
+
+{
+  "instruction": "Belli bir tarih aralığında Finans ve Satış evraklarına bilgi girişi nasıl engellenir?",
+  "input": "Belirli bir tarih aralığı için Finans ve Satış modüllerindeki evraklara bilgi girişini kapatmak istiyoruz. Bu mümkün mü?",
+  "output": "Evet. İşletmen → Takvime Bağlı Kısıtlar menüsünden yapılabilir."
+}
+{
+  "instruction": "Satış faturasında hesap kodu sahasının öndeğer olarak dolu gelmesi nasıl düzeltilir?",
+  "input": "Satış faturası açtığımda hesap kodu alanı otomatik olarak dolu geliyor. Bu durumu nasıl düzeltebilirim?",
+  "output": "1. Seçenekler → Öndeğerleri Getir parametresinin işareti kaldırılır. 2. Satış Faturası evrağı açılır. 3. 'Kayıttaki Bilgileri Öndeğer Olarak Kaydet' butonuna basılır. 4. Satış Faturası evrağı kapatılıp Seçenekler → Öndeğerleri Getir parametresi tekrar işaretlenir."
+}
+{
+  "instruction": "Satış faturası kaydında 'Onaylı yevmiye tarihinden öncesine kayıt girişi yapılamaz' hatası nasıl çözülür?",
+  "input": "Satış faturası kaydederken 'Onaylı yevmiye tarihinden öncesine kayıt girişi yapılamaz' hatası alıyorum. Ne yapmalıyım?",
+  "output": "Tanımlar → Muhasebe → Onaylı Yevmiye Bilgileri menüsünde fiş tarihi silinebilir veya düzenlenebilir."
+}
+
+
+
+{
+  "instruction": "KDV tevkifatlı satış faturasında KDV tevkifat tutarı muhasebede ayrı alt hesapta nasıl takip edilir?",
+  "input": "KDV tevkifatlı satış faturası kesiyorum. KDV tevkifat tutarını muhasebede ayrı alt hesapta takip etmek istiyorum. Nasıl yapabilirim?",
+  "output": "Satış Faturası → Muhasebe Tanımları parametre ekranında 'KDV Tutarından KDV Tevkifat Tutarı Düşülsin' seçeneği işaretli olmamalıdır."
+}
+{
+  "instruction": "Mahsup fişi kaydında muhasebe alt hesap kartları neden güncellenmez?",
+  "input": "Mahsup fişi ile fiş kaydı yapıyorum ancak muhasebe alt hesap kartları güncellenmiyor. Sebebi ne olabilir?",
+  "output": "İşletmen → Diğer → Kart Güncelleme Tanımları → Muhasebe, Bütçe Yönetimi menüsünde ilgili şirket için 'Muhasebe Hesap Kartları Güncellenmesin' işareti aktif olabilir."
+}
+
+
+
+{
+  "instruction": "Merkez Bankası günlük döviz kurlarının programa girişte otomatik yüklenmesi nasıl sağlanır?",
+  "input": "Her programa girişte Merkez Bankası günlük döviz kurlarının otomatik yüklenmesini istiyorum. Bunu nasıl ayarlayabilirim?",
+  "output": "Döviz Kurları modülü → Merkez Bankası Döviz Kurları Otomatik Yükle menüsünde 'Günlük Döviz Kurları Sisteme Otomatik Yüklensin' parametresi işaretli olmalıdır."
+}
+{
+  "instruction": "Li-Nova programında Ana Menü'nün yüklenmesi neden uzun sürer?",
+  "input": "Li-Nova programına giriş yaptığımda Ana Menü ağaç olarak yüklenirken çok uzun bekliyor. Sebebi ne olabilir?",
+  "output": "İşletmen → Diğer → Tanımlar Analiz Modülü Raporları Otomatik Yüklensin parametresi işaretli olabilir."
+}
+
+
+
+{
+  "instruction": "Bankadan tahsil edilen senet çek işleminde banka hesabı için virman hareketi neden oluşmaz?",
+  "input": "Senet çek işlem bordrosundan 'Bankadan Tahsil Edildi' işlemi yapıyorum ancak banka hesabı için virman hareketi oluşmuyor. Sebebi ne olabilir?",
+  "output": "Tahsile verilen çekler cari hesap kartının 'Banka Hesap Kodu' tanımlı olmadığı için virman hareketi oluşmaz."
+}
+{
+  "instruction": "Teleskop raporlarının Excel'e aktarımında sayısal sahaların sola dayalı gelmesi sorunu nasıl çözülür?",
+  "input": "Teleskop raporlarını Excel'e aktardığımda sayısal alanlar txt formatında sola dayalı olarak geliyor. Nasıl düzeltebilirim?",
+  "output": "Sayısal alanların biçim özelliklerinde tanımlanan binler basamağı ve ondalık hane ayıraçları, bölgesel ayarlarda tanımlı olan ayıraçlarla aynı olacak şekilde değiştirilmelidir."
+}
+

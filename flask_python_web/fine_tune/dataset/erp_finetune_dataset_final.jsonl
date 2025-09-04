@@ -1,0 +1,925 @@
+{"instruction": "Finans modülü ne işe yarar?", "input": "Finansal işlemlerimi ERP ile nasıl yönetebilirim?", "output": "Finans Yönetim Modülü; müşteri, satıcı ve banka hesaplarını takip eder, ödeme-tahsilat planları oluşturur ve bunlara bağlı risk, adat ve faiz hesaplamalarını yapar."}
+{"instruction": "Stok seviyesini nasıl takip ederim?", "input": "Stok bilgilerimi düzenli takip etmek istiyorum.", "output": "Stok Yönetim Modülü, ticari malların kritik seviyelerini takip etmenizi sağlar. Böylece stok durumunu anlık izleyebilirsiniz."}
+{"instruction": "Tedarikçi siparişlerini takip etmek için hangi modülü kullanmalıyım?", "input": "Tedarikçi siparişlerinin kontrolünü sağlamak istiyorum.", "output": "Pazarlama ve Satın Alma Modülü; tedarikçi ilişkilerini yönetir ve sipariş takibi yapmanızı sağlar."}
+{"instruction": "Muhasebe işlemlerimi nasıl yönetirim?", "input": "Şirketin muhasebe işlemlerini dijital ortamda yürütmek istiyorum.", "output": "Muhasebe Yönetim Modülü, yasal yükümlülüklerinizi yerine getirmenize, mali tablolar hazırlamanıza ve analiz yapmanıza olanak tanır."}
+{"instruction": "Verilerimi başka sistemden nasıl aktarırım?", "input": "Başka bir ERP sisteminden Link-Cloud'a geçiş yapmak istiyorum.", "output": "Kolay Veri Geçişi özelliği sayesinde mevcut sisteminizdeki verileri hızlıca Link-Cloud ERP’ye aktarabilirsiniz."}
+{"instruction": "Sistem veri güvenliği sunuyor mu?", "input": "Başka bir ERP sisteminden Link-Cloud'a geçiş yapmak istiyorum.", "output": "Evet, Link-Cloud ERP ile verileriniz güvendedir. Ayrıca 10 güne kadar istediğiniz zamana geri dönebilirsiniz."}
+{"instruction": "Veritabanı bana özel mi oluşturuluyor?", "input": "Başka bir ERP sisteminden Link-Cloud'a geçiş yapmak istiyorum.", "output": "Evet, işletmenize özel veritabanı oluşturularak tüm süreçlerinizi hızlı ve güvenli şekilde yönetmenizi sağlar."}
+{"instruction": "Gece bile sisteme erişebilir miyim?", "input": "Sisteme gece saatlerinde veya tatilde erişebilir miyim?", "output": "Evet, Link-Cloud ERP bulut altyapısıyla 7/24 yüksek performanslı erişim sunar."}
+{"instruction": "Kullanıcı ve rol yönetimi nasıl yapılır?", "input": "Kullanıcı yetkilendirmesi ve rol tanımlamaları yapmak istiyorum.", "output": "ERP sistemi, sınırsız kullanıcı oluşturmanıza, roller tanımlamanıza ve bu rolleri kullanıcılarla eşleştirmenize olanak tanır."}
+{"instruction": "Satın alma süreçlerini nasıl verimli hale getirebilirim?", "input": "Başka bir ERP sisteminden Link-Cloud'a geçiş yapmak istiyorum.", "output": "Pazarlama ve Satın Alma Modülü, siparişleri takip etmenizi ve ödeme planları oluşturarak süreci daha verimli hale getirmenizi sağlar."}
+{"instruction": "Finans modülü ile çek ve senet işlemleri yapılabilir mi?", "input": "Finansal işlemlerimi ERP ile nasıl yönetebilirim?", "output": "Evet, çek ve senet işlemleri Finans Yönetim Modülü üzerinden takip edilebilir."}
+{"instruction": "Stok uyarı seviyelerini nasıl belirlerim?", "input": "Stok bilgilerimi düzenli takip etmek istiyorum.", "output": "Stok Yönetim Modülü'nde kritik seviyeler tanımlanarak stok uyarıları otomatik hale getirilebilir."}
+{"instruction": "Tedarikçilere otomatik ödeme planı yapılabilir mi?", "input": "Tedarikçi siparişlerinin kontrolünü sağlamak istiyorum.", "output": "Pazarlama ve Satın Alma Modülü ödeme planları oluşturarak bu işlemleri kolaylaştırır."}
+{"instruction": "Yasal beyannameleri ERP ile hazırlayabilir miyim?", "input": "Yasal beyannameleri sistem üzerinden verebilir miyim?", "output": "Muhasebe Yönetim Modülü ile yasal beyannameler ve mali raporlar hazırlanabilir."}
+{"instruction": "Verilerim silinirse geri dönebilir miyim?", "input": "Başka bir ERP sisteminden Link-Cloud'a geçiş yapmak istiyorum.", "output": "Evet, 10 güne kadar geçmiş yedeklerden veri geri yüklenebilir."}
+{"instruction": "Farklı kullanıcılar farklı yetkilere sahip olabilir mi?", "input": "Kullanıcı yetkilendirmesi ve rol tanımlamaları yapmak istiyorum.", "output": "Evet, kullanıcı rolleri tanımlanarak her kullanıcıya özel yetkiler verilebilir."}
+{"instruction": "ERP sistemi cep telefonundan kullanılabilir mi?", "input": "ERP sistemine cep telefonumdan erişmek istiyorum.", "output": "Evet, Link-Cloud ERP’ye 7/24 tüm cihazlardan erişebilirsiniz."}
+{"instruction": "Stok raporlarını dışa aktarabilir miyim?", "input": "Stok bilgilerimi düzenli takip etmek istiyorum.", "output": "Stok Yönetim Modülü ile oluşturulan raporlar Excel veya PDF olarak dışa aktarılabilir."}
+{"instruction": "Satış raporlarını grafiksel görebilir miyim?", "input": "Satış analizlerini grafik olarak görebilir miyim?", "output": "Evet, Finans Yönetim Modülü'nde grafiksel satış analizleri mümkündür."}
+{"instruction": "ERP sistemi ile banka entegrasyonu mümkün mü?", "input": "ERP sistemi ile banka hesaplarımı senkronize edebilir miyim?", "output": "Finans Yönetim Modülü banka hesaplarını entegre şekilde yönetmenizi sağlar."}
+{"instruction": "ERP sistemini kullanmak kolay mı?", "input": "ERP sistemine yeni başlayan biri olarak kullanım kolaylığını merak ediyorum.", "output": "Link-Cloud ERP, kullanıcıların programı kolayca öğrenip verimli bir şekilde kullanabileceği bir arayüze sahiptir."}
+{"instruction": "ERP sisteminde İngilizce dil seçeneği var mı?", "input": "Şirketimiz İngilizce dilinde de çalışıyor, sistem bu dili destekliyor mu?", "output": "Link-Cloud ERP, Türkçe ve İngilizce olmak üzere çoklu dil desteği sunar."}
+{"instruction": "Link-Cloud ERP uluslararası kullanım için uygun mu?", "input": "Yurt dışı operasyonlarımız var, sistem bu kullanım için uygun mu?", "output": "Çoklu dil desteği sayesinde Link-Cloud ERP, uluslararası faaliyet gösteren işletmeler için uygundur."}
+{"instruction": "ERP sisteminden Excel formatında rapor alabilir miyim?", "input": "Excel'de analiz yapabilmek için raporları bu formata aktarabilir miyim?", "output": "Link-Cloud ERP’deki tüm raporlar Excel formatında dışa aktarılabilir."}
+{"instruction": "ERP sisteminden PDF olarak rapor alabilir miyim?", "input": "Raporları PDF olarak dışa aktarmak istiyoruz, bu mümkün mü?", "output": "Link-Cloud ERP’deki tüm raporlar PDF formatında dışa aktarılabilir."}
+{"instruction": "ERP sisteminde kullanıcı arayüzü özelleştirilebilir mi?", "input": "Kullanıcı arayüzünü kendi kullanım şeklime göre değiştirebilir miyim?", "output": "Kullanıcı ekranları kişisel tercihlere göre özelleştirilebilir."}
+{"instruction": "Kullanıcı tercihleri cihaz değişse bile hatırlanıyor mu?", "input": "Kullanıcı tercihlerim cihaz değişince de korunur mu?", "output": "Link-Cloud, farklı terminallerden giriş yapılsa bile kullanıcının son tercihlerini hatırlar."}
+{"instruction": "ERP sistemini cep telefonunda kullanabilir miyim?", "input": "Sisteme mobil cihazlardan erişim mümkün mü?", "output": "Responsive tasarımı sayesinde Link-Cloud her cihazla uyumlu çalışır."}
+{"instruction": "Tablet ile ERP’ye giriş yapabilir miyim?", "input": "Sisteme mobil cihazlardan erişim mümkün mü?", "output": "Link-Cloud ERP responsive tasarımı ile tabletlerde sorunsuz şekilde çalışır."}
+{"instruction": "Farklı çözünürlüklerde sistem düzgün çalışır mı?", "input": "Farklı çözünürlükteki cihazlarda sistem düzgün çalışır mı?", "output": "Link-Cloud ERP, bağlantı yapılan cihazın çözünürlüğüne göre ekranı otomatik olarak ayarlar."}
+{"instruction": "ERP sistemi finans modülünü içeriyor mu?", "input": "Finansal süreçlerimizi bu sistem üzerinden yönetebilir miyiz?", "output": "Link-Cloud ERP'de Finans Yönetim Modülü bulunmaktadır."}
+{"instruction": "ERP sisteminde stok takibi yapılabilir mi?", "input": "Stok takibini ERP sistemi ile yapabilir miyim?", "output": "Stok Yönetimi Link-Cloud ERP modüllerinden biridir."}
+{"instruction": "ERP’de satış ve satın alma yönetimi var mı?", "input": "Satış ve satın alma süreçlerimizi bu sistemde yönetmek istiyoruz.", "output": "Satış Pazarlama ve Satın Alma modülü Link-Cloud ERP içinde yer alır."}
+{"instruction": "Muhasebe işlemleri ERP sistemi ile yapılabilir mi?", "input": "Muhasebe işlemlerimi ERP üzerinden yürütebilir miyim?", "output": "Link-Cloud ERP muhasebe modülü sayesinde muhasebe işlemlerini yönetebilirsiniz."}
+{"instruction": "ERP sisteminin iletişim bilgilerine nasıl ulaşırım?", "input": "Firma ile nasıl iletişime geçebilirim?", "output": "Link-Cloud ERP için iletişim: (216) 522 00 00 veya info@linkbilgisayar.com.tr"}
+{"instruction": "ERP sistemi hangi adreste hizmet veriyor?", "input": "Şirketin fiziksel adresi nedir?", "output": "Kısıklı Caddesi No:2A/2, Ak İş Merkezi, Altunizade Üsküdar 34662 İSTANBUL adresinde hizmet vermektedir."}
+{"instruction": "ERP sistemini ücretsiz deneyebilir miyim?", "input": "Sistemi para ödemeden deneyebilir miyim?", "output": "Link-Cloud ERP’yi 15 gün ücretsiz olarak deneyebilirsiniz."}
+{"instruction": "Link-Cloud ERP için demo alabilir miyim?", "input": "Kullanabilmem için demo imkanı var mı?", "output": "Link-Cloud ERP için demo talebinde bulunabilir ve çözümü 15 gün ücretsiz deneyebilirsiniz."}
+{"instruction": "ERP sisteminde veri aktarımı kolay mı?", "input": "ERP sistemine yeni başlayan biri olarak kullanım kolaylığını merak ediyorum.", "output": "Sistem, verileri kolayca Excel ve PDF formatlarında dışa aktarabilmenizi sağlar."}
+{"instruction": "Link-Cloud ERP farklı cihazlarda aynı şekilde mi çalışır?", "input": "Farklı cihazlarda sistem performansı aynı mıdır?", "output": "Responsive tasarımı sayesinde Link-Cloud ERP tüm cihazlarda uyumlu şekilde çalışır."}
+{
+"instruction": "Link-Cloud nedir?",
+"input": "ERP sistemleri hakkında araştırma yaparken Link-Cloud adını duydum. Nedir bu sistem?",
+"output": "Link-Cloud, Link tarafından geliştirilen ve KOBİ’lere yönelik bulut tabanlı bir Kurumsal Kaynak Planlaması (ERP) yazılımıdır."
+}
+{
+"instruction": "Link-Cloud kimler için uygundur?",
+"input": "Yeni kurulan bir küçük işletmeyiz. Link-Cloud bizim için uygun mu?",
+"output": "Link-Cloud, özellikle küçük ve orta ölçekli işletmeler (KOBİ'ler) için tasarlanmıştır."
+}
+{
+"instruction": "Link-Cloud hangi altyapıyı kullanır?",
+"input": "Bu sistemin teknolojik altyapısı nedir, hangi platform üzerinde çalışır?",
+"output": "Link-Cloud, bulut kaynakları üzerinde çalışır ve ölçeklenebilir mimarisi sayesinde kullanıcı sayısı arttıkça kapasitesini artırabilir."
+}
+{
+"instruction": "Link-Cloud çok kiracılı sistem ne demektir?",
+"input": "Tanıtımda çok kiracılı yapıdan bahsediliyor. Bu ne anlama geliyor?",
+"output": "Çok kiracılı sistem, her bir müşterinin verilerinin ayrı tutulduğu ancak aynı yazılım altyapısında hizmet aldığı yapıdır. Link-Cloud bu mimariyi kullanır."
+}
+{
+"instruction": "Link-Cloud nasıl fiyatlandırılır?",
+"input": "ERP sistemi için bütçe planlaması yapıyoruz. Link-Cloud’un fiyatlandırma modeli nasıl?",
+"output": "Link-Cloud, 'Kullandığın Kadar Öde' (Pay-as-you-go) modeliyle fiyatlandırılır. Yani kullanıcı, sadece kullandığı kaynaklar kadar ödeme yapar."
+}
+{
+"instruction": "Link-Cloud’un avantajları nelerdir?",
+"input": "Benim için en önemli şey esneklik ve düşük maliyet. Link-Cloud bana ne gibi avantajlar sunar?",
+"output": "Link-Cloud; düşük maliyet, kolay ölçeklenebilirlik, uzaktan erişim, çok kiracılı yapı ve sadece kullanılan kadar ödeme avantajı sunar."
+}
+{
+"instruction": "Link-Cloud sistemine nasıl erişim sağlanır?",
+"input": "Sisteme ofis dışından da erişebilir miyim? Teknik bir kuruluma ihtiyaç var mı?",
+"output": "Link-Cloud, internet bağlantısı olan herhangi bir cihaz üzerinden web tarayıcısı ile erişilebilir."
+}
+{
+"instruction": "Link-Cloud neden KOBİ’ler için avantajlıdır?",
+"input": "Bir KOBİ olarak neden Link-Cloud tercih etmeliyiz?",
+"output": "KOBİ’ler, yüksek sunucu maliyetleri olmadan ERP sistemine ulaşabilir, sadece kullandıkları kadar öder ve ihtiyaçları doğrultusunda sistemi büyütebilirler."
+}
+{
+"instruction": "Döviz Sistemi Link-Cloud ERP’de neden önemlidir?",
+"input": "Şirketimiz sık sık dövizle işlem yapıyor, bu sistemin genel ERP üzerindeki etkisi nedir?",
+"output": "Döviz Sistemi, Link-Cloud ERP’nin tüm modüllerinde ihtiyaç duyulan temel bir bileşendir ve dövizle çalışmayı mümkün kılar."
+}
+{
+"instruction": "Döviz Sistemi hangi seviyede konumlandırılmıştır?",
+"input": "Birden fazla işletmeye hizmet veren bir sistem geliştiriyorum, döviz yönetimi merkezi mi yoksa tenant bazlı mı çalışıyor?",
+"output": "Link-Cloud ERP’de Döviz Sistemi master yapı içerisinde değil, her kiracı (tenant) seviyesinde ayrı ayrı konumlandırılmıştır."
+}
+{
+"instruction": "Yerel para dışında döviz tanımlamaları nasıl yapılır?",
+"input": "İşletmemizin hem TL hem de USD ile işlemleri var. USD’yi nasıl tanımlarım?",
+"output": "İşletmenin yerel para birimi dışında kullandığı döviz bilgileri, Döviz Sistemi üzerinden tanımlanabilir."
+}
+{
+"instruction": "Döviz kurları nasıl güncellenir?",
+"input": "Kurlar manuel mi giriliyor yoksa otomatik mi alınıyor?",
+"output": "Link-Cloud ERP Döviz Sistemi, TC Merkez Bankası üzerinden günlük olarak otomatik döviz kuru verilerini alacak şekilde yapılandırılmıştır."
+}
+{
+"instruction": "Hangi modüller döviz sistemine ihtiyaç duyar?",
+"input": "ERP sisteminde sadece muhasebe mi dövizle çalışır?",
+"output": "Döviz Sistemi tüm ERP süreçlerine hizmet etse de özellikle Finans, Satış ve Satınalma modüllerinde aktif olarak kullanılmaktadır."
+}
+{
+"instruction": "Döviz Sistemi neden FINSAT içinde geliştiriliyor?",
+"input": "Modül yapısını inceliyorum. Döviz neden genel bir modül değil de FINSAT altında?",
+"output": "Çünkü dövizli işlemler çoğunlukla Finans, Satış ve Satınalma süreçlerinde gerçekleştiğinden, bu sistem FINSAT yapısı içinde geliştirilmiştir."
+}
+{
+"instruction": "Link-Cloud ERP döviz sisteminde hangi kur türleri olabilir?",
+"input": "Kur bilgileri sabit mi, farklı türler tanımlanabiliyor mu?",
+"output": "Sistem, alış kuru, satış kuru, efektif kur gibi farklı döviz türlerini destekleyecek şekilde geliştirilebilir."
+}
+{
+"instruction": "TCMB'den döviz kuru verisi alınmazsa ne olur?",
+"input": "Bir gün Merkez Bankası API erişimi kesilirse sistem ne yapar?",
+"output": "TCMB servisinde problem olması durumunda sistem, kullanıcıyı bilgilendirir ve manuel kur girişi yapılmasına olanak tanır."
+}
+{
+"instruction": "Farklı işletmeler aynı dövizleri mi kullanmak zorunda?",
+"input": "Farklı kiracılar kendi kur bilgilerini bağımsız tanımlayabilir mi?",
+"output": "Her kiracı kendi döviz tanımlarını yapar; sistem çok kiracılı olduğu için her işletme bağımsız çalışabilir."
+}
+{
+"instruction": "Döviz sisteminin master yapı dışında olmasının avantajı nedir?",
+"input": "Merkezi yapı yerine kiracı bazlı olmasının ne gibi faydaları var?",
+"output": "Bu sayede her işletme, kendi döviz politikalarına ve ihtiyaçlarına göre bağımsız yapılandırma yapabilir."
+}
+{
+"instruction": "Link-Cloud ERP'de döviz sistemi neden master yapıya dahil edilmemiştir?",
+"input": "Genel ERP mimarisini inceliyorum. Döviz yönetimi neden merkezi sistemde değil?",
+"output": "Çünkü dövizle çalışma işletmeden işletmeye farklılık gösterebilir. Bu yüzden Döviz Sistemi master yapı içinde değil, kiracı seviyesinde ele alınmıştır."
+}
+{
+"instruction": "Link-Cloud ERP'de döviz sistemi tenant bazlı mıdır?",
+"input": "Her müşterinin farklı döviz ihtiyaçları olabileceğini düşünüyoruz, bu destekleniyor mu?",
+"output": "Evet, Döviz Sistemi kiracı (tenant) seviyesinde yapılandırılmıştır ve her işletme kendi döviz ayarlarını bağımsız olarak yapabilir."
+}
+{
+"instruction": "Link-Cloud ERP, döviz kurlarını hangi kaynaktan alır?",
+"input": "Kur güncellemeleri için dış kaynak kullanılacak mı?",
+"output": "Evet, sistem kapsamında geliştirilecek bir servis ile döviz kurları günlük olarak TC Merkez Bankası üzerinden alınacaktır."
+}
+{
+"instruction": "Döviz sistemi hangi ERP modüllerine hizmet eder?",
+"input": "Hangi iş süreçlerinde döviz sistemine ihtiyaç duyulur?",
+"output": "Döviz Sistemi tüm ERP süreçlerine hizmet etmek üzere geliştirilmiştir, ancak özellikle Finans, Satış ve Satınalma modüllerinde sıkça kullanılır."
+}
+{
+"instruction": "Döviz sistemi neden ayrı bir modül olarak geliştirilmiştir?",
+"input": "ERP içinde döviz neden kendi başına bir modül olarak tasarlanmış?",
+"output": "Çünkü dövizle çalışma her işletmede farklı şekilde gerçekleşebilir. Bu nedenle sistem esnek olacak şekilde bağımsız bir modül olarak geliştirilmiştir."
+}
+{
+"instruction": "Döviz modülü FINSAT içinde mi yer alıyor?",
+"input": "Modül hiyerarşisini inceliyorum. Döviz yapısı nereye dahil?",
+"output": "Evet, döviz modülü Finans, Satış ve Satınalma süreçleriyle doğrudan ilişkili olduğu için FINSAT ana yapısı içerisinde konumlandırılmıştır."
+}
+{
+"instruction": "Link-Cloud ERP’de döviz bilgileri nerede tanımlanır?",
+"input": "USD, EUR gibi para birimlerini nasıl sisteme eklerim?",
+"output": "İşletmenin kullandığı yabancı para bilgileri Döviz Sistemi üzerinden tanımlanır."
+}
+{
+"instruction": "Link-Cloud ERP'de Finans Yönetimi modülü ne amaçla geliştirilmiştir?",
+"input": "Şirketimizin mali kaynaklarını daha etkin yönetmek istiyoruz. Bu modül ne sağlar?",
+"output": "Link-Cloud Finans Yönetim modülü, işletmelerin mali kaynaklarını etkin ve verimli bir şekilde kullanmalarını sağlamak amacıyla hazırlanmıştır."
+}
+{
+"instruction": "Finans modülü sektöre özel midir?",
+"input": "İnşaat sektöründeyiz, bu modül bize uygun olur mu?",
+"output": "Link-Cloud Finans Yönetim modülü sektör bağımsız olarak geliştirilmiştir."
+}
+{
+"instruction": "Link-Cloud ERP finans modülünde hangi işlemler yapılabilir?",
+"input": "Modül içinde hangi finansal işlemleri yapabileceğimizi öğrenmek istiyoruz.",
+"output": "Cari Hesap, Kasa, Banka, Kredi Kartı ve Çek işlemleri Link-Cloud Finans modülünde yapılabilir."
+}
+{
+"instruction": "Cari Hesap Sistemi ne işe yarar?",
+"input": "Finansal işlemlerin etkilerini nasıl izleyebiliriz?",
+"output": "Cari Hesap Sistemi, finansal işlemlerin taraflarda yarattığı değişmeleri izlemeyi sağlayan sistemdir."
+}
+{
+"instruction": "Link-Cloud ERP'de cari hesaplar kaça ayrılır?",
+"input": "Sistemde kaç tür cari hesap tanımı vardır?",
+"output": "Cari hesaplar beş ana kategoride toplanmıştır: Müşteri, Satıcı, Kasa, Banka ve Diğer."
+}
+{
+"instruction": "Müşteri cari hesabı nedir?",
+"input": "Müşterilere yaptığımız satışları hangi hesap türünde takip ederiz?",
+"output": "İşletmenin mal veya hizmet satışı yaptığı ve bunun karşılığında ödeme aldığı hesaba müşteri cari hesabı denir."
+}
+{
+"instruction": "Satıcı cari hesabı ne anlama gelir?",
+"input": "Tedarikçilerle olan işlemleri nasıl takip ederiz?",
+"output": "İşletmenin mal veya hizmet alımı yaptığı ve bunun karşılığında ödeme yaptığı hesaba satıcı cari hesabı denir."
+}
+{
+"instruction": "Kasa hesabı nedir?",
+"input": "Nakit giriş çıkışlarını nasıl takip edebiliriz?",
+"output": "İşletmede nakit hareketlerini takip etmek için açılan hesaba kasa hesabı denir."
+}
+{
+"instruction": "Banka hesabı finans modülünde nasıl tanımlanır?",
+"input": "Bankalarla olan işlemleri nasıl izleyebiliriz?",
+"output": "İşletmenin çalıştığı bankalarla ilgili bilgilerin ve hareketlerin takibi için banka hesabı açılır."
+}
+{
+"instruction": "Diğer cari hesaplar ne zaman kullanılır?",
+"input": "Müşteri ya da satıcı ayrımı yapmadan tüm hesapları birlikte takip etmek istiyoruz. Bu mümkün mü?",
+"output": "Cari hesaplarla ilgili müşteri, satıcı, banka ve kasa ayrımı yapılmadan takip yapılmak isteniyorsa, 'Diğer' cari hesap türü kullanılır."
+}
+{
+"instruction": "Cari Hesap Sistemi finans modülünün neresinde konumlanır?",
+"input": "Cari Hesap Sistemi ayrı bir modül mü yoksa finans modülüne mi dahil?",
+"output": "Cari Hesap Sistemi, Link-Cloud Finans Yönetim modülünün bir parçası olarak çalışır."
+}
+{
+"instruction": "Çek işlemleri Link-Cloud ERP’de hangi modül üzerinden yapılır?",
+"input": "Firmamızda çek ile ödeme alıp veriyoruz. Hangi modül kullanılır?",
+"output": "Çek işlemleri, Link-Cloud ERP’nin Finans Yönetim modülü üzerinden yapılır."
+}
+{
+"instruction": "Kredi kartı işlemleri finans modülünde nasıl yer alır?",
+"input": "Kredi kartı ile yapılan tahsilat ve ödemeleri takip edebilir miyiz?",
+"output": "Kredi Kartı işlemleri Finans Yönetim modülünün desteklediği işlemler arasında yer alır."
+}
+{
+"instruction": "Cari hesap sisteminin temel amacı nedir?",
+"input": "Bu sistemin işleyişe nasıl katkı sağladığını öğrenmek istiyoruz.",
+"output": "Cari Hesap Sistemi, finansal işlemlerin taraflarda oluşturduğu değişikliklerin izlenmesini sağlar."
+}
+{
+"instruction": "Finans modülü yasal mevzuatlara uygun mudur?",
+"input": "Vergi denetimleri ve resmi süreçler açısından uygun mu?",
+"output": "Finans modülü, mali mevzuatlar göz önüne alınarak geliştirilmiştir."
+}
+{
+"instruction": "Link-Cloud ERP’de finansal işlemler hangi hesaplar arasında yapılır?",
+"input": "Tahsilat ve ödeme işlemlerini hangi tür hesaplar arasında gerçekleştirebiliriz?",
+"output": "Finansal işlemler; Müşteri, Satıcı, Kasa, Banka ve Diğer tipli cari hesaplar arasında yapılır."
+}
+{
+"instruction": "Finansal işlemlerde hangi tür işlemler desteklenmektedir?",
+"input": "Hangi işlem türlerini sistem üzerinde gerçekleştirebiliriz?",
+"output": "Tahsil, Tediye, Dekont, Havale, Gelir-Gider gibi finansal işlemler sistemde desteklenmektedir."
+}
+{
+"instruction": "Kasa işlemleri nelerdir?",
+"input": "Kasa üzerinden yapılan işlemler neleri kapsar?",
+"output": "Kasadan yapılan ödeme ve tahsilat işlemleri Kasa İşlemleri başlığı altında ele alınır."
+}
+{
+"instruction": "Tahsilat işlemi kaç belge türüyle yapılabilir?",
+"input": "Kasa tahsilatı işlemlerinde hangi belgeler kullanılır?",
+"output": "Tahsilat işlemi, 'Tahsilat Makbuzu' ve 'Kasa Tahsil Fişi' olmak üzere iki farklı belge ile yapılabilir."
+}
+{
+"instruction": "Tahsilat belgeleri aynı içeriğe mi sahiptir?",
+"input": "İki farklı tahsilat belgesi varsa, aralarında ne fark vardır?",
+"output": "Her iki belgenin çalışma tanımları aynıdır ancak her belge için ayrı tanımlama yapılır."
+}
+{
+"instruction": "Tediye işlemi kaç belge türüyle yapılabilir?",
+"input": "Kasadan ödeme yaparken hangi belgeleri kullanırız?",
+"output": "Tediye işlemi, 'Tediye Makbuzu' ve 'Kasa Tediye Fişi' olmak üzere iki farklı belge ile yapılabilir."
+}
+{
+"instruction": "Tediye belgelerinin tanımlama biçimi nasıldır?",
+"input": "İki belge aynı işlemi yapıyor ama sistemde nasıl yönetiliyor?",
+"output": "Her iki belgenin tanım içeriği aynıdır ancak sistemde ayrı ayrı tanımlanırlar."
+}
+{
+"instruction": "Tahsilat ve tediye işlemleri sistemde nasıl ayrılır?",
+"input": "Kasa işlemlerini analiz etmek istiyorum. Gelir ve gider belgeleri nasıl ayrılır?",
+"output": "Tahsilat işlemleri için 'Tahsilat Makbuzu' ve 'Kasa Tahsil Fişi', tediye işlemleri için ise 'Tediye Makbuzu' ve 'Kasa Tediye Fişi' belgeleri kullanılır."
+}
+{
+"instruction": "Link-Cloud ERP’de dekont işlemi neyi ifade eder?",
+"input": "Dekont işlemleri sistemde finansal işlemler kapsamında yer alıyor mu?",
+"output": "Evet, Dekont işlemleri finansal işlemler arasında yer alır ve Müşteri, Satıcı, Kasa, Banka gibi hesaplar arasında kullanılabilir."
+}
+{
+"instruction": "Gelir-gider işlemleri hangi hesaplar arasında yapılır?",
+"input": "Genel muhasebe işlemlerinde gelir ve giderleri nasıl izleyebiliriz?",
+"output": "Gelir-gider işlemleri; Müşteri, Satıcı, Kasa, Banka ve Diğer tipli cari hesaplar arasında yapılabilir."
+}
+{
+"instruction": "Tediye nedir?",
+"input": "Finansal belgeler içinde tediye terimi sıkça geçiyor. Anlamı nedir?",
+"output": "Tediye, işletmenin herhangi bir kişi ya da kuruma yaptığı ödeme anlamına gelir."
+}
+{
+"instruction": "Kasa tediye işlemi neyi ifade eder?",
+"input": "Kasadan ödeme yaptığımızda bu işleme sistemde ne denir?",
+"output": "Kasadan yapılan ödeme işlemleri tediye işlemi olarak adlandırılır."
+}
+{
+"instruction": "Tediye işlemi hangi belgelerle yapılır?",
+"input": "Ödeme işlemlerini kaydetmek için hangi belge türleri kullanılır?",
+"output": "Tediye işlemi, 'Tediye Makbuzu' ve 'Kasa Tediye Fişi' belgeleri ile yapılır."
+}
+{
+"instruction": "Link-Cloud ERP'de banka işlemleri neyi kapsar?",
+"input": "Müşterilerimizle banka üzerinden işlem yapıyoruz. Bu işlemler hangi modülde yer alır?",
+"output": "Müşterilerin veya işletmenin banka ile yaptığı işlemler, Link-Cloud ERP'de Banka İşlemleri başlığı altında ele alınır."
+}
+{
+"instruction": "Dekont nedir?",
+"input": "Banka üzerinden ödeme veya tahsilat yaptığımızda hangi belge oluşur?",
+"output": "Dekont, işletmenin banka hesabından müşteri ya da tedarikçiye yapılan tahsilat veya ödeme işlemine ait üretilen belgedir."
+}
+{
+"instruction": "Link-Cloud ERP'de banka dekontu neyi gösterir?",
+"input": "Banka ile yapılan hareketleri nasıl belgeliyoruz?",
+"output": "Banka dekontu, müşteri veya tedarikçiye yapılan ödeme ya da tahsilat işlemine ilişkin belgedir."
+}
+{
+"instruction": "Banka teminat mektubu ne için kullanılır?",
+"input": "Teminat mektubu bilgilerini sisteme nasıl işleriz?",
+"output": "Banka teminat mektubu, bankaya verilecek teminat mektubu bilgilerinin girilmesi için kullanılır."
+}
+{
+"instruction": "Teminat mektubu bilgileri Link-Cloud ERP'de nasıl takip edilir?",
+"input": "Verdiğimiz banka teminatlarının detaylarını ERP üzerinden takip etmek istiyoruz.",
+"output": "Teminat mektubu bilgileri, Link-Cloud ERP'deki Banka İşlemleri modülünde girilerek takip edilir."
+}
+{
+"instruction": "Link-Cloud ERP'de alınan ve verilen çekler nasıl takip edilir?",
+"input": "Çekle ödeme ve tahsilat işlemlerimizi sistemde nasıl yönetebiliriz?",
+"output": "Çek ile yapılan tahsilatlarda alınan çeklerin, çek ile yapılan ödemelerde ise verilen çeklerin takibi bu modül üzerinden yapılır."
+}
+{
+"instruction": "Alınan çek ile verilen çek arasında sistemde fark var mıdır?",
+"input": "Müşteriden aldığımız çekle satıcıya verdiğimiz çeki sistem nasıl ayırt eder?",
+"output": "Alınan çekler tahsilat işlemleriyle, verilen çekler ise ödeme işlemleriyle ilişkilendirilerek ayrı şekilde takip edilir."
+}
+{
+"instruction": "Kredi kartı işlemleri için ödeme sistemleri nasıl entegre edilir?",
+"input": "Kredi kartı ile tahsilat yapmak istiyoruz. Sistem bu süreci nasıl destekliyor?",
+"output": "Link-Cloud ERP, birden çok ödeme aracı ile API üzerinden entegrasyon kuracak şekilde yapılandırılmıştır."
+}
+{
+"instruction": "Kredi kartı ödeme sistemi ile uygulama nasıl iletişim kurar?",
+"input": "Sistem, ödeme sağlayıcısı ile doğrudan mı yoksa katmanlı bir yapı ile mi çalışır?",
+"output": "Ödeme aracısı ile entegrasyon, Connector arayüzü üzerinden yapılır. Bu soyutlama sayesinde uygulama doğrudan bağımlı hale gelmez."
+}
+{
+"instruction": "Hangi ödeme sistemleriyle entegrasyon sağlanmıştır?",
+"input": "Başlangıçta hangi firmalarla çalışılacak?",
+"output": "Başlangıçta Param ve Paytr sistemleri ile entegrasyon yapılacaktır."
+}
+{
+"instruction": "İleride yeni ödeme sistemleri eklenebilir mi?",
+"input": "Yeni bir ödeme sistemine geçersek ERP buna uyum sağlar mı?",
+"output": "Evet, ilerleyen süreçte gelen talebe göre yeni ödeme aracıları sisteme entegre edilecektir."
+}
+{
+"instruction": "Connector arayüzünün görevi nedir?",
+"input": "Uygulama ile ödeme sistemleri arasında nasıl bir bağlantı kurulur?",
+"output": "Connector arayüzü, ödeme aracısı ile entegrasyonun soyutlama katmanı olarak çalışır ve uygulamanın bu sistemlere doğrudan bağımlı olmasını engeller."
+}
+{
+"instruction": "Link-Cloud ERP'de çek takibi hangi modülde yapılır?",
+"input": "Alınan veya verilen çeklerin durumunu sistemde nasıl izleyebilirim?",
+"output": "Çek takibi, Alınan / Verilen Çekler modülü üzerinden yapılır."
+}
+{
+"instruction": "Verilen çekler hangi işlem türünde takip edilir?",
+"input": "Tedarikçilere verdiğimiz çekleri sistem nasıl kategorize eder?",
+"output": "Tedarikçilere yapılan ödemelerde kullanılan çekler, Verilen Çek olarak sistemde takip edilir."
+}
+{
+"instruction": "Alınan çekler hangi işlem türüne karşılık gelir?",
+"input": "Müşteriden aldığımız çekler ne olarak geçer?",
+"output": "Müşteriden alınan çekler, tahsilat işlemleri kapsamında Alınan Çek olarak tanımlanır."
+}
+{
+"instruction": "Kredi kartı işlemleri uygulama içi entegrasyonla mı yapılır?",
+"input": "Kredi kartı ile tahsilat doğrudan mı sistem üzerinden yapılır?",
+"output": "Evet, ödeme aracısı API’leriyle kurulan entegrasyon sayesinde kredi kartı işlemleri uygulama üzerinden yapılabilir."
+}
+{
+"instruction": "Ödeme sistemi entegrasyonu uygulamayı bağımlı hale getirir mi?",
+"input": "Uygulama ödeme sağlayıcısına teknik olarak bağlanır mı?",
+"output": "Hayır, Connector arayüzü sayesinde uygulama ödeme sistemlerine doğrudan bağımlı hale gelmez."
+}
+{
+"instruction": "Param ve Paytr dışında başka sistemler eklenebilir mi?",
+"input": "Farklı bir ödeme sistemi kullanmak istiyoruz, sistem destekler mi?",
+"output": "Evet, ilerleyen süreçte gelen taleplere göre yeni ödeme sistemleri entegrasyon listesine eklenebilir."
+}
+{
+"instruction": "Kredi kartı işlemlerinde entegrasyon nasıl başlatılır?",
+"input": "Yeni bir ödeme sistemini bağlamak istiyoruz. Nereden başlarız?",
+"output": "Ödeme sistemleri ile entegrasyon, Connector arayüzü aracılığıyla başlatılır."
+}
+{
+"instruction": "Connector arayüzü neden kullanılmaktadır?",
+"input": "Ödeme sistemi entegrasyonunda neden ek bir katmana ihtiyaç duyulmuştur?",
+"output": "Connector arayüzü, uygulama ile ödeme aracısı arasındaki bağlantıyı soyutlayarak bağımlılığı azaltmak için kullanılır."
+}
+{
+"instruction": "Masraf fişi ne için kullanılır?",
+"input": "Müşteriden alınan masraf bilgilerini sistemde nasıl takip edebilirim?",
+"output": "Masraf fişi, müşteriden alınan masraf fişi bilgilerinin izlenebilmesi amacıyla kullanılır."
+}
+{
+"instruction": "Masraf fişi işlemi hangi modülde yer alır?",
+"input": "Müşteri masraflarını kayıt altına almak istiyoruz, hangi menüyü kullanmalıyız?",
+"output": "Masraf fişi işlemleri, Diğer Finansal İşlemler modülü altında yer alır."
+}
+{
+"instruction": "Kur farkı hesaplaması ne zaman yapılır?",
+"input": "Dövizli işlemlerde kur farkını nasıl hesaplıyoruz?",
+"output": "Kur farkı, borç veya alacak işlemlerinin kur farkı hesaplanacağı tarihteki kura göre yeniden hesaplanmasıyla yapılır."
+}
+{
+"instruction": "Kur farkı dekontu ne işe yarar?",
+"input": "Kur değiştiğinde oluşan farkı sistemde nasıl belgeleyebilirim?",
+"output": "Kur farkı dekontu, kur farkı geliri ya da giderini belgelemek amacıyla otomatik olarak oluşturulan belgedir."
+}
+{
+"instruction": "Kur farkı nasıl oluşur?",
+"input": "Yabancı para ile borçlandık, kur değişti. Ne olur?",
+"output": "Yabancı para birimiyle yapılan borç/alacak işlemlerinde, kur farkı tarihindeki kura göre yapılan yeniden hesaplama sonucu kur farkı oluşur."
+}
+{
+"instruction": "Kur farkı işlemleri otomatik mi yapılır?",
+"input": "Kur farkı dekontunu elle mi oluşturmamız gerekiyor?",
+"output": "Kur farkı hesaplaması sonrası oluşan fark sistem tarafından otomatik olarak Kur Farkı Dekontu şeklinde oluşturulur."
+}
+{
+"instruction": "Kur farkı dekontu gelir mi yoksa gider midir?",
+"input": "Kur farkı pozitif ya da negatif olursa sistem bunu nasıl yorumlar?",
+"output": "Yapılan hesaplamaya göre oluşan fark pozitifse gelir, negatifse gider olarak Kur Farkı Dekontu şeklinde kaydedilir."
+}
+{
+"instruction": "Kur farkı hesaplamasında hangi kur cinsi kullanılır?",
+"input": "Fark hesaplanırken hangi kur tipi esas alınır?",
+"output": "Kur farkı hesaplamasında kullanılacak kur cinsi, Kur Farkı Dövizli Çalışma tanımlarından alınır."
+}
+{
+"instruction": "Kur bilgileri sistemde nereden alınır?",
+"input": "Kur farkı işlemi yaparken sistem kuru nereden çeker?",
+"output": "Kur bilgisi, Kur Farkı Dövizli Çalışma tanımlarında belirtilen kaynaklardan alınır."
+}
+{
+"instruction": "Yabancı para ile yapılan borç işlemleri nasıl değerlendirilir?",
+"input": "EUR cinsinden borçlanma yaptım, kur farkı nasıl yansır?",
+"output": "Yabancı para birimiyle yapılan borç işlemleri, kur farkı hesaplanacak tarihteki kura göre yeniden değerlendirilir."
+}
+{
+"instruction": "Alacak işlemleri kur farkı ile nasıl yeniden hesaplanır?",
+"input": "Dövizli alacağım var, kur değişti. Nasıl işlem yapılır?",
+"output": "Yabancı para birimiyle yapılan alacak işlemleri, belirlenen tarihteki kur ile yeniden hesaplanarak fark dekontlanır."
+}
+{
+"instruction": "Kur farkı gelir ve giderleri sistemde nasıl ayrılır?",
+"input": "Döviz kazancı ile kaybını ayrı şekilde görmek istiyoruz.",
+"output": "Sistem, kur farkı hesaplamasından sonra farkı pozitifse gelir, negatifse gider olarak kaydeder."
+}
+{
+"instruction": "Kur farkı dekontu hangi işlem sonucunda oluşur?",
+"input": "Kur farkı dekontu kendiliğinden mi oluşur yoksa tetikleyici bir işlem var mı?",
+"output": "Kur farkı dekontu, yabancı para birimiyle yapılmış borç/alacak işlemlerinin yeniden kur hesaplaması sonucu oluşur."
+}
+{
+"instruction": "Masraf fişi sadece müşteriye mi aittir?",
+"input": "İçeriklerde sürekli müşteriden alınan masraf fişinden söz ediliyor. Sadece müşterilere mi ait olabilir?",
+"output": "Evet, masraf fişi işlemi müşteriden alınan masraf bilgilerini izlemek amacıyla kullanılır."
+}
+{
+"instruction": "Kur farkı işlemi yalnızca dövizli işlemler için mi yapılır?",
+"input": "TL bazlı borçlarda da kur farkı olur mu?",
+"output": "Hayır, kur farkı yalnızca yabancı para birimleriyle yapılan borç ve alacak işlemleri için hesaplanır."
+}
+{
+"instruction": "Kur farkı hesaplama tarihi neden önemlidir?",
+"input": "Kur farkı hesaplamasında tarih neden ayrıca belirtiliyor?",
+"output": "Çünkü borç veya alacak işlemleri, kur farkının hesaplanacağı tarihteki kura göre yeniden değerlendirilir."
+}
+{
+"instruction": "Kur farkı dekontları manuel mi hazırlanır?",
+"input": "Muhasebecimiz her ay bu işlemi elle yapıyor, sistem otomatik mi oluşturuyor?",
+"output": "Kur farkı dekontları, sistem tarafından otomatik olarak oluşturulur."
+}
+{
+"instruction": "Kur farkı dekontunun türü neye göre belirlenir?",
+"input": "Dekontun gelir mi gider mi olacağını kim belirler?",
+"output": "Kur farkı hesaplaması sonucundaki farka göre dekont türü sistem tarafından otomatik belirlenir."
+}
+{
+"instruction": "Kur bilgileri önceden tanımlanmalı mı?",
+"input": "Kur farkı işlemlerini yapmadan önce hangi ayarları tanımlamalıyız?",
+"output": "Kur farkı hesaplamalarında kullanılacak kur cinsi ve kurun alınacağı kaynak, Kur Farkı Dövizli Çalışma tanımlarında önceden belirlenmelidir."
+}
+{
+"instruction": "Kur farkı geliri nasıl oluşur?",
+"input": "Kur yükseldiğinde sistemde nasıl bir kazanç oluşur?",
+"output": "Borç veya alacak işlemi için hesaplanan yeni kur değeri, önceki değerden yüksekse sistem bunu kur farkı geliri olarak işler."
+}
+{
+"instruction": "Kur farkı gideri ne durumda oluşur?",
+"input": "Kur düşünce zarar mı yazılıyor?",
+"output": "Borç veya alacak işlemi için hesaplanan yeni kur değeri, önceki değerden düşükse sistem bunu kur farkı gideri olarak işler."
+}
+{
+"instruction": "Kur Farkı Dövizli Çalışma tanımı ne işe yarar?",
+"input": "Sistem kur farkı için hangi ayarları nereden alır?",
+"output": "Kur farkı hesaplamasında kullanılacak kur cinsi ve kurun alınacağı kaynak, Kur Farkı Dövizli Çalışma tanımlarından alınır."
+}
+{
+"instruction": "Kur farkı hangi işlemler için uygulanmaz?",
+"input": "Her borç/alacak işlemine kur farkı uygulanır mı?",
+"output": "Kur farkı sadece yabancı para birimleriyle yapılan işlemlerde uygulanır, yerel para biriminde uygulanmaz."
+}
+{
+"instruction": "Finans Raporları hangi modül kapsamında yer alır?",
+"input": "Raporlama modülünü inceliyoruz. Finansal raporlar hangi alana bağlı?",
+"output": "Finans raporları, Finans modülü kapsamına alınmıştır."
+}
+{
+"instruction": "Finans raporları neyi kapsar?",
+"input": "Sistemdeki finans raporları tam olarak hangi bilgileri içerir?",
+"output": "Finans raporları; rapor parametreleri, öndeğer alanları, kullanıcı tarafından eklenebilir alanlar ve hesaplama formüllerini kapsar."
+}
+{
+"instruction": "Finans raporlarının içeriği nasıl analiz edilmiştir?",
+"input": "Her bir raporun nasıl hesaplandığını anlamak istiyoruz.",
+"output": "Her rapor türü için; kullanılan parametreler, öndeğer görüntü alanları, eklenebilecek alanlar ve formüller detaylı şekilde analiz edilmiştir."
+}
+{
+"instruction": "Finans raporlarında hangi parametreler kullanılır?",
+"input": "Raporu oluştururken hangi girişler kullanılıyor?",
+"output": "Finans raporlarının hesaplamasında kullanılan parametreler her rapor türü için ayrı ayrı tanımlanmıştır."
+}
+{
+"instruction": "Finans raporları öndeğer olarak hangi alanları gösterir?",
+"input": "Rapor ilk açıldığında hangi veriler otomatik gelir?",
+"output": "Raporlar öndeğer olarak bazı temel alanları görüntüler. Bu alanlar her rapor için önceden tanımlanmıştır."
+}
+{
+"instruction": "Kullanıcı, rapora yeni alan ekleyebilir mi?",
+"input": "Raporlara özelleştirme yapılabiliyor mu?",
+"output": "Evet, kullanıcı rapora sonradan ihtiyaç duyduğu tüm alanları ekleyebilir."
+}
+{
+"instruction": "Finans raporlarında hesaplamalar nasıl yapılır?",
+"input": "Raporlardaki sayısal veriler hangi formüllerle hesaplanır?",
+"output": "Her rapor içeriğinde kullanılan hesaplama ve formüller detaylı olarak analiz edilmiştir."
+}
+{
+"instruction": "Finans raporlarında formüller önceden tanımlı mıdır?",
+"input": "Her raporda sabit formüller mi var?",
+"output": "Evet, raporların içeriğinde kullanılan formül ve hesaplama yöntemleri rapor türüne göre önceden tanımlanmıştır."
+}
+{
+"instruction": "Finans raporları sabit midir yoksa dinamik mi çalışır?",
+"input": "Kullanıcıların raporları özelleştirme imkânı var mı?",
+"output": "Finans raporları dinamik yapıdadır; öndeğer alanların dışında kullanıcı eklemeleriyle genişletilebilir."
+}
+{
+"instruction": "Finans raporları kullanıcı tarafından değiştirilebilir mi?",
+"input": "Hazır gelen raporları ihtiyacımıza göre düzenleyebilir miyiz?",
+"output": "Evet, kullanıcı tarafından raporlara yeni alanlar eklenebilir ve mevcut yapı değiştirilebilir."
+}
+{
+"instruction": "Raporlama sisteminde her rapor türü ayrı mı analiz edilmiştir?",
+"input": "Tüm raporlar için aynı hesaplama mı kullanılır?",
+"output": "Hayır, her rapor türü özel olarak ele alınmış ve hesaplama yöntemi detaylı şekilde analiz edilmiştir."
+}
+{
+"instruction": "Finans raporları sistemde nasıl yer alır?",
+"input": "Raporlama bileşeni finansal süreçlere nasıl entegre?",
+"output": "Finans raporları, finans modülünün ayrılmaz bir parçası olarak yapılandırılmıştır."
+}
+{
+"instruction": "Finans raporlarının teknik içeriği nelerdir?",
+"input": "Sistemde bir raporun arka planında ne analiz edilir?",
+"output": "Raporlarda parametreler, öndeğerler, kullanıcı tarafından eklenebilir alanlar ve hesaplama formülleri teknik içeriği oluşturur."
+}
+{
+"instruction": "Her rapor için ayrı parametre mi tanımlanır?",
+"input": "Raporları oluştururken sabit parametre seti mi kullanılıyor?",
+"output": "Hayır, her rapor türü için özel parametre setleri tanımlanır."
+}
+{
+"instruction": "Cari hesap ekstresi nedir?",
+"input": "Müşteri ya da satıcı ile olan hareketleri görmek istiyorum. Hangi raporu kullanmalıyım?",
+"output": "Cari hesap ekstresi, müşteri veya satıcının belirli tarih aralığındaki cari hareketlerini ve bakiyesini gösteren rapordur."
+}
+{
+"instruction": "Cari hesap ekstresi ne zaman kullanılır?",
+"input": "Şirketin finansal planlamasını yaparken hangi rapordan yararlanabilirim?",
+"output": "Cari hesap ekstresi, mali durumu görmek, nakit akışını yönetmek ve finansal planlama yapmak için kullanılır."
+}
+{
+"instruction": "Cari hesap ekstresi hangi tür hesaplar için oluşturulabilir?",
+"input": "Sadece müşteriler için mi, yoksa tedarikçiler için de mi kullanılır?",
+"output": "Cari hesap ekstresi hem müşteri hem de satıcı hesapları için oluşturulabilir."
+}
+{
+"instruction": "Cari hesap ekstresi tarih aralığına göre mi hazırlanır?",
+"input": "Belirli bir zaman dilimi içindeki işlemleri görmek istiyoruz. Bu mümkün mü?",
+"output": "Evet, cari hesap ekstresi belirli bir tarih aralığına göre hazırlanır."
+}
+{
+"instruction": "Cari hesap ekstresi hangi bilgileri içerir?",
+"input": "Rapor içerisinde neler yer alır?",
+"output": "Cari hareketlerin listesi ve mevcut bakiye bilgisi yer alır."
+}
+{
+"instruction": "Cari hesap ekstresi ile borç ve alacak takibi yapılabilir mi?",
+"input": "Müşterilerin ödenmemiş borçlarını takip etmek istiyoruz. Bu rapor işe yarar mı?",
+"output": "Evet, cari hesap ekstresi alacakların tahsilatını ve borçların ödenmesini izlemek için kullanılır."
+}
+{
+"instruction": "Cari hesap takibi neden önemlidir?",
+"input": "Şirketler neden bu tür raporlar kullanır?",
+"output": "İşletmeler, operasyonel faaliyetlerini sürdürmek ve geleceğe dönük pozitif kararlar almak için cari hesap takibi yapar."
+}
+{
+"instruction": "Cari hesap ekstresi nakit akışını izlemek için kullanılabilir mi?",
+"input": "Günlük ve aylık nakit giriş çıkışlarımızı izlemek istiyoruz. Bu rapor faydalı mı?",
+"output": "Evet, cari hesap ekstresi nakit akışını yönetmek amacıyla kullanılabilir."
+}
+{
+"instruction": "Cari hesap ekstresi geleceğe dönük karar almada nasıl yardımcı olur?",
+"input": "Stratejik planlama yaparken bu raporun bize katkısı ne olur?",
+"output": "Cari hesap ekstresi, mali durumu göstererek işletmenin geleceğe dönük pozitif kararlar almasını kolaylaştırır."
+}
+{
+"instruction": "Cari hesap ekstresi ile hangi finansal göstergeler izlenebilir?",
+"input": "Özellikle hangi alanlara odaklanmalıyız?",
+"output": "Alacakların tahsilatı, borçların ödemesi, bakiye durumu ve nakit hareketleri izlenebilir."
+}
+{
+"instruction": "Cari hesap ekstresi raporu nasıl filtrelenir?",
+"input": "Sadece belli bir dönemi görmek istiyorum. Bu mümkün mü?",
+"output": "Evet, cari hesap ekstresi tarih aralığına göre filtrelenerek görüntülenebilir."
+}
+{
+"instruction": "Cari hesap ekstresi müşterilere özel olarak hazırlanabilir mi?",
+"input": "Sadece bir müşterinin geçmiş hareketlerini raporlamak istiyoruz.",
+"output": "Evet, cari hesap ekstresi belirli bir müşteri için oluşturulabilir."
+}
+{
+"instruction": "Cari hesap ekstresi geçmiş ödemeleri gösterir mi?",
+"input": "Bir satıcıya yapılan ödemeleri topluca görmek istiyoruz.",
+"output": "Evet, cari hesap ekstresi geçmiş borç ve ödeme hareketlerini listeler."
+}
+{
+"instruction": "Finansal planlama için neden cari hesap ekstresi kullanılır?",
+"input": "Planlama süreçlerimizde bu raporu neden kullanmalıyız?",
+"output": "Cari hesap ekstresi, mali durumun detaylı analizini sunarak finansal planlama için doğru veri sağlar."
+}
+{
+"instruction": "Cari hesap ekstresi günlük olarak alınabilir mi?",
+"input": "Her gün güncel rapor almak istiyoruz, bu mümkün mü?",
+"output": "Evet, cari hesap ekstresi istenen tarih aralığında, günlük olarak da alınabilir."
+}
+{
+"instruction": "Genel Borç-Alacak Listesi nedir?",
+"input": "Tüm cari hesaplar için borç ve alacak toplamlarını görmek istiyoruz.",
+"output": "Genel Borç-Alacak Listesi, belirli cari hesap kodu aralığındaki hesapların borç ve alacak durumlarını verilen tarih aralığına göre icmal olarak hesaplayan rapordur."
+}
+{
+"instruction": "Genel Borç-Alacak Listesi neye göre hesaplama yapar?",
+"input": "Bu raporda hangi iki kriter esas alınır?",
+"output": "Cari hesap kodu aralığına ve tarih aralığına göre hesaplama yapılır."
+}
+{
+"instruction": "İcmal raporu nedir?",
+"input": "Bu rapor özet mi verir detay mı?",
+"output": "İcmal, özet tablo anlamına gelir. Genel Borç-Alacak Listesi raporu da hesapların toplam borç ve alacaklarını özet olarak sunar."
+}
+{
+"instruction": "Bu raporda detay kayıtlar alınabilir mi?",
+"input": "Sadece özet değil, her hesabın ayrıntılarını da görebilir miyiz?",
+"output": "Evet, gerektiğinde her bir cari hesap bazında detay kayıtlar alınabilir."
+}
+{
+"instruction": "Genel Borç-Alacak raporunu filtrelemek mümkün mü?",
+"input": "Belirli cari kodlarına ait kayıtları görmek istiyoruz.",
+"output": "Evet, rapor belirli bir cari hesap kodu aralığına göre filtrelenebilir."
+}
+{
+"instruction": "Tarih bazında borç-alacak dökümü alınabilir mi?",
+"input": "Sadece son 3 ayın raporunu almak istiyoruz. Bu yapılabilir mi?",
+"output": "Evet, Genel Borç-Alacak Listesi raporu istenen tarih aralığına göre oluşturulabilir."
+}
+{
+"instruction": "Genel Borç-Alacak raporu hangi durumlarda kullanılır?",
+"input": "Şirket genelindeki borç ve alacak durumunu özetlemek istiyoruz.",
+"output": "Bu rapor, tüm cari hesapların borç-alacak durumunu topluca görmek isteyen işletmeler tarafından kullanılır."
+}
+{
+"instruction": "Müşteri ve satıcı bilgileri hangi raporda listelenir?",
+"input": "Tüm müşterilerimize ait temel bilgileri görmek istiyoruz.",
+"output": "Müşteri / Satıcı Listesi, müşteri ve satıcı bilgilerinin listelendiği rapordur."
+}
+{
+"instruction": "Müşteri / Satıcı Listesi hangi veri kaynağını kullanır?",
+"input": "Bu liste hangi tablolar üzerinden oluşturuluyor?",
+"output": "CariHesap ve ilişkili tablolardan veri alarak oluşturulur."
+}
+{
+"instruction": "Müşteri / Satıcı Listesi sabit bir tablo mudur?",
+"input": "Liste, sistemden dinamik olarak mı gelir?",
+"output": "Evet, Müşteri / Satıcı Listesi raporu, sistemde tanımlı cari hesap ve ilişkili kayıtları anlık olarak çeker."
+}
+{
+"instruction": "Müşteri bilgileri hangi alanlardan alınır?",
+"input": "Ad, adres, vergi numarası gibi alanlar sisteme nereden gelir?",
+"output": "Müşteri / Satıcı Listesi, CariHesap ve ilişkili tablolardan gelen alanları içerir."
+}
+{
+"instruction": "Satıcı listesi ile müşteri listesi ayrı mı gösterilir?",
+"input": "Her iki taraf da aynı tabloda mı yer alır?",
+"output": "Müşteri / Satıcı Listesi raporunda her iki grup da aynı yapı içinde listelenebilir, filtre ile ayrıştırılabilir."
+}
+{
+"instruction": "Müşteri / Satıcı Listesi hangi amaçlarla kullanılır?",
+"input": "Listeyi görüntülemek bize ne sağlar?",
+"output": "Bu liste, tüm müşteri ve tedarikçilere ait temel bilgileri topluca görüntülemek ve raporlamak için kullanılır."
+}
+{
+"instruction": "Müşteri / Satıcı Listesi dışa aktarılabilir mi?",
+"input": "Bu listeyi Excel'e aktarabilir miyiz?",
+"output": "Sistem, bu tür raporların dışa aktarımına genellikle izin verir. Müşteri / Satıcı Listesi de buna dahildir."
+}
+{
+"instruction": "Genel Borç-Alacak ve Müşteri Listesi birlikte analiz edilebilir mi?",
+"input": "Hem borç-alacak hem müşteri detayını aynı anda görebilir miyiz?",
+"output": "Raporlar ayrı ayrı alınır ama kullanıcı tarafından birleştirilerek analiz yapılabilir."
+}
+{
+"instruction": "Yaşlandırma raporu nedir?",
+"input": "Müşterilerin borçlarını daha düzenli görmek istiyoruz. Hangi rapor kullanılmalı?",
+"output": "Yaşlandırma, işletmenin müşterilerinin işletmeye olan borçlarının ya da işletmenin tedarikçilerine olan borçlarının takibi için kullanılır."
+}
+{
+"instruction": "Yaşlandırma hangi borçların takibini yapar?",
+"input": "Sadece müşterilere mi yoksa tedarikçilere de uygulanabilir mi?",
+"output": "Yaşlandırma raporları hem müşterilerin hem de tedarikçilerin borçlarının takibi için kullanılır."
+}
+{
+"instruction": "Cari yaşlandırma yöntemi ne işe yarar?",
+"input": "Geç ödemeleri nasıl belirleyebiliriz?",
+"output": "Cari yaşlandırma yöntemiyle ödemesi geciken müşterilerin borçları tespit edilir ve sınıflandırılır."
+}
+{
+"instruction": "Cari yaşlandırma işletmeye nasıl katkı sağlar?",
+"input": "Bu raporun finansal planlamaya etkisi nedir?",
+"output": "Cari yaşlandırma sayesinde geciken borçlara göre hareket planı oluşturularak işletmenin nakit akışı kontrol altına alınabilir."
+}
+{
+"instruction": "Yaşlandırma raporları kaç farklı şekilde alınabilir?",
+"input": "Farklı formatlarda yaşlandırma görmek istiyoruz. Sistem bunu destekliyor mu?",
+"output": "Yaşlandırma raporları Günlük, Aylık ve Vadelere Göre Yaşlandırma olmak üzere üç farklı yöntemle alınabilir."
+}
+{
+"instruction": "Günlük yaşlandırma raporu neyi gösterir?",
+"input": "Borçların her gün nasıl değiştiğini takip etmek istiyoruz.",
+"output": "Günlük yaşlandırma raporu, borçların günlük bazda yaşlandırılmasını sağlar."
+}
+{
+"instruction": "Aylık yaşlandırma raporu ne için kullanılır?",
+"input": "Her ay sonunda müşterilerin ödeme durumunu görmek istiyoruz.",
+"output": "Aylık yaşlandırma, borçların ay bazında gruplandırılmasını sağlar."
+}
+{
+"instruction": "Vadelere göre yaşlandırma neyi ifade eder?",
+"input": "Borçların vade tarihine göre nasıl sınıflandırıldığını görmek istiyoruz.",
+"output": "Vadelere göre yaşlandırma, borçların ödeme vadesine göre sınıflandırılmasını sağlar."
+}
+{
+"instruction": "Yaşlandırma yöntemleri birbirinden nasıl ayrılır?",
+"input": "Günlük, aylık ve vadeli yaşlandırma teknik olarak farklı mı çalışıyor?",
+"output": "Hayır, üç yaşlandırma raporu da temelde aynı mantıkla çalışır; sadece raporlama biçimi farklıdır."
+}
+{
+"instruction": "Yaşlandırma raporları özete göre alınabilir mi?",
+"input": "Tüm detayları görmek istemiyoruz, özet almak mümkün mü?",
+"output": "Evet, yaşlandırma raporları özet ya da detaylı olarak sunulabilir."
+}
+{
+"instruction": "Yaşlandırma işlemlerinin detaylı hali nasıl görünür?",
+"input": "Her bir müşterinin hareketlerini ayrıntılı incelemek istiyoruz.",
+"output": "Detaylı yaşlandırma raporu, yaşlandırılan her işlem satırını ayrı olarak gösterir."
+}
+{
+"instruction": "Özet yaşlandırma raporları hangi bilgileri içerir?",
+"input": "Sadece toplam borç bilgisi yeterli olabilir mi?",
+"output": "Özet yaşlandırma raporları, müşterilerin toplam gecikmiş borçlarını gruplandırılmış şekilde gösterir."
+}
+{
+"instruction": "Yaşlandırma raporu nakit akışına nasıl katkı sağlar?",
+"input": "Finans departmanımız bu raporu neden kullanmalı?",
+"output": "Yaşlandırma raporları, geç ödemeleri tespit ederek tahsilat planı oluşturulmasına ve nakit akışının kontrol edilmesine katkı sağlar."
+}
+{
+"instruction": "Yaşlandırma raporunda sınıflandırma yapılabilir mi?",
+"input": "Ödemeleri gecikme sürelerine göre gruplamak mümkün mü?",
+"output": "Evet, cari yaşlandırma yöntemi ile borçlar sınıflandırılabilir."
+}
+{
+"instruction": "Yaşlandırma yalnızca müşteri borçları için midir?",
+"input": "Tedarikçilere olan borçları da kapsar mı?",
+"output": "Hayır, yaşlandırma hem müşteri hem de tedarikçilere olan borçları kapsar."
+}
+{
+"instruction": "Yaşlandırma raporu işletme stratejisine nasıl destek olur?",
+"input": "Stratejik kararlar alırken bu rapor neden önemlidir?",
+"output": "Geç ödemelerin tespiti ve tahsilatların zamanında yapılması için yaşlandırma raporu işletmenin stratejik karar alma süreçlerine destek sağlar."
+}
+{
+"instruction": "Yaşlandırma raporu kullanıcıya ne tür esneklikler sunar?",
+"input": "İhtiyaca göre farklı türlerde rapor almak mümkün mü?",
+"output": "Evet, kullanıcı isteğine göre günlük, aylık ya da vade bazlı ve özet/detaylı yaşlandırma raporları alınabilir."
+}
+{
+"instruction": "Vade Farkı raporu nedir?",
+"input": "Geç ödemelere faiz uygulamak istiyoruz. Hangi raporu kullanabiliriz?",
+"output": "Vade Farkı raporu, borç ya da alacağa karşı vade farkı hesaplamak için kullanılır."
+}
+{
+"instruction": "Vade farkı raporu hangi durumlarda kullanılır?",
+"input": "Müşteri faturalarını vadesinden sonra ödediğinde ek fark çıkarmak istiyoruz.",
+"output": "Müşterilerin vadesinden sonra yaptığı ödemelere yansıtılacak vade farkı bu rapor ile hesaplanır."
+}
+{
+"instruction": "Tedarikçilere yapılan geç ödemelerde de vade farkı olur mu?",
+"input": "Satın aldığımız mallar için geç ödeme yaptık. Sistem bunu hesaplar mı?",
+"output": "Evet, tedarikçilere yapılan geç ödemelerde de vade farkı hesaplanır."
+}
+{
+"instruction": "Vade farkı hangi hesaplara göre çalışır?",
+"input": "Sistem hangi hesapları dikkate alarak işlem yapar?",
+"output": "Vade farkı raporunda müşteri ve satıcı hesaplara ait cari hesap kartları dikkate alınır."
+}
+{
+"instruction": "Vade farkı hesaplamasında kapama yönü nasıl belirlenir?",
+"input": "Borcun mu yoksa alacağın mı kapatılacağı nasıl seçilir?",
+"output": "Kapama işleminin Borç ya da Alacağa göre yapılacağı kullanıcıdan parametre olarak alınır."
+}
+{
+"instruction": "Borç kapama yönü seçilirse ne olur?",
+"input": "Borç üzerinden vade farkı hesaplanmasını istiyoruz.",
+"output": "Borç yönü seçildiğinde, alacak hareketleri ile borç kapatılır."
+}
+{
+"instruction": "Alacak kapama yönü seçilirse sistem nasıl çalışır?",
+"input": "Alacak hareketleri için vade farkı hesaplamak istiyoruz.",
+"output": "Bu durumda borç hareketleri ile alacak hareketleri kapatılır."
+}
+{
+"instruction": "Vade farkı sabit oranla mı hesaplanır?",
+"input": "Sabit bir faiz oranı belirleyebilir miyiz?",
+"output": "Evet, vade farkı hesaplamasında sabit oran kullanılabilir ve bu oran kullanıcıdan parametre olarak alınır."
+}
+{
+"instruction": "Vade farkı oranı nereden alınır?",
+"input": "Oranı sistem mi belirler kullanıcı mı girer?",
+"output": "Oran sabitse kullanıcıdan parametre olarak alınır; hareket bazlıysa işlem üzerinden belirlenir."
+}
+{
+"instruction": "Vade farkı oranı aylık mı yıllık mı kullanılır?",
+"input": "Sistemdeki oran hesaplamasında dönem nedir?",
+"output": "Vade farkı oranı aylık olarak değerlendirilir."
+}
+{
+"instruction": "Vade farkı hesaplamasında gün sayısı nasıl belirlenir?",
+"input": "Geç ödeme gününü sistem nasıl bulur?",
+"output": "Gün sayısı, [Ödeme Tarihi] – [Fatura Vade Tarihi] şeklinde hesaplanır."
+}
+{
+"instruction": "Vade farkı her durumda hesaplanır mı?",
+"input": "Gün sayısı sıfırsa sistem fark hesaplar mı?",
+"output": "Hayır, gün sayısı sıfırdan büyükse vade farkı hesaplanır."
+}
+{
+"instruction": "Kapama işlemi nasıl yapılır?",
+"input": "Sistem önce hangi hareketleri eşleştirir?",
+"output": "Borç/Alacak hareketleri, Alacak/Borç hareketleriyle kapatılır."
+}
+{
+"instruction": "Vade farkı yaşlandırmadan nasıl farklılaşır?",
+"input": "Bu işlem yaşlandırmadan farklı mı?",
+"output": "Evet, vade farkında kapama işlemi tarihe göre küçükten büyüğe, FIFO mantığı ile yapılır."
+}
+{
+"instruction": "FIFO mantığı ne için kullanılır?",
+"input": "Sistem neden tarih sırasına göre işlem yapıyor?",
+"output": "Kapama işlemi vade farkı hesaplamasında küçükten büyüğe olacak şekilde FIFO mantığı ile yapılır."
+}
+{
+"instruction": "Müşteri ödemelerinde gecikme farkı hesaplamak mümkün mü?",
+"input": "Müşteri faturayı 10 gün geç ödedi. Bu durum raporda görülür mü?",
+"output": "Evet, bu fark raporda [Ödeme Tarihi] – [Vade Tarihi] üzerinden hesaplanır ve gün sayısı pozitifse vade farkı uygulanır."
+}
+{
+"instruction": "Tedarikçiye geç ödeme yapıldığında sistem nasıl işlem yapar?",
+"input": "Faturayı geç ödedik. Ek tutar yansır mı?",
+"output": "Evet, vade farkı hesaplanarak ödeme üzerine yansıtılır."
+}
+{
+"instruction": "Vade farkı raporunda hangi hareketler kapatılır?",
+"input": "Sistem hangi finansal hareketleri dikkate alır?",
+"output": "Borç ve alacak hareketleri birbirleriyle kapatılarak vade farkı hesaplanır."
+}
+{
+"instruction": "Vade farkı oranı her işlem için farklı olabilir mi?",
+"input": "Bazı işlemlerde farklı faiz oranları uygulamak istiyoruz.",
+"output": "Evet, sabit oran yerine cari hareket üzerinde tanımlı oran da kullanılabilir."
+}
+{
+"instruction": "Vade farkı hesaplaması kullanıcıya özelleştirilebilir mi?",
+"input": "Borç yönlü mü alacak yönlü mü hesaplanacağını kullanıcı seçebilir mi?",
+"output": "Evet, borç ya da alacak yönlü kapama işlemi kullanıcıdan parametre olarak alınır."
+},

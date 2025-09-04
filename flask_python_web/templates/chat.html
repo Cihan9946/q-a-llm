@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Asistan - Ollama</title>
+  <style>
+    body {
+      font-family: system-ui, 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f7f7f8;
+      display: flex;
+      flex-direction: column;
+      height: 100vh; /* Yüksekliği %100 yapıyoruz */
+      overflow: hidden; /* Sayfanın geneline kaydırma eklenmesini engelliyoruz */
+    }
+
+    /* Navbar */
+   .navbar {
+    background-color: #1f2937;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+   .train-button-container {
+    margin-right: 10px; /* Space between the button and the dropdown */
+  }
+
+   .train-button {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .navbar h1 {
+    font-size: 20px;
+    margin: 0;
+  }
+
+    .navbar select {
+      padding: 8px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: 1px solid #d1d5db;
+      background: #2d3748;
+      color: white;
+      width: 200px; /* Daraltılmış dropdown */
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      background: #1f2937;
+      color: white;
+      padding: 20px;
+      height: calc(100vh - 60px); /* Sayfanın geri kalan kısmı kadar yükseklik */
+      box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+      overflow-y: auto; /* Yalnızca sidebar kısmında scroll yapılabilir */
+    }
+
+    .sidebar h3 {
+      color: #f1f5f9;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .session-link {
+      color: #d1d5db;
+      cursor: pointer;
+      margin: 8px 0;
+      padding: 8px;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+
+    .session-link:hover {
+      background: #374151;
+    }
+
+    /* Main content area */
+    .main-container {
+      display: flex;
+      flex-grow: 1;
+      background: #f7f7f8;
+      width: 100%; /* Yatayda tam genişlik */
+      height: 100%; /* Dikeyde tam yükseklik */
+    }
+
+    /* Main chat area */
+    .main {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      overflow-y: auto; /* Ana chat alanında kaydırmayı engelliyoruz */
+    }
+
+    /* Chat box */
+    .chat-box {
+      background: #ffffff;
+      border-radius: 10px;
+      width: 100%; /* Chat ekranı genişliğini sınırlama */
+      flex-grow: 1; /* Genişleme sağlar */
+      overflow-y: auto; /* Yalnızca chat ekranında scroll */
+      border: 1px solid #e0e0e0;
+      margin-bottom: 20px; /* Mesaj kutusunun altında biraz boşluk bırakıyoruz */
+    }
+
+    .msg {
+      margin: 12px 0;
+      max-width: 80%;
+      padding: 12px 16px;
+      border-radius: 18px;
+      font-size: 15px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+
+    .user-msg {
+      margin-left: auto;
+      background: #dcfce7;
+      color: #14532d;
+      border-bottom-right-radius: 4px;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+    }
+
+    .bot-msg {
+      margin-right: auto;
+      background: #ffffff;
+      color: #1f2937;
+      border-bottom-left-radius: 4px;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+
+    /* Input ve butonlar */
+    input[type="text"] {
+      width: 70%;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #d1d5db;
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    button {
+      padding: 11px 18px;
+      background: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: #2563eb;
+    }
+
+    #resetBtn {
+      background: #ef4444;
+    }
+
+    #resetBtn:hover {
+      background: #dc2626;
+    }
+
+    .typing {
+      font-style: italic;
+      color: #9ca3af;
+      margin-top: 10px;
+      padding-left: 5px;
+      font-size: 14px;
+    }
+
+    .typing::after {
+      content: '';
+      display: inline-block;
+      margin-left: 5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #9ca3af;
+      animation: blink 1s infinite ease-in-out;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+
+    /* Dropdown Menüsü Düzenlemesi */
+   select {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    background: #2d3748;
+    color: white;
+    width: 200px; /* Adjust dropdown width as needed */
+  }
+
+  </style>
+</head>
+<body>
+
+<!-- Navbar (Model Select) -->
+<div class="navbar">
+  <h1>🧠 Yapay Zeka Asistanı</h1>
+  <!-- ÜST BUTON -->
+  <div class="train-button-container">
+    <a href="/train_model">
+      <button class="train-button">🧠 Modeli Eğit</button>
+    </a>
+  </div>
+  <!-- ✅ Yeni Buton -->
+<div class="train-button-container">
+  <a href="/api_settings">
+    <button class="train-button">⚙️ API Ayarları</button>
+  </a>
+</div>
+
+  <select id="modelSelect">
+    {% for model, name in models.items() %}
+      <option value="{{ model }}">{{ name }}</option>
+    {% endfor %}
+  </select>
+</div>
+
+
+  <div class="main-container">
+    <!-- SOL MENÜ -->
+    <div class="sidebar">
+      <h3>🧠 Sohbetler</h3>
+      <button onclick="newSession()">+ Yeni Sohbet</button>
+      <div id="session-list">
+        {% for sid, history in all_sessions.items() %}
+          {% if history %}
+            <div class="session-link" onclick="switchSession('{{ sid }}')">
+              🗨️ {{ history[-1].user[:15] }}...
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- ANA KISIM (Chat Box) -->
+    <div class="main">
+      <div class="chat-box" id="chat-box">
+        {% for item in history %}
+          <div class="msg user-msg"><strong>Kullanıcı:</strong> {{ item.user }}</div>
+          <div class="msg bot-msg"><strong>Asistan:</strong> {{ item.bot }}</div>
+        {% endfor %}
+      </div>
+      <div style="margin-bottom:20px;">
+        <input type="text" id="message" placeholder="Mesajınızı yazın..." />
+        <button id="sendBtn">Gönder</button>
+        <button id="resetBtn">🗑️ Temizle</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // generateUUID fonksiyonunu tanımladık
+    function generateUUID() {
+      if (crypto.randomUUID) {
+        return crypto.randomUUID();
+      } else {
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random() * 16 | 0;
+          var v = (c === 'x') ? r : (r & 0x3 | 0x8);
+          return v.toString(16);
+        });
+      }
+    }
+
+    const sendBtn = document.getElementById("sendBtn");
+    const resetBtn = document.getElementById("resetBtn");
+    const chatBox = document.getElementById("chat-box");
+    const messageInput = document.getElementById("message");
+    const modelSelect = document.getElementById("modelSelect");
+
+    sendBtn.addEventListener("click", function () {
+      const msg = messageInput.value.trim();
+      if (!msg) return;
+
+      const userDiv = document.createElement("div");
+      userDiv.className = "msg user-msg";
+      userDiv.innerHTML = `<strong>Kullanıcı:</strong> ${msg}`;
+      chatBox.appendChild(userDiv);
+
+      const typingDiv = document.createElement("div");
+      typingDiv.className = "msg bot-msg typing";
+      typingDiv.id = "typing";
+      typingDiv.innerText = "Asistan yazıyor";
+      chatBox.appendChild(typingDiv);
+
+      chatBox.scrollTop = chatBox.scrollHeight;
+      messageInput.value = "";
+
+      fetch("/send_message", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: msg, model: modelSelect.value })
+      })
+      .then(res => res.json())
+      .then(data => {
+        const typingElem = document.getElementById("typing");
+        if (typingElem) typingElem.remove();
+
+        const botDiv = document.createElement("div");
+        botDiv.className = "msg bot-msg";
+        botDiv.innerHTML = `<strong>Asistan:</strong> ${data.response}`;
+        chatBox.appendChild(botDiv);
+
+        chatBox.scrollTop = chatBox.scrollHeight;
+      });
+    });
+
+    messageInput.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        sendBtn.click();
+      }
+    });
+
+    resetBtn.addEventListener("click", function () {
+      fetch("/reset", { method: "POST" }).then(() => location.reload());
+    });
+
+    function switchSession(sessionId) {
+      fetch("/switch_session", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ session_id: sessionId })
+      }).then(() => location.reload());
+    }
+
+    function newSession() {
+      const newId = generateUUID();
+      switchSession(newId);
+    }
+  </script>
+</body>
+</html>
